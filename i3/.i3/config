@@ -21,9 +21,10 @@ bindsym $mod+F12 exec /home/bubujka/.bu.cards/bin/run-cards-client
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/make-screenshot
 
 bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
-bindsym $mod+v exec /home/bubujka/.bu.bin/bin/toggle-video-recording
+bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
+bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 
-bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
+#bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
