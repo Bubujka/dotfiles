@@ -1,0 +1,6 @@
+#!/bin/bash
+PATH=$PATH:$HOME/.bu.bin/bin
+bash -c 'sleep 2 ; setxkbmap -layout us,ru -option  ctrl:nocaps'&
+bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
+bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
+nm-applet &
