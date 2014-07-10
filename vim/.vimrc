@@ -17,8 +17,8 @@ filetype plugin indent on
 set backspace=indent,eol,start
 highlight clear SignColumn
 "set gfn=DejaVu\ Sans\ Mono\ 14
-set gfn=Droid\ Sans\ Mono\ 12
-"set gfn=Anonymous\ Pro\ 12
+" set gfn=PT\ Mono\ 16
+set gfn=Cousine\ Regular\ 14
 set nu
 set foldmethod=marker
 set foldmarker=#[,#]   
