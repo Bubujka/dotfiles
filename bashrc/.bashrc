@@ -54,3 +54,5 @@ stty stop undef
 
 
 
+
+PATH=$PATH:$HOME/.beta.bin/bin

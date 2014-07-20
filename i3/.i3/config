@@ -14,10 +14,16 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
-bindsym F11 exec /home/bubujka/.bu.tgl/tgl
-bindsym F12 exec /home/bubujka/.bu.cards/bin/new-card-from-dmenu gtd GTD
+bindsym F9 exec /home/bubujka/.bu.tgl/tgl
+
+bindsym F11 exec /home/bubujka/.bu.bin/bin/new-card-from-dmenu ideas Ideas
+bindsym shift+F11 exec /home/bubujka/.bu.bin/bin/new-card-from-xclip ideas
+bindsym $mod+F11 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.db/ideas
+
+
+bindsym F12 exec /home/bubujka/.bu.bin/bin/new-card-from-dmenu gtd GTD
 bindsym shift+F12 exec /home/bubujka/.bu.cards/bin/new-card-from-xclip gtd
-bindsym $mod+F12 exec /home/bubujka/.bu.cards/bin/run-cards-client
+bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.db/gtd
 
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindsym $mod+l exec slock
@@ -75,7 +81,6 @@ bindsym F5 workspace 5
 bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
-bindsym F9 workspace 9
 
 # move focused container to workspace
 bindsym Shift+F1 move container to workspace vim
@@ -86,7 +91,6 @@ bindsym Shift+F5 move container to workspace 5
 bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
-bindsym Shift+F9 move container to workspace 9
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
