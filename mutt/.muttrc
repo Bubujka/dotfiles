@@ -1,0 +1,56 @@
+# Пароли к муту
+# set my_name = "......... ..........."
+# set from = '............@...........'
+# set imap_user="...........@............"
+# set my_user="...........@............"
+# set realname='....... .......'
+# set imap_pass="................"
+# set my_pass='................'
+
+source "~/.mutt-pwd"
+
+set editor=`echo \$EDITOR`
+set message_cachedir="~/.mutt_msgcache"
+
+set folder=imaps://imap.gmail.com/
+set imap_check_subscribed
+set record="~/.mutt/sent"
+set delete = "yes"
+set include = "yes"
+set spoolfile   = +INBOX
+set fast_reply = "yes"
+#set mime_forward=yes 
+#set mime_forward_rest=yes
+mailboxes       = +INBOX
+
+# store message headers locally to speed things up
+# if hcache is a folder, Mutt will create sub cache folders for each account which may speeds things even more up
+set header_cache = ~/.cache/mutt
+
+# store messages locally to speed things up, like searching message bodies 
+# can be the same folder as header_cache
+set message_cachedir = "~/.cache/mutt"
+
+# specify where to save and/or look for postponed messages
+set postponed = +[Gmail]/Drafts
+
+# allow Mutt to open new imap connection automatically
+unset imap_passive
+
+# keep imap connection alive by polling intermittently (time in seconds)
+set imap_keepalive = 300
+
+# how often to check for new mail (time in seconds)
+set mail_check = 120
+
+
+set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+set alias_file = "~/.mutt/aliases"
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
+
+bind index "I" imap-fetch-mail
