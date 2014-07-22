@@ -52,7 +52,18 @@ complete -C ~/.db/bin/completion/prog prog
 complete -C ~/.db/bin/completion/tt tt
 stty stop undef
 
-
+next-uncommitted() {
+  for dir in `find ~/ -type d -name '.git'`
+  do
+    cd $dir;
+    cd ..
+    if [ $(git status --porcelain | wc -l ) != 0 ] ;
+    then
+      git status
+      break
+    fi
+  done
+}
 
 
 PATH=$PATH:$HOME/.beta.bin/bin
