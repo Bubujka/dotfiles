@@ -60,7 +60,7 @@ next-uncommitted() {
     if [ $(git status --porcelain | wc -l ) != 0 ] ;
     then
       git status
-      break
+      return
     fi
   done
   cd
