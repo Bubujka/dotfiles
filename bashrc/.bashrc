@@ -63,6 +63,7 @@ next-uncommitted() {
       break
     fi
   done
+  cd
 }
 
 
