@@ -66,5 +66,18 @@ next-uncommitted() {
   cd
 }
 
+gua() {
+  for dir in `find ~/ -type d -name '.git'`
+  do
+    cd $dir;
+    cd ..
+    basename "$(pwd)" 
+    pwd
+    git pull
+    echo
+  done
+  next-uncommitted
+}
+
 
 PATH=$PATH:$HOME/.beta.bin/bin
