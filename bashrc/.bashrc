@@ -52,7 +52,7 @@ complete -C ~/.db/bin/completion/prog prog
 complete -C ~/.db/bin/completion/tt tt
 stty stop undef
 
-next-uncommitted() {
+nu() {
   for dir in `find ~/ -type d -name '.git'`
   do
     cd $dir;
@@ -76,7 +76,7 @@ gua() {
     git pull
     echo
   done
-  next-uncommitted
+  nu
 }
 
 
