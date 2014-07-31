@@ -79,5 +79,9 @@ gua() {
   nu
 }
 
+uunu() {
+  uu 
+  nu
+}
 
 PATH=$PATH:$HOME/.beta.bin/bin
