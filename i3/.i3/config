@@ -15,6 +15,7 @@ floating_modifier $mod
 bindsym $mod+Return exec xterm
 
 bindsym F9 exec /home/bubujka/.bu.tgl/tgl
+bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
 
 bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
 bindsym shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
