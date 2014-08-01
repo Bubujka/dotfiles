@@ -14,7 +14,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
-bindsym F9 exec /home/bubujka/.bu.tgl/tgl
+bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
 
 bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
@@ -25,8 +25,8 @@ bindsym shift+F11 exec /home/bubujka/.bu.bin/bin/new-card-from-xclip ideas
 bindsym $mod+F11 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.db/ideas
 
 
-bindsym F12 exec /home/bubujka/.bu.bin/bin/new-card-from-dmenu gtd GTD
-bindsym shift+F12 exec /home/bubujka/.bu.cards/bin/new-card-from-xclip gtd
+bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
+bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.db/gtd
 
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot
