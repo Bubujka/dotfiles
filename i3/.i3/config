@@ -19,6 +19,7 @@ bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
 
 bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
 bindsym shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
+bindsym $mod+F10 exec /home/bubujka/.bu.bin/bin/open-basecamp
 
 bindsym F11 exec /home/bubujka/.bu.bin/bin/new-card-from-dmenu ideas Ideas
 bindsym shift+F11 exec /home/bubujka/.bu.bin/bin/new-card-from-xclip ideas
@@ -27,7 +28,7 @@ bindsym $mod+F11 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.
 
 bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
 bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
-bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/run-cards-client /home/bubujka/.db/gtd
+bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindsym $mod+l exec slock
