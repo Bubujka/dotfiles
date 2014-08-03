@@ -311,3 +311,4 @@ map <CR> o<Esc>k
 filetype indent on
 
 
+au BufRead,BufNewFile */wiki/* setfiletype markdown
