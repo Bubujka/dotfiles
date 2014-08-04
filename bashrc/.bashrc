@@ -13,7 +13,7 @@ export BROWSER="google-chrome"
   . "$HOME/.rvm/scripts/rvm"
 
 . "$HOME/.password"
-export DEBUG='app:*'
+export DEBUG='app*'
 export NODE_ENV='development'
 export PRJ_ENV='dev'
 
