@@ -85,4 +85,21 @@ uunu() {
   nu
 }
 
+
+_dk() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(ls ~/dokuro/prj)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+dk() {
+  cd ~/dokuro/prj/$1
+}
+
+complete -F _dk dk
+
 PATH=$PATH:$HOME/.beta.bin/bin
