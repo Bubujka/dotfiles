@@ -1,6 +1,6 @@
 export VIDEO_RECORDING_RESOLUTION='1600x900' # у меня такой экран
 export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого размера пожмёт всё равно. Заливать меньше
-export VIDEO_SAVING_PATH=~/.db/history/video 
+export VIDEO_SAVING_PATH=~/.db/history/video
 export MIC_SAVING_PATH=~/.db/history/mic
 export VOICEMAIL_SAVING_PATH=~/.db/history/voicemail
 export NAMED_MIC_SAVING_PATH=~/.db/history/talk
@@ -17,7 +17,7 @@ export DEBUG='app*'
 export NODE_ENV='development'
 export PRJ_ENV='dev'
 
-export PATH=$HOME/.usr/bin:$PATH:$HOME/.rvm/bin 
+export PATH=$HOME/.usr/bin:$PATH:$HOME/.rvm/bin
 export PATH=$HOME/.node/bin:$HOME/.bu.bin/bin:$HOME/.db/bin/stable:$HOME/.db/bin:$PATH
 export PATH=$PATH:$HOME/.beta.bin/bin
 export PATH=$PATH:$HOME/.omega.bin/bin
@@ -72,7 +72,7 @@ gua() {
   do
     cd $dir;
     cd ..
-    basename "$(pwd)" 
+    basename "$(pwd)"
     pwd
     git pull
     echo
@@ -81,12 +81,12 @@ gua() {
 }
 
 uunu() {
-  uu 
+  uu
   nu
 }
 
 
-_dk() 
+_dk()
 {
     local cur prev opts
     COMPREPLY=()
@@ -100,6 +100,6 @@ dk() {
   cd ~/dokuro/prj/$1
 }
 
-complete -F _dk dk
+. ~/.beta.bin/include
 
 PATH=$PATH:$HOME/.beta.bin/bin
