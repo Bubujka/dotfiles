@@ -84,9 +84,9 @@ highlight clear SignColumn
 set gfn=Cousine\ Regular\ 14
 set nu
 set foldmethod=marker
-set foldmarker=#[,#]   
+set foldmarker=#[,#]
 " установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
-set keymap=russian-jcukenwin 
+set keymap=russian-jcukenwin
 " по умолчанию - латинская раскладка
 set iminsert=0
 " по умолчанию - латинская раскладка при поиске
@@ -97,7 +97,7 @@ set ic
 set hls
 " использовать инкрементальный поиск
 set is
-" ширина текста 
+" ширина текста
 set textwidth=0
 " минимальная высота окна пусть будет 0 (по умолчанию - 1)
 set winminheight=0
@@ -138,7 +138,7 @@ set softtabstop=2
 set tabstop=2
 
 " Формат строки состояния
-set statusline=%<%f%h%m%r\ %b\ %{&fileencoding}\ 0x\ \ %l,%c%V\ %P 
+set statusline=%<%f%h%m%r\ %b\ %{&fileencoding}\ 0x\ \ %l,%c%V\ %P
 set laststatus=2
 
 " Включаем "умные" отспупы ( например, автоотступ после {)
@@ -184,7 +184,7 @@ call SMap("<C-J>", "<C-W>j")
 call SMap("<C-K>", "<C-W>k")
 syntax on
 au BufNewFile,BufRead *.t2t                 setf txt2tags
-noremap <silent> <F11> :cal VimCommanderToggle()<CR> 
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
 imap <C-?> <C-H>
 
 " syn match ErrorMsg '\%>80v.+'
@@ -276,8 +276,8 @@ nnoremap <Leader>p :!php -l %<CR>
   " \   exe "g#\\cCOPYRIGHT \\(".strftime("%Y")."\\)\\@![0-9]\\{4\\}\\(-".strftime("%Y")."\\)\\@!#s#\\([0-9]\\{4\\}\\)\\(-[0-9]\\{4\\}\\)\\?#\\1-".strftime("%Y") |
   " \ endif>
 
-au BufRead,BufNewFile *nginx* set ft=nginx 
-au BufRead,BufNewFile *io set ft=io 
+au BufRead,BufNewFile *nginx* set ft=nginx
+au BufRead,BufNewFile *io set ft=io
 set listchars=tab:··
 "set list
 
@@ -308,7 +308,11 @@ au BufNewFile,BufRead *.less set filetype=less
 
 map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
+" imap <Esc> <Esc>:w<cr>
+call SMap("<PageUp>", ":w<CR>")
 filetype indent on
 
+autocmd FileType jade imap <Esc> <Esc>:w<cr>
+autocmd FileType stylus imap <Esc> <Esc>:w<cr>
 
 au BufRead,BufNewFile */wiki/* setfiletype markdown
