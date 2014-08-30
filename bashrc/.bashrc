@@ -102,4 +102,5 @@ dk() {
 
 . ~/.beta.bin/include
 
+alias s3kotex='s3cmd -c ~/.s3cfg-kotex'
 PATH=$PATH:$HOME/.beta.bin/bin
