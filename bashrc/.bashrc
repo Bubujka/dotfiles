@@ -101,6 +101,7 @@ dk() {
 }
 
 . ~/.beta.bin/include
-
+alias гг='uu'
+alias ггтг='uunu'
 alias s3kotex='s3cmd -c ~/.s3cfg-kotex'
 PATH=$PATH:$HOME/.beta.bin/bin

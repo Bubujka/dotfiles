@@ -1,8 +1,10 @@
+# LVDS1 VGA1
 # hide_edge_borders both
 new_window none
 new_float none
+force_xinerama true
 
-# win key 
+# win key
 set $mod Mod4
 
 default_orientation vertical
@@ -41,6 +43,8 @@ bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
 bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
 bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 
+
+bindcode 78 exec /home/bubujka/.bu.bin/bin/write-to-journal
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
@@ -72,8 +76,8 @@ bindsym $mod+f fullscreen
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-
 # switch to workspace
+
 bindsym F1 workspace vim
 bindsym F2 workspace www
 bindsym F3 workspace sh
@@ -101,12 +105,20 @@ bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
 
+
 # reload the configuration file
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
+
+workspace vim output LVDS1
+workspace sh output LVDS1
+workspace sh2 output LVDS1
+
+workspace skype output VGA1
+workspace www output VGA1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
