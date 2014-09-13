@@ -92,15 +92,45 @@ _dk()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(ls ~/dokuro/prj)
+    opts=$(ls ~/.db/dokuro/prj)
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
 }
+
 dk() {
-  cd ~/dokuro/prj/$1
+  if [ "$1" == "" ]; then
+    cd ~/.db/dokuro
+  else
+    cd ~/.db/dokuro/prj/$1
+  fi
 }
 
+complete -F _dk dk
+
+
+_prj()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(ls ~/.db/prj)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+
+prj() {
+  if [ "$1" == "" ]; then
+    cd ~/.db/prj
+  else
+    cd ~/.db/prj/$1
+  fi
+}
+
+complete -F _prj prj
+
 . ~/.beta.bin/include
+alias st='cd ~/.db/storage'
 alias гг='uu'
 alias ггтг='uunu'
 alias s3kotex='s3cmd -c ~/.s3cfg-kotex'

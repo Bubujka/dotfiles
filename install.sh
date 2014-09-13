@@ -4,6 +4,6 @@ git submodule update
 
 for file in *; do
   if [ -d "$file" ]; then
-    stow "$file"
+    stow "$file" -t ~/
   fi
 done
