@@ -1,4 +1,6 @@
 filetype off                   " required!
+
+set gfn=Input\ Mono\ Condensed\ Regular\ 14
 " set rtp+=~/.vim/bundle/vundle/
 " call vundle#rc()
 
@@ -81,7 +83,7 @@ set backspace=indent,eol,start
 highlight clear SignColumn
 "set gfn=DejaVu\ Sans\ Mono\ 14
 " set gfn=PT\ Mono\ 16
-set gfn=Cousine\ Regular\ 14
+"set gfn=Cousine\ Regular\ 14
 set nu
 set foldmethod=marker
 set foldmarker=#[,#]
