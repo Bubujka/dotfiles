@@ -1,23 +1,35 @@
 local http://local.bubujka.org:3000/
 ---
-sync https://github.com/caolan/async
-bitbucket https://bitbucket.org/
-chrome-extensions https://chrome.google.com/webstore/category/apps?hl=ru
-drive https://drive.google.com/
-dropbox https://www.dropbox.com/home
-github https://github.com/
-gmail https://mail.google.com/mail/u/0/#inbox
-knex http://knexjs.org/
-najomi http://ru.najomi.org
-nmodules https://nodejsmodules.org/
-node http://nodejs.org/api/
-npm https://www.npmjs.org/
-pdd https://pdd.yandex.ru
-read.amazon https://read.amazon.com/
-toggl https://new.toggl.com/app/timer
-_underscore http://underscorejs.org
-vk-api https://vk.com/dev/methods
-week https://new.teamweek.com/
-music https://play.google.com/music/listen
-stream https://github.com/substack/stream-handbook
-vk-iframe https://vk.com/app4506236_185088179
+vk                        https://vk.com/
+fb                        https://www.facebook.com
+bitbucket                 https://bitbucket.org/
+chrome-extensions         https://chrome.google.com/webstore/category/apps?hl=ru
+drive                     https://drive.google.com/
+dropbox                   https://www.dropbox.com/home
+github                    https://github.com/
+gmail                     https://mail.google.com/mail/u/0/#inbox
+najomi                    http://ru.najomi.org
+nmodules                  https://nodejsmodules.org/
+node                      http://nodejs.org/api/
+npm                       https://www.npmjs.org/
+pdd                       https://pdd.yandex.ru
+read.amazon               https://read.amazon.com/
+toggl                     https://new.toggl.com/app/timer
+week                      https://new.teamweek.com/
+music                     https://play.google.com/music/listen
+stream                    https://github.com/substack/stream-handbook
+books                     https://play.google.com/books
+trello                    https://trello.com
+---
+knex                      http://knexjs.org/
+_ underscore              http://underscorejs.org
+fabric.js docs            http://fabricjs.com/docs/
+vk api docs               https://vk.com/dev/methods
+sync async docs           https://github.com/caolan/async
+basecamp api docs         https://github.com/basecamp/bcx-api/
+toggl api docs            https://github.com/toggl/toggl_api_docs
+fb api docs               https://developers.facebook.com/docs
+---
+fb apps dev               https://developers.facebook.com/
+---
+vk dev iframe             https://vk.com/app4506236_185088179
