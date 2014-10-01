@@ -20,6 +20,7 @@ music                     https://play.google.com/music/listen
 stream                    https://github.com/substack/stream-handbook
 books                     https://play.google.com/books
 trello                    https://trello.com
+alfabank                  https://click.alfabank.ru
 ---
 knex                      http://knexjs.org/
 _ underscore              http://underscorejs.org
@@ -33,3 +34,6 @@ fb api docs               https://developers.facebook.com/docs
 fb apps dev               https://developers.facebook.com/
 ---
 vk dev iframe             https://vk.com/app4506236_185088179
+---
+spitz-dev                 http://dogs.canine
+spitz-prd                 http://spitz.su

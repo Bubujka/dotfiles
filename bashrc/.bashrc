@@ -133,5 +133,8 @@ complete -F _prj prj
 alias st='cd ~/.db/storage'
 alias гг='uu'
 alias ггтг='uunu'
-alias s3kotex='s3cmd -c ~/.s3cfg-kotex'
+alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
+alias s3-my='s3cmd -c ~/.s3cfg-my'
+alias s3-beta='s3cmd -c ~/.s3cfg-beta'
+alias wiki='cd ~/.db/wiki'
 PATH=$PATH:$HOME/.beta.bin/bin
