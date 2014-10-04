@@ -37,3 +37,11 @@ vk dev iframe             https://vk.com/app4506236_185088179
 ---
 spitz-dev                 http://dogs.canine
 spitz-prd                 http://spitz.su
+
+---
+sqs                       https://eu-west-1.console.aws.amazon.com/sqs/home?region=eu-west-1
+s3                        https://console.aws.amazon.com/s3/home?region=eu-west-1
+iam                       https://console.aws.amazon.com/iam/home?region=eu-west-1#users
+mongoose                  http://mongoosejs.com/docs/guide.html
+keystone-config           http://keystonejs.com/docs/configuration/
+keystone-db               http://keystonejs.com/docs/database/
