@@ -8,6 +8,9 @@ export PRJ_REPOSITORY="git@github.com:Bubujka/prj.git" # реп для мелк�
 export ADMIN_EMAIL="zendzirou@gmail.com"
 export BROWSER="google-chrome"
 
+alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
+alias s3-my='s3cmd -c ~/.s3cfg-my'
+alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \
   . "$HOME/.rvm/scripts/rvm"

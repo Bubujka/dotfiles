@@ -45,3 +45,5 @@ iam                       https://console.aws.amazon.com/iam/home?region=eu-west
 mongoose                  http://mongoosejs.com/docs/guide.html
 keystone-config           http://keystonejs.com/docs/configuration/
 keystone-db               http://keystonejs.com/docs/database/
+faker.js                  https://github.com/marak/Faker.js/
+chance.js                 http://chancejs.com/
