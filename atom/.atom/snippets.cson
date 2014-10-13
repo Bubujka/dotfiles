@@ -1,0 +1,55 @@
+'.source.js':
+  'router.get':
+    'prefix': 'router.get'
+    'body': """
+      router.get('/$1', function(req,res,next){
+        $2
+      })
+    """
+  'router.post':
+    'prefix': 'router.post'
+    'body': """
+      router.post('/$1', function(req,res,next){
+        $2
+      })
+    """
+  'require':
+    'prefix': 'rq'
+    'body': """
+      ${1:var }${2:debug} = require('${3:debug}')${4:;}
+    """
+  'module.exports':
+    'prefix': 'module'
+    'body': """
+      module.exports = {
+        ${1:hello}: function($2){
+          $3
+        }
+      }
+    """
+  'express.router':
+    'prefix': 'router'
+    'body': """
+      var router = module.exports = require('express').Router()$1
+
+      router.get('/', function(req,res,next){
+
+      })
+    """
+  'mongoose.model':
+    'prefix': 'model'
+    'body': """
+      var mongoose = require('mongoose');
+
+      var schema = mongoose.Schema({
+        $2
+      });
+
+      module.exports = mongoose.model('${1:ModelName}', schema)
+    """
+  'mongoose.string':
+    'prefix': 'String'
+    'body': """
+      ${1:name_field}: { type: String, default: '$2'},
+      $3
+    """
