@@ -17,6 +17,7 @@
     'prefix': 'rq'
     'body': """
       ${1:var }${2:debug} = require('${3:debug}')${4:;}
+      $5
     """
   'module.exports':
     'prefix': 'module'
@@ -52,4 +53,44 @@
     'body': """
       ${1:name_field}: { type: String, default: '$2'},
       $3
+    """
+  '#!':
+    'prefix': '#!'
+    'body': """
+      #!/usr/bin/env node
+      $1
+    """
+  'function':
+    'prefix': 'fun'
+    'body': """
+      function${1: function_name}(${2:arguments}){
+        ${3:// body...}
+      }
+    """
+  'callback':
+    'prefix': 'cb'
+    'body': """
+      function(err, ${1:data}){
+        if(err)
+          return ${2:next}(err);
+        ${3:// body...}
+      }
+    """
+  'foreach':
+    'prefix': 'foreach'
+    'body': """
+      ${1:items}.forEach(function(${2:itm}){
+        ${3:// body...}
+      });
+    """
+  'exit':
+    'prefix': 'exit'
+    'body': """
+      process.exit(${1:0});
+      $2
+    """
+  'env':
+    'prefix': 'env'
+    'body': """
+      process.env.${1:NODE_ENV}
     """
