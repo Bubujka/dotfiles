@@ -49,12 +49,12 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/write-to-journal
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
+bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 
 # thinkpad special keys
 bindcode 122 exec /home/bubujka/.bu.bin/bin/volume 5%-
 bindcode 123 exec /home/bubujka/.bu.bin/bin/volume 5%+
 
-bindsym $mod+p exec /home/bubujka/.bu.bin/bin/open-plan
 bindsym $mod+b exec google-chrome
 
 # kill focused window
