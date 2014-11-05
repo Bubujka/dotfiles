@@ -36,7 +36,8 @@ bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot
-bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
+bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
+#bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
 bindsym $mod+l exec slock
 
 bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
@@ -49,6 +50,7 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/write-to-journal
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
+bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 
 # thinkpad special keys

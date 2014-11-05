@@ -266,8 +266,8 @@ command! -nargs=* Gi call GrepIText('<args>')
 
 
 nnoremap :bdd :bufdo bd <CR>
-nnoremap <Leader>[ :SmallerFont <CR>
-nnoremap <Leader>] :LargerFont <CR>
+"nnoremap <Leader>[ :SmallerFont <CR>
+"nnoremap <Leader>] :LargerFont <CR>
 nnoremap <Leader>f :call NormalFont() <CR>
 nnoremap <Leader>p :!php -l %<CR>
 
@@ -318,3 +318,7 @@ autocmd FileType jade imap <Esc> <Esc>:w<cr>
 autocmd FileType stylus imap <Esc> <Esc>:w<cr>
 
 au BufRead,BufNewFile */wiki/* setfiletype markdown
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+

@@ -1,0 +1,15 @@
+snippet should
+	require('should');
+
+snippet .should.have.property
+	.should.have.property(${0})
+
+snippet describe
+	describe('${1:What}', function(){
+		${0}
+	});
+
+snippet it
+	it('${1:What}', function(){
+		${0}
+	});

@@ -1,0 +1,21 @@
+snippet var
+	var ${1:something} = ${0:nothing};
+
+snippet router.get
+	router.get('/${1}', function(req,res,next){
+		${2}
+	})
+snippet fun
+	function${1: function_name}(${2:arguments}){
+		${3:// body...}
+	}
+snippet cb
+	function(err, ${1:data}){
+		if(err)
+			return ${2:next}(err);
+		${3:// body...}
+	}
+snippet foreach
+	${1:items}.forEach(function(${2:itm}){
+		${3:// body...}
+	});

@@ -1,0 +1,21 @@
+snippet env
+	process.env.${0:SOMETHING}
+
+snippet node_env
+	process.env.NODE_ENV$0
+
+snippet rq
+	var ${2:_} = require('${1:underscore}')${3:;}$0
+
+snippet module
+	module.exports = {
+		${1:hello}: function(${2}){
+			${3}
+		}
+	}
+snippet #!
+	#!/usr/bin/env node
+	$0
+snippet exit
+	process.exit(${1:0});
+	$2

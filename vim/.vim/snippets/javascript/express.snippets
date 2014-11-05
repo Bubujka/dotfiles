@@ -1,0 +1,10 @@
+snippet router.post
+	router.post('/${1}', function(req,res,next){
+		${2}
+	})
+snippet router
+	var router = module.exports = require('express').Router();
+
+	router.get('/', function(req,res,next){
+		${0}
+	});

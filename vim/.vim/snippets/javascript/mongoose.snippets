@@ -1,0 +1,12 @@
+snippet model
+	var mongoose = require('mongoose');
+
+	var schema = mongoose.Schema({
+		$0
+	});
+
+	module.exports = mongoose.model('${1:ModelName}', schema)
+
+snippet String
+	${1:name_field}: { type: String, default: '$2'},
+	$0
