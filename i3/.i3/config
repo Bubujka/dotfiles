@@ -35,8 +35,8 @@ bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
 bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
-bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot
-bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
+bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
+bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
 #bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
 bindsym $mod+l exec slock
 
