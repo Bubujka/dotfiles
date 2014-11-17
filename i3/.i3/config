@@ -49,6 +49,7 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/write-to-journal
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
@@ -86,7 +87,7 @@ bindsym F3 workspace sh
 bindsym F4 workspace sh2
 
 bindsym $mod+s workspace skype
-bindsym $mod+t workspace toggl
+#bindsym $mod+t workspace toggl
 
 bindsym $mod+Shift+M move container to workspace mail
 bindsym $mod+Shift+T move container to workspace toggl

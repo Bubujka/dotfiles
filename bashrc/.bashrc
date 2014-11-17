@@ -18,6 +18,7 @@ alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 . "$HOME/.password"
 export DEBUG='app*'
 export NODE_ENV='development'
+export PHP_ENV='development'
 export PRJ_ENV='dev'
 
 export PATH=$HOME/.usr/bin:$PATH:$HOME/.rvm/bin

@@ -1,3 +1,6 @@
 set mark-symlinked-directories on
 set bell-style none
 set completion-query-items 500
+set meta-flag on
+set convert-meta off
+set output-meta on

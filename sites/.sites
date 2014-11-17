@@ -1,4 +1,8 @@
-local http://local.bubujka.org:3000/
+local                     http://local.bubujka.org:3000/
+keystone local            http://local.bubujka.org:3000/keystone
+
+metropolis                http://metropolis.moscow
+
 ---
 vk                        https://vk.com/
 fb                        https://www.facebook.com

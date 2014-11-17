@@ -85,8 +85,6 @@ highlight clear SignColumn
 " set gfn=PT\ Mono\ 16
 "set gfn=Cousine\ Regular\ 14
 set nu
-set foldmethod=marker
-set foldmarker=#[,#]
 " установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
 set keymap=russian-jcukenwin
 " по умолчанию - латинская раскладка

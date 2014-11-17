@@ -19,3 +19,8 @@ snippet #!
 snippet exit
 	process.exit(${1:0});
 	$2
+snippet err
+	if(err){
+	  return ${1:next}(err);
+	}
+	${0}
