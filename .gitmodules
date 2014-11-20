@@ -31,3 +31,9 @@
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
+[submodule "vim/.vim/bundle/vim-mustache-handlebars"]
+	path = vim/.vim/bundle/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
