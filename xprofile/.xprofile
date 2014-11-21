@@ -1,7 +1,7 @@
 #!/bin/bash
 export VIDEO_RECORDING_RESOLUTION='1600x900' # у меня такой экран
 export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого размера пожмёт всё равно. Заливать меньше
-export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video 
+export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video
 export PATH=$PATH:$HOME/.bu.bin/bin
 export PATH=$PATH:$HOME/.usr/bin
 . "$HOME/.password"
@@ -10,5 +10,6 @@ bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
 bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
 bash -c 'sleep 3 ; xset +fp ~/.fonts'&
 bash -c 'sleep 3 ; feh --bg-max ~/.wallpaper.jpg '&
+bash -c 'sleep 3 ; xset r rate 200 30'&
 bash -c 'sleep 3 ; dropbox start'&
 nm-applet &

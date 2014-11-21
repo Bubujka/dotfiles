@@ -3,6 +3,7 @@ keystone local            http://local.bubujka.org:3000/keystone
 gleemail                  http://localhost:5000
 
 metropolis                http://metropolis.moscow
+metropolis keystone       http://metropolis.moscow/keystone
 
 ---
 vk                        https://vk.com/
