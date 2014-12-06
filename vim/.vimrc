@@ -312,8 +312,8 @@ map <CR> o<Esc>k
 call SMap("<PageUp>", ":w<CR>")
 filetype indent on
 
-autocmd FileType jade imap <Esc> <Esc>:w<cr>
-autocmd FileType stylus imap <Esc> <Esc>:w<cr>
+" autocmd FileType jade imap <Esc> <Esc>:w<cr>
+" autocmd FileType stylus imap <Esc> <Esc>:w<cr>
 
 au BufRead,BufNewFile */wiki/* setfiletype markdown
 
