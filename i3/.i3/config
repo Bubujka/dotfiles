@@ -39,6 +39,7 @@ bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
 #bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
 bindsym $mod+l exec slock
+bindsym $mod+g exec /home/bubujka/.bu.bin/bin/selection-google
 
 bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
 bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
