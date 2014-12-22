@@ -1,3 +1,4 @@
+solo                      http://nabiraem.ru/study/
 local                     http://local.bubujka.org:3000/
 keystone local            http://local.bubujka.org:3000/keystone
 gleemail                  http://localhost:5000
@@ -71,3 +72,4 @@ google analytics               'https://www.google.com/analytics/web/?hl=ru&pli=
 --- Apiary
 apiary cli                http://client.apiary.io/
 apiary example            https://github.com/apiaryio/api-blueprint/tree/master/examples
+apiary blueprint spec     'https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#ResourceParametersSection'
