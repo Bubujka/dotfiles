@@ -1,6 +1,5 @@
 snippet env
 	process.env.${0:SOMETHING}
-
 snippet node_env
 	process.env.NODE_ENV$0
 
@@ -23,4 +22,8 @@ snippet err
 	if(err){
 	  return ${1:next}(err);
 	}
+	${0}
+
+snippet dotenv
+	require('dotenv').load();
 	${0}
