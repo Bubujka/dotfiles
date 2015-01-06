@@ -3,6 +3,7 @@ local                     http://local.bubujka.org:3000/
 keystone local            http://local.bubujka.org:3000/keystone
 gleemail                  http://localhost:5000
 docs                      http://devdocs.io/
+vaz                       http://www.avtoall.ru/catalog/vaz-3/legkovye_avtomobili-18/vaz_2104-5/
 
 metropolis                http://metropolis.moscow
 metropolis keystone       http://metropolis.moscow/keystone
