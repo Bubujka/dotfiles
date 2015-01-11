@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/apiblueprint.vim"]
 	path = vim/.vim/bundle/apiblueprint.vim
 	url = https://github.com/kylef/apiblueprint.vim.git
+[submodule "bin/.bin/git-extras"]
+	path = bin/.bin/git-extras
+	url = https://github.com/tj/git-extras.git

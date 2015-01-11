@@ -18,6 +18,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
+bindcode 118 exec /home/bubujka/.bu.bin/bin/new-tab # Insert
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
 bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
@@ -53,6 +54,7 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
+bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 
 # thinkpad special keys
@@ -111,7 +113,8 @@ bindsym Shift+F8 move container to workspace 8
 
 
 # reload the configuration file
-bindsym $mod+Shift+C reload
+#bindsym $mod+Shift+C reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)

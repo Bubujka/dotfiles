@@ -1,4 +1,5 @@
 solo                      http://nabiraem.ru/study/
+postman                   chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm/index.html
 local                     http://local.bubujka.org:3000/
 keystone local            http://local.bubujka.org:3000/keystone
 gleemail                  http://localhost:5000
@@ -32,6 +33,7 @@ trello                    https://trello.com
 alfabank                  https://click.alfabank.ru
 ---
 knex                      http://knexjs.org/
+bookshelf                 http://bookshelfjs.org/
 _ underscore              http://underscorejs.org
 fabric.js docs            http://fabricjs.com/docs/
 vk api docs               https://vk.com/dev/methods

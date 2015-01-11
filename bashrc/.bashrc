@@ -27,6 +27,7 @@ export PATH=$PATH:$HOME/.beta.bin/bin
 export PATH=$PATH:$HOME/.omega.bin/bin
 export PATH=$PATH:$HOME/.bu.cards/bin
 export PATH=$PATH:$HOME/.bu.bin/bin
+. ~/.bin_path
 . ~/.bu.bin/alias
 source ~/.ssh_agent_info
 
@@ -123,6 +124,7 @@ _prj()
     return 0
 }
 
+
 prj() {
   if [ "$1" == "" ]; then
     cd ~/.db/prj
@@ -132,6 +134,19 @@ prj() {
 }
 
 complete -F _prj prj
+
+_cook()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(ls ~/.db/prj/kitchen/nodes | sed 's/.json$//')
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+
+complete -F _cook cook
 
 . ~/.beta.bin/include
 alias st='cd ~/.db/storage'
