@@ -1,0 +1,2 @@
+export PATH=$PATH:$HOME/.bin/git-extras/bin
+export PATH=$PATH:$HOME/.bin-private/*/bin

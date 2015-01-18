@@ -23,7 +23,6 @@ export PRJ_ENV='dev'
 
 export PATH=$HOME/.usr/bin:$PATH:$HOME/.rvm/bin
 export PATH=$HOME/.node/bin:$HOME/.bu.bin/bin:$HOME/.db/bin/stable:$HOME/.db/bin:$PATH
-export PATH=$PATH:$HOME/.beta.bin/bin
 export PATH=$PATH:$HOME/.omega.bin/bin
 export PATH=$PATH:$HOME/.bu.cards/bin
 export PATH=$PATH:$HOME/.bu.bin/bin
@@ -148,7 +147,7 @@ _cook()
 
 complete -F _cook cook
 
-. ~/.beta.bin/include
+. ~/.bin-private/.beta.bin/include
 alias st='cd ~/.db/storage'
 alias гг='uu'
 alias ггтг='uunu'
@@ -156,4 +155,3 @@ alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
 alias s3-my='s3cmd -c ~/.s3cfg-my'
 alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 alias wiki='cd ~/.db/wiki'
-PATH=$PATH:$HOME/.beta.bin/bin

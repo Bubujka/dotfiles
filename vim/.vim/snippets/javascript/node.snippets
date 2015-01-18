@@ -4,7 +4,12 @@ snippet node_env
 	process.env.NODE_ENV$0
 
 snippet rq
-	var ${2:_} = require('${1:underscore}')${3:;}$0
+	var $1 = require('${1:underscore}');
+	$0
+
+snippet _
+	var _ = require('underscore');
+	$0
 
 snippet module
 	module.exports = {
