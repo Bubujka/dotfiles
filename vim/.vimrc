@@ -315,7 +315,7 @@ filetype indent on
 " autocmd FileType jade imap <Esc> <Esc>:w<cr>
 " autocmd FileType stylus imap <Esc> <Esc>:w<cr>
 
-au BufRead,BufNewFile */wiki/* setfiletype markdown
+" au BufRead,BufNewFile */wiki/* setfiletype markdown
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -328,3 +328,4 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+let g:vim_markdown_folding_disabled=1
