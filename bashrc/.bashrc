@@ -147,7 +147,7 @@ _cook()
 
 complete -F _cook cook
 
-. ~/.bin-private/.beta.bin/include
+. ~/.bin-private/beta.bin/include
 alias st='cd ~/.db/storage'
 alias гг='uu'
 alias ггтг='uunu'
