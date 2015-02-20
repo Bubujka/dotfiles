@@ -2,6 +2,8 @@ solo                      http://nabiraem.ru/study/
 lingualeo                 https://lingualeo.com/ru/dashboard2
 postman                   chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm/index.html
 local                     http://local.bubujka.org:3000/
+local files               http://local.bubujka.org:3000/files.html
+local-prefixed            http://local.bubujka.org:3002/www/
 keystone local            http://local.bubujka.org:3000/keystone
 gleemail                  http://localhost:5000
 docs                      http://devdocs.io/
