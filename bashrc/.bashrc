@@ -12,6 +12,7 @@ alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
 alias s3-my='s3cmd -c ~/.s3cfg-my'
 alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && \
   . "$HOME/.rvm/scripts/rvm"
 
@@ -132,7 +133,7 @@ _dk()
 
 dk() {
   if [ "$1" == "" ]; then
-    cd ~/.db/dokuro
+    cd ~/.db/dokuro/prj
   else
     cd ~/.db/dokuro/prj/$1
   fi
@@ -141,27 +142,42 @@ dk() {
 complete -F _dk dk
 
 
-_prj()
-{
+_prj() {
     local cur prev opts
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(ls ~/.db/prj)
+    opts=$(_projects)
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
 }
 
 
-prj() {
+p() {
+  local dir
+  dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
+}
+
+
+_db() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(ls ~/.db)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+
+db() {
   if [ "$1" == "" ]; then
-    cd ~/.db/prj
+    cd ~/.db/
   else
-    cd ~/.db/prj/$1
+    cd ~/.db/$1
   fi
 }
 
-complete -F _prj prj
+complete -F _db db
 
 _cook()
 {
@@ -184,3 +200,4 @@ alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
 alias s3-my='s3cmd -c ~/.s3cfg-my'
 alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 alias wiki='cd ~/.db/wiki'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
