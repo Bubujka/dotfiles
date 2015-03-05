@@ -185,7 +185,7 @@ _cook()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(ls ~/.db/prj/kitchen/nodes | sed 's/.json$//')
+    opts=$(ls ~/.db/beta/kitchen/nodes | sed 's/.json$//')
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
 }

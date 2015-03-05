@@ -1,3 +1,6 @@
+snippet app.knex
+	var app = require('${1:..}/app.js');
+	var knex = app.get('knex');
 snippet router.post
 	router.post('/${1}', function(req,res,next){
 		${2}
