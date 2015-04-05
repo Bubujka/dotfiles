@@ -1,3 +1,4 @@
+priority 2
 snippet var
 	var ${1:something} = ${0:nothing};
 
@@ -9,6 +10,11 @@ snippet fun
 	function${1: function_name}(${2:arguments}){
 		${3:// body...}
 	}
+snippet f)
+	function(${1:err, data}){
+		${2:// body...}
+	})
+
 snippet cb
 	function(err, ${1:data}){
 		if(err)
