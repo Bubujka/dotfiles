@@ -32,3 +32,53 @@ snippet err
 snippet dotenv
 	require('dotenv').load();
 	${0}
+
+snippet knex
+	var app = require('../app');
+	var knex = app.get('knex');
+	${0}
+snippet knex.
+	knex
+		.select()
+		.from('${1:table}')
+		.where({
+
+		})
+		.catch(next)
+		.then(function(data){
+			$2
+		});
+snippet knex.f
+	knex
+		.select()
+		.from('${1:table}')
+		.where({
+
+		})
+		.first()
+		.catch(next)
+		.then(function(data){
+			$2
+		});
+
+snippet knex.i
+	knex('${1:table}')
+		.insert({
+			$2
+		})
+		.catch(next)
+		.then(function(id){
+			$3
+		});
+snippet knex.u
+	knex('${1:table}')
+		.where({
+			${2}
+		})
+		.update({
+			${3}
+		})
+		.catch(next)
+		.then(function(id){
+			${4}
+		});

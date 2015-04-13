@@ -9,7 +9,9 @@ gleemail                  http://localhost:5000
 docs                      http://devdocs.io/
 vaz                       http://www.avtoall.ru/catalog/vaz-3/legkovye_avtomobili-18/vaz_2104-5/
 yii                       http://www.yiiframework.com/doc-2.0/guide-index.html
-
+up api                    https://jawbone.com/up/developer
+odnoklassniki clients     http://ok.ru/dk?st.cmd=appsInfoMyDevList
+odnoklassniki api         http://apiok.ru/api
 instagram api console     https://apigee.com/console/instagram
 instagram clients         https://instagram.com/developer/clients/manage/
 
