@@ -9,6 +9,7 @@ gleemail                  http://localhost:5000
 docs                      http://devdocs.io/
 vaz                       http://www.avtoall.ru/catalog/vaz-3/legkovye_avtomobili-18/vaz_2104-5/
 yii                       http://www.yiiframework.com/doc-2.0/guide-index.html
+yii migrations            'http://www.yiiframework.com/doc-2.0/guide-db-migrations.html#database-accessing-methods'
 
 momentjs doc              http://momentjs.com/docs/
 up api                    https://jawbone.com/up/developer

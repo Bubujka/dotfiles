@@ -5,7 +5,7 @@ export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video
 export PATH=$PATH:$HOME/.bu.bin/bin
 export PATH=$PATH:$HOME/.usr/bin
 . "$HOME/.password"
-bash -c 'sleep 2 ; setxkbmap -layout us,ru -option  ctrl:nocaps'&
+bash -c 'sleep 2 ; setxkbmap -layout us,ru -option ctrl:nocaps,grp:shifts_toggle'&
 bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
 bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
 bash -c 'sleep 3 ; xset +fp ~/.fonts'&
