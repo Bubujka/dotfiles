@@ -96,3 +96,7 @@ apiary example            https://github.com/apiaryio/api-blueprint/tree/master/
 apiary blueprint spec     'https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#ResourceParametersSection'
 intervention image        http://image.intervention.io/
 
+
+--- Monitoring
+munin najomi              http://munin.najomi.org/munin/
+uptime najomi             http://munin.najomi.org:8082
