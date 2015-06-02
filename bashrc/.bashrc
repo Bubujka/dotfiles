@@ -237,3 +237,4 @@ alias s3-my='s3cmd -c ~/.s3cfg-my'
 alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 alias wiki='cd ~/.db/wiki'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export PATH=$PATH:/opt/nwjs

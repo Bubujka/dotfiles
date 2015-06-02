@@ -49,3 +49,6 @@
 [submodule "vim/.vim/bundle/emmet-vim"]
 	path = vim/.vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/.vim/bundle/vim-bemhtml"]
+	path = vim/.vim/bundle/vim-bemhtml
+	url = https://github.com/vim-scripts/vim-bemhtml.git

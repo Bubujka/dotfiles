@@ -185,7 +185,7 @@ client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
 bar {
-    tray_output none
+    #tray_output none
     status_command i3status
 
     colors {
