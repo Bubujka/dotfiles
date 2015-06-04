@@ -333,3 +333,14 @@ nnoremap <C-f> <esc>ggVG!undoc<cr>
 let g:vim_markdown_folding_disabled=1
 let g:user_emmet_leader_key='<c-e>'
 
+" swap files (.swp) in a common location
+" // means use the file's full path
+set dir=~/.vim/_swap//
+
+" backup files (~) in a common location if possible
+set backup
+set backupdir=~/.vim/_backup/,~/tmp,.
+
+" turn on undo files, put them in a common location
+set undofile
+set undodir=~/.vim/_undo/
