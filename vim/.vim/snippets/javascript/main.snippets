@@ -25,3 +25,7 @@ snippet foreach
 	${1:items}.forEach(function(${2:itm}){
 		${3:// body...}
 	});
+snippet de
+	var debug = require('debug')('app:${1:something}');
+snippet d
+	debug('${1:mmmmm?}'${2});
