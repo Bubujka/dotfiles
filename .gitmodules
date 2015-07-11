@@ -48,7 +48,7 @@
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/.vim/bundle/emmet-vim"]
 	path = vim/.vim/bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
+	url = git@github.com:Bubujka/emmet-vim.git
 [submodule "vim/.vim/bundle/vim-bemhtml"]
 	path = vim/.vim/bundle/vim-bemhtml
 	url = https://github.com/vim-scripts/vim-bemhtml.git

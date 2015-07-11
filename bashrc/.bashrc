@@ -22,7 +22,7 @@ export NODE_ENV='development'
 export PHP_ENV='development'
 export PRJ_ENV='dev'
 
-export PATH=$HOME/.usr/bin:$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$HOME/.node/bin:$HOME/.bu.bin/bin:$HOME/.db/bin/stable:$HOME/.db/bin:$PATH
 export PATH=$PATH:$HOME/.omega.bin/bin
 export PATH=$PATH:$HOME/.bu.cards/bin
@@ -194,27 +194,15 @@ p() {
   dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
 }
 
-
-_db() {
-    local cur prev opts
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(ls ~/.db)
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
+d() {
+  local dir
+  dir=$(ls ~/.db/ | fzf +m) && cd ~/.db/"$dir"
 }
 
-db() {
-  if [ "$1" == "" ]; then
-    cd ~/.db/
-  else
-    cd ~/.db/$1
-  fi
+w() {
+  local dir
+  dir=$(ls ~/.db/wiki/ | fzf +m) && vim ~/.db/wiki/"$dir"
 }
-
-complete -F _db db
-
 _cook()
 {
     local cur prev opts
@@ -238,3 +226,6 @@ alias s3-beta='s3cmd -c ~/.s3cfg-beta'
 alias wiki='cd ~/.db/wiki'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export PATH=$PATH:/opt/nwjs
+
+export NVM_DIR="/home/bubujka/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
