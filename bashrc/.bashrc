@@ -67,7 +67,7 @@ nu() {
     echo "Кэш старый +_+"
     find ~/ -type d -name '.git' > ~/.git-repos
   fi
-  for dir in `cat ~/.git-repos`
+  for dir in `cat ~/.git-repos | grep -v .gvm`
   do
     if [ -d "$dir" ]; then
       echo -n '.'
@@ -229,3 +229,4 @@ export PATH=$PATH:/opt/nwjs
 
 export NVM_DIR="/home/bubujka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "/home/bubujka/.gvm/scripts/gvm" ]] && source "/home/bubujka/.gvm/scripts/gvm"

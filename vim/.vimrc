@@ -300,6 +300,7 @@ call SMap("<F8>", ":!aspell -c %<cr>")
 " set nohlsearch
 
 
+call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-o>", ":r !xclip -o<cr>")
 call SMap("<C-t>", "<esc><esc>ggO<esc>O<esc>ggO----------------------------<esc>:r !date <cr>o<esc>o")
 " call SMap("<C-h>", "<esc><esc>ggO<esc>O<esc>ggO----------------------------<esc>gg2O<esc>")
@@ -328,8 +329,6 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-nnoremap <C-f> <esc>ggVG!undoc<cr>
-
 let g:vim_markdown_folding_disabled=1
 let g:user_emmet_leader_key='<c-e>'
 
@@ -345,3 +344,4 @@ let g:user_emmet_leader_key='<c-e>'
 " set undofile
 " set undodir=~/.vim/_undo/
 let g:user_emmet_expandabbr_key='<S-Tab>'
+set rtp+=~/.fzf
