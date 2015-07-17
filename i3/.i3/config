@@ -59,6 +59,7 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
+bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/select-wiki-file beta
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj

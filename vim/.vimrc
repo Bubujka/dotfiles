@@ -300,6 +300,7 @@ call SMap("<F8>", ":!aspell -c %<cr>")
 " set nohlsearch
 
 
+call SMap("<C-b>", "<esc><esc>:bufdo split<cr>")
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-o>", ":r !xclip -o<cr>")
 call SMap("<C-t>", "<esc><esc>ggO<esc>O<esc>ggO----------------------------<esc>:r !date <cr>o<esc>o")
