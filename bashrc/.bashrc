@@ -56,7 +56,7 @@ complete -C ~/.db/bin/completion/mode mode
 complete -C ~/.db/bin/completion/life life
 complete -C ~/.db/bin/completion/prog prog
 complete -C ~/.db/bin/completion/tt tt
-stty stop undef
+#stty stop undef
 nu() {
   if [ ! -f ~/.git-repos ]; then
     echo "Нет файла +_+"

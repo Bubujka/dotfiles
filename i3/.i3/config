@@ -139,6 +139,7 @@ workspace sh2 output LVDS1
 
 workspace skype output VGA1
 workspace www output VGA1
+for_window [title="[fzf]"] floating enable
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
