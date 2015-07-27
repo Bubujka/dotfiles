@@ -345,4 +345,4 @@ let g:user_emmet_leader_key='<c-e>'
 " set undofile
 " set undodir=~/.vim/_undo/
 let g:user_emmet_expandabbr_key='<S-Tab>'
-set rtp+=~/.fzf
+" set rtp+=~/.fzf
