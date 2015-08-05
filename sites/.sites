@@ -1,6 +1,8 @@
 solo                      http://nabiraem.ru/study/
 lingualeo                 https://lingualeo.com/ru/dashboard2
 postman                   chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm/index.html
+swagger                   http://local.bubujka.org:8000/
+swagger spec              https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md
 local backend             http://local.bubujka.org:3003/
 local gii                 http://local.bubujka.org:3003/gii
 local                     http://local.bubujka.org:3000/
