@@ -303,8 +303,6 @@ call SMap("<F8>", ":!aspell -c %<cr>")
 call SMap("<C-b>", "<esc><esc>:bufdo split<cr>")
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-o>", ":r !xclip -o<cr>")
-call SMap("<C-t>", "<esc><esc>ggO<esc>O<esc>ggO----------------------------<esc>:r !date <cr>o<esc>o")
-" call SMap("<C-h>", "<esc><esc>ggO<esc>O<esc>ggO----------------------------<esc>gg2O<esc>")
 
 au BufNewFile,BufRead *.less set filetype=less
 
@@ -346,3 +344,4 @@ let g:user_emmet_leader_key='<c-e>'
 " set undodir=~/.vim/_undo/
 let g:user_emmet_expandabbr_key='<S-Tab>'
 " set rtp+=~/.fzf
+"
