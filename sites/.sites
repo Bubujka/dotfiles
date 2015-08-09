@@ -54,7 +54,7 @@ node                      http://nodejs.org/api/
 npm                       https://www.npmjs.org/
 pdd                       https://pdd.yandex.ru
 read.amazon               https://read.amazon.com/
-toggl                     https://new.toggl.com/app/timer
+toggl                     https://toggl.com/app/timer
 week                      https://new.teamweek.com/
 music                     http://music.yandex.ru/artist/144018/tracks
 stream                    https://github.com/substack/stream-handbook
