@@ -1,0 +1,25 @@
+snippet nga.entity
+	var ${1:posts} = nga.entity('$1');
+	admin.addEntity($1);
+	$1
+	  .listView()
+	  .fields([
+	  		nga.field('id'),
+	  		nga.field('name')
+	  		])
+	  .listActions(['show', 'edit', 'delete']);
+	$1
+	  .creationView()
+	  .fields([
+	  		nga.field('name')
+	  		]);
+	$1
+	  .editionView()
+	  .fields([
+	  		$1.creationView().fields();
+	  		]);
+	$1.showView()
+	  .fields([
+	  	nga.field('id'),
+	  	nga.field('name'),
+	  	]);

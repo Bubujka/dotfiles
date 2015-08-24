@@ -52,3 +52,6 @@
 [submodule "vim/.vim/bundle/vim-bemhtml"]
 	path = vim/.vim/bundle/vim-bemhtml
 	url = https://github.com/vim-scripts/vim-bemhtml.git
+[submodule "vim/.vim/bundle/vim-jst"]
+	path = vim/.vim/bundle/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
