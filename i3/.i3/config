@@ -23,7 +23,7 @@ bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
 bindcode 118 exec /home/bubujka/.bu.bin/bin/new-tab # Insert
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
-bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
+bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
 
 bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
 bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
