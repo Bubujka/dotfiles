@@ -7,6 +7,9 @@ export NAMED_MIC_SAVING_PATH=~/.db/history/talk
 export PRJ_REPOSITORY="git@github.com:Bubujka/prj.git" # реп для мелких приватных проектов
 export ADMIN_EMAIL="zendzirou@gmail.com"
 export BROWSER="google-chrome"
+# https://twitter.com/michaelhoffman/status/639178145673932800
+
+HISTFILE="${HOME}/.history/$(date -u +%Y_%m_%d.%H.%M.%S)_${HOSTNAME}_$$"
 
 alias s3-kotex='s3cmd -c ~/.s3cfg-kotex'
 alias s3-my='s3cmd -c ~/.s3cfg-my'
@@ -27,6 +30,7 @@ export PATH=$HOME/.node/bin:$HOME/.bu.bin/bin:$HOME/.db/bin/stable:$HOME/.db/bin
 export PATH=$PATH:$HOME/.omega.bin/bin
 export PATH=$PATH:$HOME/.bu.cards/bin
 export PATH=$PATH:$HOME/.bu.bin/bin
+export PATH=$PATH:$HOME/.git-radar
 . ~/.bin_path
 . ~/.bu.bin/alias
 source ~/.ssh_agent_info
