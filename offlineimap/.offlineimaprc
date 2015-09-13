@@ -1,0 +1,20 @@
+[general]
+ui = ttyui
+accounts = Gmail
+pythonfile = ~/.offlineimap.py
+
+[Account Gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/.mail
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser = zendzirou@gmail.com
+remotepasseval = get_pass("Gmail")
+realdelete = no
+maxconnections = 3
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
