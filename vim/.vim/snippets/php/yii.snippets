@@ -5,3 +5,33 @@ snippet yii.controller
 			return $this->render('index');
 		}
 	}
+snippet yii.cc
+	<?php
+	namespace console\controllers;
+	class ${1:Wtf}Controller extends \yii\console\Controller{
+		function actionIndex()
+		{
+			echo "hello, world";
+			exit;
+		}
+	}
+
+snippet yii.cors
+	function beforeAction($action){
+		if(\Yii::$app->params['cors']){
+			header('Access-Control-Allow-Origin: *');
+			header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+			header('Access-Control-Max-Age: 1000');
+			header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+			header('Access-Control-Allow-Credentials: true');
+		}
+		\Yii::$app->request->enableCsrfValidation = false;
+		\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+		return parent::beforeAction($action);
+	}
+
+snippet yii.ct
+		$this->createTable('${1:table}', [
+			'id' => Schema::TYPE_PK,
+			${0}
+		], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');

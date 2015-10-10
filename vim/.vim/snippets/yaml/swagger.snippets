@@ -1,0 +1,40 @@
+snippet swagger
+	---
+	swagger: "2.0"
+	info: 
+	description: |
+		${1:Описание проекта}
+	version: "1.0.0"
+	title: ${2:Заголовок}
+	contact: 
+		email: "zendzirou@gmail.com"
+
+	host: "local.bubujka.org:3004"
+	basePath: "/api/v1"
+	schemes: 
+	- "http"
+	produces: ['application/json']
+
+	tags: 
+	paths: 
+	definitions: 
+snippet sw.tag
+	- name: ${1:key}
+	  description: ${2:Название}
+
+snippet sw.path
+	/${1:pth}:
+	  ${2:get}: 
+	    tags: [${3:tag}]
+	    summary: ${4:summary}
+	    produces: ['application/json']
+	    responses:
+	      200:
+	        description: Нормальный ответ
+	        schema: 
+				${0://something}
+snippet sw.def
+	${1:Class}:
+	  type: object
+	  properties:
+	    ${0://something}

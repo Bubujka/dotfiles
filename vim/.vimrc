@@ -345,3 +345,4 @@ let g:user_emmet_leader_key='<c-e>'
 let g:user_emmet_expandabbr_key='<S-Tab>'
 " set rtp+=~/.fzf
 "
+set fdm=indent
