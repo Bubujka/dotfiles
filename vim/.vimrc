@@ -331,18 +331,18 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 let g:vim_markdown_folding_disabled=1
 let g:user_emmet_leader_key='<c-e>'
 
-" swap files (.swp) in a common location
-" // means use the file's full path
-"set dir=~/.vim/_swap//
+" Еммет раскрывает свои шорткаты по сочетанию shift-tab
+let g:user_emmet_expandabbr_key='<S-Tab>' 
+" -------------------------------------------
 
-" backup files (~) in a common location if possible
-"set backup
-"set backupdir=~/.vim/_backup/,~/tmp,.
 
-" turn on undo files, put them in a common location
-" set undofile
-" set undodir=~/.vim/_undo/
-let g:user_emmet_expandabbr_key='<S-Tab>'
-" set rtp+=~/.fzf
-"
+" Сворачивание кода включено на основе отступов
 set fdm=indent
+" -------------------------------------------
+
+" Команда gb открывает ссылку под курсором в браузере
+" Консольная команда br - открывает ссылку в хроме и меняет фокус
+" оконного менеджера на рабочий стол с браузером
+let g:Browser_x = 'br'
+nnoremap <silent> gb :exe('!'.g:Browser_x.' "'.expand('<cfile>').'" &')<CR>
+" -------------------------------------------
