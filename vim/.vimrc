@@ -346,3 +346,10 @@ set fdm=indent
 let g:Browser_x = 'br'
 nnoremap <silent> gb :exe('!'.g:Browser_x.' "'.expand('<cfile>').'" &')<CR>
 " -------------------------------------------
+
+" Отключить автодополнение html, javascript для php
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['php'] = 'php'
+" -------------------------------------------
+
