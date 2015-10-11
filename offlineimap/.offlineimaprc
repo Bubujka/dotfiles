@@ -18,3 +18,5 @@ remotepasseval = get_pass("Gmail")
 realdelete = no
 maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+createfolders = False
+nametrans = lambda foldername: foldername.decode('imap4-utf-7').encode('utf-8')
