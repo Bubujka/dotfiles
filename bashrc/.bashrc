@@ -234,3 +234,22 @@ export PATH=$PATH:/opt/nwjs
 export NVM_DIR="/home/bubujka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "/home/bubujka/.gvm/scripts/gvm" ]] && source "/home/bubujka/.gvm/scripts/gvm"
+
+
+# Команда для перехода к папке с использованием fzf
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+
+# Запуск и подключение gpg-agent - чтобы по сотне раз не вводить пароль к почте
+envfile="$HOME/.gnupg/gpg-agent.env"
+if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
+    eval "$(cat "$envfile")"
+else
+    eval "$(gpg-agent --daemon --write-env-file "$envfile")"
+fi
+export GPG_AGENT_INFO  # the env file does not contain the export statement

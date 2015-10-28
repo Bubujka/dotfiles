@@ -8,6 +8,7 @@ export NVM_DIR="/home/bubujka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . "$HOME/.password"
 bash -c 'sleep 2 ; setxkbmap -layout us,ru -option ctrl:nocaps,grp:shifts_toggle'&
+bash -c 'sleep 2 ; synclient VertEdgeScroll=0'&
 bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
 bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
 bash -c 'sleep 3 ; xset +fp ~/.fonts'&
@@ -19,3 +20,4 @@ bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulatio
 bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
 bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
 nm-applet &
+i3
