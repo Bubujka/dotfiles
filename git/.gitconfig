@@ -1,0 +1,23 @@
+[alias]
+  ci = commit
+  rh = reset --hard HEAD
+  co = checkout
+  br = branch
+  st = status
+  ad = add . --all
+  mnc = merge --no-commit --no-ff
+  hist = log --pretty=format:\"% h % ad | % s% d [% an]\" --graph --date=short
+  rao = remote add origin
+  ras = remote add stage
+  pu  = push -u origin master
+[color]
+	ui = true
+[user]
+	name = Aleksej Kamynin
+	email = zendzirou@gmail.com
+[core]
+	excludesfile = /home/bubujka/.gitignore
+	quotepath = false
+
+[push]
+	default = matching
