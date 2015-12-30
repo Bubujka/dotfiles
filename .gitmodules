@@ -58,3 +58,9 @@
 [submodule "vim/.vim/bundle/vim-slim"]
 	path = vim/.vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim/.vim/bundle/vim-unimpaired"]
+	path = vim/.vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git

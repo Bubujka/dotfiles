@@ -182,6 +182,8 @@ call SMap("<F12>", ":quit<cr>")
 call SMap("<F3>", "0f{mf%ms'fV's<jV'sk>/function")
 call SMap("<C-J>", "<C-W>j")
 call SMap("<C-K>", "<C-W>k")
+call SMap("<C-о>", "<C-W>j")
+call SMap("<C-л>", "<C-W>k")
 syntax on
 au BufNewFile,BufRead *.t2t                 setf txt2tags
 noremap <silent> <F11> :cal VimCommanderToggle()<CR>
@@ -263,7 +265,8 @@ endfunction
 command! -nargs=* Gi call GrepIText('<args>')
 
 
-nnoremap :bdd :bufdo bd <CR>
+
+"nnoremap :bdd :bufdo bd <CR>
 "nnoremap <Leader>[ :SmallerFont <CR>
 "nnoremap <Leader>] :LargerFont <CR>
 nnoremap <Leader>f :call NormalFont() <CR>
@@ -354,3 +357,18 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
 " -------------------------------------------
 
+" заставить вим сохранять по команде :ц
+cnoreabbrev <expr> ц ((getcmdtype() is# ':' && getcmdline() is# 'ц')?('w'):('ц'))
+" -------------------------------------------
+
+nnoremap :bdd :bufdo bd <CR>
+
+" 3. Recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
