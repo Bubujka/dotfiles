@@ -99,6 +99,7 @@ nu() {
         return
       fi
     else
+      echo "$dir"
       echo -n 'm'
     fi
   done
