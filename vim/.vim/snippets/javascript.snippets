@@ -1,0 +1,52 @@
+snippet rq
+	var ${1:what} = require('${0:what}');
+snippet _
+	var _ = require('underscore');${0}
+snippet arr
+	[
+		${0}
+	]
+snippet obj
+	{
+		${0}
+	}
+snippet f
+	function(${1}){
+		${0}
+	}
+snippet err
+	if(err){
+		return ${1:next}(err);
+	}${0}
+snippet fc
+	${1:main}(${0})
+snippet fc;
+	${1:main}(${0});
+snippet var
+	var ${1:what} = ${0};
+snippet fd
+	function ${1:main}($2){
+		${0}
+	}
+snippet fa
+	${1:what} = function ${2:main}($3){
+		${0}
+	}
+snippet pr
+	${1:what}: ${0}
+snippet if
+	if(${1:what}){
+		${0}
+	}
+snippet else
+	else{
+		${0}
+	}
+snippet eif
+	else if(${1:what){
+		${0}
+	}
+snippet fe
+	for(var ${1:i} in ${2:arr}){
+		${0}
+	}

@@ -1,15 +1,15 @@
-filetype off                   " required!
-
-set gfn=Input\ Mono\ Condensed\ Regular\ 14
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-
-" Bundle 'gmarik/vundle'
-" Bundle 'Valloric/YouCompleteMe'
+" Подключаем все модули что есть для вима
 execute pathogen#infect()
+
+" Настраиваем шрифт 
+set gfn=Input\ Mono\ Condensed\ Regular\ 14
+
+" Настройки цветовой схемы
 set background=light
 let g:solarized_contrast='high'
 colorscheme solarized
+
+" Возможность использовать часть команд в русской раскладке
 map ё `
 map й q
 map ц w
@@ -77,41 +77,46 @@ map Ь M
 map Б <
 map Ю >
 
+" Включаем поддержку плагинов и отступов 
 filetype plugin indent on
 
-set backspace=indent,eol,start
-highlight clear SignColumn
-"set gfn=DejaVu\ Sans\ Mono\ 14
-" set gfn=PT\ Mono\ 16
-"set gfn=Cousine\ Regular\ 14
+
+" Включаем нумерацию строк
 set nu
+
 " установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
 set keymap=russian-jcukenwin
 " по умолчанию - латинская раскладка
 set iminsert=0
+
 " по умолчанию - латинская раскладка при поиске
 set imsearch=0
+
 " игнорировать регистр при поиске
 set ic
+
 " подсвечивать поиск
 set hls
+
 " использовать инкрементальный поиск
 set is
+
 " ширина текста
 set textwidth=0
+
 " минимальная высота окна пусть будет 0 (по умолчанию - 1)
 set winminheight=0
+
 " всегда делать активное окно максимального размера
 set noequalalways
 set winheight=9999
-" установить шрифт Courier New Cyr
-" настраиваю для работы с русскими словами (чтобы w, b, * понимали
-" русские слова)
+
 set iskeyword=@,48-57,_,192-255
 set t_Co=256
-"colorscheme summerfruit256
 
 
+set backspace=indent,eol,start
+highlight clear SignColumn
 
 set fileencodings=utf-8,cp1251,koi8-r,default
 
@@ -142,7 +147,7 @@ set statusline=%<%f%h%m%r\ %b\ %{&fileencoding}\ 0x\ \ %l,%c%V\ %P
 set laststatus=2
 
 " Включаем "умные" отспупы ( например, автоотступ после {)
-set smartindent
+"set smartindent
 
 " Fix <Enter> for comment
 set fo+=cr
@@ -313,7 +318,6 @@ map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
 " imap <Esc> <Esc>:w<cr>
 call SMap("<PageUp>", ":w<CR>")
-filetype indent on
 
 " autocmd FileType jade imap <Esc> <Esc>:w<cr>
 " autocmd FileType stylus imap <Esc> <Esc>:w<cr>
@@ -343,7 +347,6 @@ let g:user_emmet_expandabbr_key='<S-Tab>'
 " Сворачивание кода включено на основе отступов
 set fdm=indent
 " -------------------------------------------
-
 " Команда gb открывает ссылку под курсором в браузере
 " Консольная команда br - открывает ссылку в хроме и меняет фокус
 " оконного менеджера на рабочий стол с браузером
