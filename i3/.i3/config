@@ -40,7 +40,8 @@ bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan
-bindcode shift+127 exec /home/bubujka/.bu.bin/bin/open-plan
+bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan
+bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 
 bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select

@@ -184,7 +184,6 @@ endfunction
 imap <F1> <C-^>
 call SMap("<F2>", ":bd<cr>")
 call SMap("<F12>", ":quit<cr>")
-call SMap("<F3>", "0f{mf%ms'fV's<jV'sk>/function")
 call SMap("<C-J>", "<C-W>j")
 call SMap("<C-K>", "<C-W>k")
 call SMap("<C-о>", "<C-W>j")
@@ -363,15 +362,21 @@ let g:snipMate.scope_aliases['php'] = 'php'
 " заставить вим сохранять по команде :ц
 cnoreabbrev <expr> ц ((getcmdtype() is# ':' && getcmdline() is# 'ц')?('w'):('ц'))
 " -------------------------------------------
-
+" Команда для закрытия всех буфферов
 nnoremap :bdd :bufdo bd <CR>
 
-" 3. Recommended settings
+" -------------------------------------------
+" Настройки библиотеки проверки синтаксиса
+" отображает количество ошибок в статусной строке
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" позволяет переходить к следующей ошибке с помощью какого-то хоткея
 let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
+" проверяет файл при открытии
 let g:syntastic_check_on_open = 1
+" не проверяет файл при открытии
 let g:syntastic_check_on_wq = 0
+
+" -------------------------------------------

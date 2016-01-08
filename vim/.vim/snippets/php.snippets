@@ -2,14 +2,22 @@ snippet arr
 	[
 		${0}
 	]
+snippet r
+	return ${0};
 snippet fc
 	${1:main}(${0})
 snippet var
 	$${1:what} = ${0};
 snippet fd
-	function ${1:main}($2){
+	function ${1:main}(${2}){
 		${0}
 	}
+snippet af
+	function(${1}){
+		${0}
+	}
+snippet vp
+	$${1:what}['${2:what}']${0}
 snippet prd
 	'${1:what}' => ${0},
 snippet pr
