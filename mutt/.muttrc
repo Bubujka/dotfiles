@@ -1,162 +1,50 @@
-# Пароли к муту
-# set my_name = "......... ..........."
-# set from = '............@...........'
-# set imap_user="...........@............"
-# set my_user="...........@............"
-# set realname='....... .......'
-# set imap_pass="................"
-# set my_pass='................'
+set folder      = imaps://imap.gmail.com/
+set imap_user   = zendzirou@gmail.com
+set imap_pass   = `pass show Mail/Gmail`
+set spoolfile   = +INBOX
+mailboxes       = +INBOX
 
-# source "~/.mutt-pwd"
-# 
-# set editor=`echo \$EDITOR`
-# set message_cachedir="~/.mutt_msgcache"
-# 
-# set folder=imaps://imap.gmail.com/
-# set imap_check_subscribed
-# set record="~/.mutt/sent"
-# set delete = "yes"
-# set include = "yes"
-# set spoolfile   = +INBOX
-# set fast_reply = "yes"
-# #set mime_forward=yes 
-# #set mime_forward_rest=yes
-# mailboxes       = +INBOX
-# 
-# # store message headers locally to speed things up
-# # if hcache is a folder, Mutt will create sub cache folders for each account which may speeds things even more up
-# set header_cache = ~/.cache/mutt
-# 
-# # store messages locally to speed things up, like searching message bodies 
-# # can be the same folder as header_cache
-# set message_cachedir = "~/.cache/mutt"
-# 
-# # specify where to save and/or look for postponed messages
-# set postponed = +[Gmail]/Drafts
-# 
-# # allow Mutt to open new imap connection automatically
-# unset imap_passive
-# 
-# # keep imap connection alive by polling intermittently (time in seconds)
-# set imap_keepalive = 300
-# 
-# # how often to check for new mail (time in seconds)
-# set mail_check = 120
-# 
-# 
-# set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
-# set ssl_force_tls = yes
-# set ssl_starttls = yes
-# 
-# set alias_file = "~/.mutt/aliases"
-# set sort_alias = alias
-# set reverse_alias = yes
-# source $alias_file
-# 
-# bind index "I" imap-fetch-mail
+# Store message headers locally to speed things up.
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
+set header_cache = ~/.cache/mutt
 
-set realname   = "Kamynin Aleksej"
-set from       = "zendzirou@gmail.com"
+# Store messages locally to speed things up, like searching message bodies.
+# Can be the same folder as header_cache.
+# This will cost important disk usage according to your e-mail amount.
+set message_cachedir = "~/.cache/mutt"
 
-set mbox_type   = Maildir
-set sendmail    = /usr/bin/msmtp
+# Specify where to save and/or look for postponed messages.
+set postponed = +[Gmail]/Drafts
 
-set folder      = ~/.mail
-set spoolfile   = "+INBOX"
-set mbox        = "+[Gmail]/All Mail"
-set postponed   = "+[Gmail]/Drafts"
-unset record
+# Allow Mutt to open new imap connection automatically.
+unset imap_passive
 
-mailboxes +INBOX
+# Keep IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
 
-macro index D \
-    "<save-message>+[Gmail]/Trash<enter>" \
-    "move message to the trash"
-
-macro index S \
-    "<save-message>+[Gmail]/Spam<enter>" \
-    "mark message as spam"
-macro index,pager I "<shell-escape>offlineimap -q<enter>" "Dl mail"
+# How often to check for new mail (time in seconds).
+set mail_check = 120
 
 
-# vim: filetype=muttrc
+set my_pass=`pass show Mail/Gmail`
+set my_user=zendzirou@gmail.com
 
-#
-#
-# make sure that you are using mutt linked against slang, not ncurses, or
-# suffer the consequences of weird color issues. use "mutt -v" to check this.
+set realname = 'Aleksej Kamynin'
+set from = zendzirou@gmail.com
+set use_from = yes
 
-# custom body highlights -----------------------------------------------
-# highlight my name and other personally relevant strings
-#color body          yellow          default         "(ethan|schoonover)"
-# custom index highlights ----------------------------------------------
-# messages which mention my name in the body
-#color index         yellow          default         "~b \"phil(_g|\!| gregory| gold)|pgregory\" !~N !~T !~F !~p !~P"
-#color index         J_cream         brightblack     "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~N !~T !~F !~p !~P"
-#color index         yellow          cyan            "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~T !~F !~p !~P"
-#color index         yellow          J_magent        "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~F !~p !~P"
-## messages which are in reference to my mails
-#color index         J_magent        default         "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" !~N !~T !~F !~p !~P"
-#color index         J_magent        brightblack     "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" ~N !~T !~F !~p !~P"
-#color index         J_magent        cyan            "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" ~T !~F !~p !~P"
-#color index         J_magent        red             "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" ~F !~p !~P"
+set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
+set ssl_force_tls = yes
 
-# for background in 16 color terminal, valid background colors include:
-# base03, bg, black, any of the non brights
 
-# basic colors ---------------------------------------------------------
-color normal        brightblue      default         
-color error         red             default         
-color tilde         white           default         
-color message       cyan            default         
-color markers       red             black           
-color attachment    black           default         
-color search        brightmagenta   default         
-#color status        J_black         J_status        
-color status        brightblue      white           
-color indicator     brightwhite     yellow          
-color tree          yellow          default                                     # arrow in threads
+# Проверить новую почту по нажатию на I
+bind index "I" imap-fetch-mail
 
-# basic monocolor screen
-mono  bold          bold
-mono  underline     underline
-mono  indicator     reverse
-mono  error         bold
+# В какой файл записывать адреса людей
+set alias_file = "~/.mutt/aliases"
 
-# index ----------------------------------------------------------------
+# Мутт сам этот файл не прочитает, надо попросить его об этом явно
+source ~/.mutt/aliases
 
-#color index         red             default         "~D(!~p|~p)"               # deleted
-#color index         white           default         ~F                         # flagged
-#color index         brightred       default         ~=                         # duplicate messages
-#color index         brightcyan      default         "~A!~N!~T!~p!~Q!~F!~D!~P"  # the rest
-#color index         J_base          default         "~A~N!~T!~p!~Q!~F!~D"      # the rest, new
-color index         red             default         "~A"                        # all messages
-color index         brightred       default         "~E"                        # expired messages
-color index         blue            default         "~N"                        # new messages
-color index         blue            default         "~O"                        # old messages
-color index         brightmagenta   default         "~Q"                        # messages that have been replied to
-color index         brightcyan      default         "~R"                        # read messages
-color index         blue            default         "~U"                        # unread messages
-color index         blue            default         "~U~$"                      # unread, unreferenced messages
-color index         brightblue      default         "~v"                        # messages part of a collapsed thread
-color index         brightblue      default         "~P"                        # messages from me
-color index         cyan            default         "~p!~F"                     # messages to me
-color index         cyan            default         "~N~p!~F"                   # new messages to me
-color index         cyan            default         "~U~p!~F"                   # unread messages to me
-color index         brightcyan      default         "~R~p!~F"                   # messages to me
-color index         red             default         "~F"                        # flagged messages
-color index         red             default         "~F~p"                      # flagged messages to me
-color index         red             default         "~N~F"                      # new flagged messages
-color index         red             default         "~N~F~p"                    # new flagged messages to me
-color index         red             default         "~U~F~p"                    # new flagged messages to me
-color index         white           red             "~D"                        # deleted messages
-color index         brightgreen     default         "~v~(!~N)"                  # collapsed thread with no unread
-color index         yellow          default         "~v~(~N)"                   # collapsed thread with some unread
-color index         green           default         "~N~v~(~N)"                 # collapsed thread with unread parent
-# statusbg used to indicated flagged when foreground color shows other status
-# for collapsed thread
-color index         red             white           "~v~(~F)!~N"                # collapsed thread with flagged, no unread
-color index         yellow          white           "~v~(~F~N)"                 # collapsed thread with some unread & flagged
-color index         green           white           "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
-color index         green           white           "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
-color index         cyan            white           "~v~(~p)"                
+# Указание куда закидывать отправленные письма
+set record = ~/.mutt/sent

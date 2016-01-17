@@ -98,7 +98,7 @@ bindsym F2 workspace www
 bindsym F3 workspace sh
 bindsym F4 workspace sh2
 
-bindsym $mod+s workspace skype
+bindsym $mod+s workspace skype; layout splith
 #bindsym $mod+t workspace toggl
 
 bindsym $mod+Shift+M move container to workspace mail
