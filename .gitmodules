@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/.vim/bundle/vim-phpfmt"]
+	path = vim/.vim/bundle/vim-phpfmt
+  url = git@github.com:Bubujka/vim-phpfmt.git

@@ -383,3 +383,10 @@ let g:syntastic_check_on_wq = 0
 
 " Включаем проверку правописания
 set spell spelllang=ru,en
+let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1) " format on save (autocmd)
+let g:phpfmt_php_path = "/opt/php/bin/php"               " Path to PHP
+let g:phpfmt_config = "/home/bubujka/.phpfmt.ini"
+"let g:phpfmt_prepasses_list = "AutoPreincrement,JointToImplode"
+"let g:phpfmt_passes_list = "ReturnNull"
+let g:phpfmt_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+"nnoremap <silent><leader>zz :call PhpFmtFixFile()<CR>

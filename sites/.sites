@@ -7,7 +7,7 @@ silex                     http://silex.sensiolabs.org/documentation
 mailcatcher               http://local.bubujka.org:1080/
 lingualeo                 https://lingualeo.com/ru/dashboard2
 postman                   chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm/index.html
-swagger                   http://local.bubujka.org:3004/swagger/
+swagger                   http://local.bubujka.org:3000/swagger/
 swagger spec              https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md
 local backend             http://local.bubujka.org:3003/
 local gii                 http://local.bubujka.org:3003/gii

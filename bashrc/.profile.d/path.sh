@@ -4,4 +4,5 @@ export PATH=$PATH:$HOME/.omega.bin/bin
 export PATH=$PATH:$HOME/.bu.cards/bin
 export PATH=$PATH:$HOME/.bu.bin/bin
 export PATH=$PATH:$HOME/.git-radar
+export PATH=$PATH:/opt/php/bin
 . ~/.bin_path
