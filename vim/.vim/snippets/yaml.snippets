@@ -1,21 +1,37 @@
+snippet string
+	type: string
+	example: ${0:what}
+snippet integer
+	type: integer
+	example: ${0:300}
+snippet $ref
+	$ref: '#/definitions/${0:what}'
+snippet array
+	type: array
+	items:
+		${0}
+snippet object
+	type: object
+	properties:
+		${0}
 snippet swagger
 	---
 	swagger: "2.0"
 
-	info: 
+	info:
 		description: |
 			${1:what?}
 		version: "1.0.0"
 		title: ${2:whaaat?}
-		contact: 
+		contact:
 			email: "zendzirou@gmail.com"
 
 	host: "local.bubujka.org:3000"
 	basePath: "/frontend"
-	schemes: 
+	schemes:
 		- "http"
 	produces: ['application/json']
 
-	tags: 
-	paths: 
-	definitions: 
+	tags:
+	paths:
+	definitions:

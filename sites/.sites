@@ -12,6 +12,7 @@ swagger spec              https://github.com/swagger-api/swagger-spec/blob/maste
 local backend             http://local.bubujka.org:3003/
 local gii                 http://local.bubujka.org:3003/gii
 local                     http://local.bubujka.org:3000/
+jenkins                   http://local.bubujka.org:8080/
 local files               http://local.bubujka.org:3000/files.html
 local-prefixed            http://local.bubujka.org:3002/www/
 keystone local            http://local.bubujka.org:3000/keystone

@@ -1,7 +1,7 @@
 " Подключаем все модули что есть для вима
 execute pathogen#infect()
 
-" Настраиваем шрифт 
+" Настраиваем шрифт
 set gfn=Input\ Mono\ Condensed\ Regular\ 14
 
 " Настройки цветовой схемы
@@ -77,7 +77,7 @@ map Ь M
 map Б <
 map Ю >
 
-" Включаем поддержку плагинов и отступов 
+" Включаем поддержку плагинов и отступов
 filetype plugin indent on
 
 
@@ -339,7 +339,7 @@ let g:vim_markdown_folding_disabled=1
 let g:user_emmet_leader_key='<c-e>'
 
 " Еммет раскрывает свои шорткаты по сочетанию shift-tab
-let g:user_emmet_expandabbr_key='<S-Tab>' 
+let g:user_emmet_expandabbr_key='<S-Tab>'
 " -------------------------------------------
 
 
@@ -390,3 +390,9 @@ let g:phpfmt_config = "/home/bubujka/.phpfmt.ini"
 "let g:phpfmt_passes_list = "ReturnNull"
 let g:phpfmt_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
 "nnoremap <silent><leader>zz :call PhpFmtFixFile()<CR>
+
+
+let g:formatters_javascript = [ 'jscs' ]
+"au BufWrite *.js :Autoformat
+
+let g:vim_markdown_folding_disabled = 0

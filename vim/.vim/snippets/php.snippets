@@ -4,11 +4,9 @@ snippet arr
 	]
 snippet r
 	return ${0};
-snippet fc
-	${1:main}(${0})
 snippet var
 	$${1:what} = ${0};
-snippet fd
+snippet f
 	function ${1:main}(${2}){
 		${0}
 	}
@@ -38,7 +36,7 @@ snippet eif
 	elseif(${1:what){
 		${0}
 	}
-snippet fe
+snippet each
 	foreach(${1:$what} as $${2:k}=>$${3:v}){
 		${0}
 	}

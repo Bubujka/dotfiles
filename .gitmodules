@@ -67,3 +67,9 @@
 [submodule "vim/.vim/bundle/vim-phpfmt"]
 	path = vim/.vim/bundle/vim-phpfmt
   url = git@github.com:Bubujka/vim-phpfmt.git
+[submodule "vim/.vim/bundle/vim-autoformat"]
+	path = vim/.vim/bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
+[submodule "vim/.vim/bundle/vim-markdown-folding"]
+	path = vim/.vim/bundle/vim-markdown-folding
+	url = https://github.com/nelstrom/vim-markdown-folding.git
