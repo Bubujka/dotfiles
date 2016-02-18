@@ -2,7 +2,7 @@
 export BROWSER="google-chrome"
 export EDITOR=vim
 
-export VIDEO_RECORDING_RESOLUTION='1600x900' # у меня такой экран
+export VIDEO_RECORDING_RESOLUTION='1920x1080' # у меня такой экран
 export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого размера пожмёт всё равно. Заливать меньше
 export VIDEO_SAVING_PATH=~/.db/history/video
 export MIC_SAVING_PATH=~/.db/history/mic

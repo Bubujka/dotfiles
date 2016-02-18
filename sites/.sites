@@ -9,8 +9,9 @@ lingualeo                 https://lingualeo.com/ru/dashboard2
 postman                   chrome-extension://fdmmgilgnpjigdojojpjoooidkmcomcm/index.html
 swagger                   http://local.bubujka.org:3000/swagger/
 swagger spec              https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md
-local backend             http://local.bubujka.org:3003/
-local gii                 http://local.bubujka.org:3003/gii
+local backend             http://local.bubujka.org:3000/backend/
+local request log         http://local.bubujka.org:3000/backend/requests-log/
+local gii                 http://local.bubujka.org:3000/frontend/gii
 local                     http://local.bubujka.org:3000/
 jenkins                   http://local.bubujka.org:8080/
 local files               http://local.bubujka.org:3000/files.html

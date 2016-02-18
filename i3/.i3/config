@@ -46,7 +46,7 @@ bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
 #bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
-bindsym $mod+l exec slock
+bindsym $mod+l exec gnome-screensaver-command -l
 bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
 
 bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
