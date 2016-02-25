@@ -48,3 +48,6 @@ source ~/.mutt/aliases
 
 # Указание куда закидывать отправленные письма
 set record = ~/.mutt/sent
+
+# Как открывать разные форматы файлов
+set mailcap_path 	= ~/.mutt/mailcap
