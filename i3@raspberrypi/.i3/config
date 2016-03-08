@@ -1,0 +1,206 @@
+# LVDS1 VGA1
+# hide_edge_borders both
+new_window none
+new_float none
+force_xinerama true
+
+# win key
+set $mod Mod4
+
+default_orientation vertical
+
+# font for window titles. ISO 10646 = Unicode
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec xterm
+bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
+bindsym $mod+o sticky toggle
+
+
+bindcode 118 exec /home/bubujka/.bu.bin/bin/new-tab # Insert
+bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
+bindsym Control+Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
+
+bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
+bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
+
+bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
+bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
+bindsym $mod+F10 exec /home/bubujka/.bu.bin/bin/open-basecamp
+
+bindsym F11 exec /home/bubujka/.bu.bin/bin/tasklists
+
+
+#bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
+#bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
+bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
+
+bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-plan
+bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/open-plan
+
+bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
+bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
+#bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
+bindsym $mod+l exec slock
+bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
+
+bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
+bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
+bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
+
+
+bindcode 78 exec /home/bubujka/.bu.bin/bin/open-journal
+#bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
+
+bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
+bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
+bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file
+bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/select-wiki-file beta
+bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
+bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
+bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
+
+# thinkpad special keys
+bindcode 122 exec /home/bubujka/.bu.bin/bin/volume 5%-
+bindcode 123 exec /home/bubujka/.bu.bin/bin/volume 5%+
+
+bindsym $mod+b exec google-chrome
+
+# kill focused window
+bindsym $mod+Shift+Q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+#bindsym $mod+l focus right
+
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# switch to workspace
+
+bindsym F1 workspace vim
+bindsym F2 workspace www
+bindsym F3 workspace sh
+bindsym F4 workspace sh2
+
+bindsym $mod+s workspace skype
+#bindsym $mod+t workspace toggl
+
+bindsym $mod+Shift+M move container to workspace mail
+bindsym $mod+Shift+T move container to workspace toggl
+bindsym $mod+Shift+S move container to workspace skype
+
+bindsym F5 workspace 5
+bindsym F6 workspace 6
+bindsym F8 workspace 8
+bindsym F7 workspace 7
+
+# move focused container to workspace
+bindsym Shift+F1 move container to workspace vim
+bindsym Shift+F2 move container to workspace www
+bindsym Shift+F3 move container to workspace sh
+bindsym Shift+F4 move container to workspace sh2
+bindsym Shift+F5 move container to workspace 5
+bindsym Shift+F6 move container to workspace 6
+bindsym Shift+F7 move container to workspace 7
+bindsym Shift+F8 move container to workspace 8
+
+# class                 border  backgr. text    indicator
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4
+#client.focused_inactive #333333 #5f676a #ffffff #484e50
+#client.unfocused        #333333 #222222 #888888 #292d2e
+#client.urgent           #2f343a #900000 #ffffff #900000
+#client.focused           #2f343a #900000 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+# reload the configuration file
+#bindsym $mod+Shift+C reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exit
+
+workspace vim output LVDS1
+workspace sh output LVDS1
+workspace sh2 output LVDS1
+
+workspace skype output VGA1
+workspace www output VGA1
+for_window [title="\[fzf\]"] floating enable
+for_window [class="ffplay"] floating enable; sticky enable
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym 113 resize shrink width 10 px or 10 ppt
+        bindsym 116 resize grow height 10 px or 10 ppt
+        bindsym 111 resize shrink height 10 px or 10 ppt
+        bindsym 114 resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+#bindsym $mod+r mode "resize"
+
+
+
+# color defines for zenburn styled i3
+#set $bg     #303030
+#set $fg     #9f9f9f
+#set $hi     #efef8f
+#set $ac     #a0afa0
+#set $tx     #040404
+#set $ia     #8f8f8f
+#set $be     #8faf9f
+#set $yw     #ccdc90
+#set $gn     #88b090
+#set $rd     #e89393
+#
+# set some nice colors      border     background  text
+#client.focused              $ac        $ac         $tx
+#client.unfocused            $bg        $bg         $ia
+#client.focused_inactive     $bg        $bg         $ac
+#client.urgent               $rd        $rd         $tx
+
+bar {
+    #tray_output none
+    status_command i3status
+
+    colors {
+        ###background          $bg
+        #statusline          $fg
+        #separator           $hi
+        #focused_workspace   $gn        $bg        $ac
+        #active_workspace    $gn        $ac        $tx
+        #inactive_workspace  $bg        $bg        $ia
+        #urgent_workspace  $bg        $bg        $ia
+    }
+}
