@@ -40,3 +40,14 @@ snippet each
 	foreach(${1:$what} as $${2:k}=>$${3:v}){
 		${0}
 	}
+snippet testcase
+	<?php
+	class ${1:What}Test extends PHPUnit_Framework_TestCase{
+		${0}
+	}
+snippet testmethod
+	public function test${1:What}(){
+	}
+
+snippet ae
+	$this->assertEqual(${0});

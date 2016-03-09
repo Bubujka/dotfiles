@@ -24,19 +24,19 @@
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/.vim/bundle/vim-addon-mw-utils"]
 	path = vim/.vim/bundle/vim-addon-mw-utils
-	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/.vim/bundle/vim-snippets"]
 	path = vim/.vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
-	url = git@github.com:scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/.vim/bundle/vim-mustache-handlebars"]
 	path = vim/.vim/bundle/vim-mustache-handlebars
-	url = git@github.com:mustache/vim-mustache-handlebars.git
+	url = https://github.com/mustache/vim-mustache-handlebars.git
 [submodule "vim/.vim/bundle/vim-coffee-script"]
 	path = vim/.vim/bundle/vim-coffee-script
-	url = git@github.com:kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "vim/.vim/bundle/apiblueprint.vim"]
 	path = vim/.vim/bundle/apiblueprint.vim
 	url = https://github.com/kylef/apiblueprint.vim.git
@@ -48,7 +48,7 @@
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/.vim/bundle/emmet-vim"]
 	path = vim/.vim/bundle/emmet-vim
-	url = git@github.com:Bubujka/emmet-vim.git
+	url = https://github.com/Bubujka/emmet-vim.git
 [submodule "vim/.vim/bundle/vim-bemhtml"]
 	path = vim/.vim/bundle/vim-bemhtml
 	url = https://github.com/vim-scripts/vim-bemhtml.git
@@ -66,7 +66,7 @@
 	url = git://github.com/tpope/vim-surround.git
 [submodule "vim/.vim/bundle/vim-phpfmt"]
 	path = vim/.vim/bundle/vim-phpfmt
-  url = git@github.com:Bubujka/vim-phpfmt.git
+  url = https://github.com/Bubujka/vim-phpfmt.git
 [submodule "vim/.vim/bundle/vim-autoformat"]
 	path = vim/.vim/bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git

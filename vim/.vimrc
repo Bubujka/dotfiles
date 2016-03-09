@@ -396,3 +396,4 @@ let g:formatters_javascript = [ 'jscs' ]
 "au BufWrite *.js :Autoformat
 
 let g:vim_markdown_folding_disabled = 0
+let g:syntastic_python_python_exec = 'python3'
