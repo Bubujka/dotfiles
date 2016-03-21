@@ -98,14 +98,16 @@ bindsym F2 workspace www
 bindsym F3 workspace sh
 bindsym F4 workspace sh2
 
-bindsym $mod+s workspace skype; layout splith
+#bindsym $mod+s workspace skype; layout splith
+
+bindsym $mod+s mode "chats"
+bindsym $mod+shift+s mode "movetochats"
 #bindsym $mod+t workspace toggl
 
 bindsym $mod+Shift+M move container to workspace mail
 bindsym $mod+Shift+T move container to workspace toggl
-bindsym $mod+Shift+S move container to workspace skype
 
-bindsym F5 workspace 5
+bindsym F5 mode "chats"
 bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
@@ -144,6 +146,19 @@ workspace www output VGA1
 for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
 
+
+mode "movetochats" {
+  bindsym j move container to workspace chat; mode "default"
+  bindsym k move container to workspace workchat; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+mode "chats" {
+  bindsym j workspace chat; layout splith; mode "default"
+  bindsym k workspace workchat; layout splith; mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
