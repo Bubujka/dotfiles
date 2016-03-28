@@ -3,7 +3,7 @@
 new_window none
 new_float none
 force_xinerama true
-
+workspace_auto_back_and_forth yes
 # win key
 set $mod Mod4
 
@@ -107,8 +107,8 @@ bindsym $mod+shift+s mode "movetochats"
 bindsym $mod+Shift+M move container to workspace mail
 bindsym $mod+Shift+T move container to workspace toggl
 
-bindsym F5 mode "chats"
-bindsym F6 workspace 6
+bindsym F5 workspace chat
+bindsym F6 workspace workchat
 bindsym F8 workspace 8
 bindsym F7 workspace 7
 
@@ -154,6 +154,7 @@ mode "movetochats" {
   bindsym Escape mode "default"
 }
 mode "chats" {
+  bindsym $mod+s workspace chat; layout splith; mode "default"
   bindsym j workspace chat; layout splith; mode "default"
   bindsym k workspace workchat; layout splith; mode "default"
   bindsym Return mode "default"
