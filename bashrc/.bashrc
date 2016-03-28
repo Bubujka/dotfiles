@@ -4,3 +4,5 @@ for i in ~/.profile.d/*.sh; do
   fi
 done
 unset i
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
