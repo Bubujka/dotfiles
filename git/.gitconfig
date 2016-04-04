@@ -18,6 +18,5 @@
 [core]
 	excludesfile = /home/bubujka/.gitignore
 	quotepath = false
-
 [push]
-	default = matching
+	default = simple
