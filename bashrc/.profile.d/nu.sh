@@ -87,13 +87,22 @@ uunu() {
 }
 
 global-pull() {
-  for dir in `find ~/ -type d -name '.git'`
+  if [ ! -f ~/.git-repos ]; then
+    echo "Нет файла +_+"
+    find ~/ -type d -name '.git' > ~/.git-repos
+  fi
+
+  if test "`find ~/.git-repos -mmin +10`"; then
+    echo "Кэш старый +_+"
+    find ~/ -type d -name '.git' > ~/.git-repos
+  fi
+
+  for dir in `cat ~/.git-repos | grep -v .gvm`
   do
-    cd $dir;
+    cd "$dir";
     cd ..
-    basename "$(pwd)"
     pwd
-    git pull
+    git fetch --all
     echo
   done
   nu
