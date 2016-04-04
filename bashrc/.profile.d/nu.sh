@@ -10,8 +10,8 @@ nu() {
   fi
   for dir in `cat ~/.git-repos | grep -v .gvm`
   do
+    echo $dir
     if [ -d "$dir" ]; then
-      echo -n '.'
       cd $dir;
       cd ..
       if [ $(cat .git/config | grep 'remote "origin"' | wc -l) == 0 ] ;
