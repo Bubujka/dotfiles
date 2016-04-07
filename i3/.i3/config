@@ -1,10 +1,10 @@
-# LVDS1 VGA1
-# hide_edge_borders both
 new_window none
 new_float none
 force_xinerama true
 workspace_auto_back_and_forth yes
-# win key
+
+# Какую клавишу назначить модификатором
+# Mod4 == win
 set $mod Mod4
 
 default_orientation vertical
@@ -15,13 +15,12 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+
 bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
 bindsym $mod+o sticky toggle
 
 
-bindcode 118 exec /home/bubujka/.bu.bin/bin/new-tab # Insert
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym Control+Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
 
@@ -61,9 +60,9 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
-bindsym $mod+w exec /home/bubujka/.bu.bin/bin/select-wiki-file ~/.db/wiki md
-bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/select-wiki-file ~/.db/prj/najomi_data md
-bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/select-wiki-file beta
+bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
+bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile beta
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
