@@ -57,6 +57,7 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/open-journal
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
+bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/select-trello-board
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
