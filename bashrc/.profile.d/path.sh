@@ -5,4 +5,5 @@ export PATH=$PATH:$HOME/.bu.cards/bin
 export PATH=$PATH:$HOME/.bu.bin/bin
 export PATH=$PATH:$HOME/.git-radar
 export PATH=/opt/php/bin:$PATH
+export PATH=/opt/java/bin:$PATH
 . ~/.bin_path
