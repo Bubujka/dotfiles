@@ -15,7 +15,7 @@ local backend             http://local.bubujka.org:3000/backend/
 local request log         http://local.bubujka.org:3000/backend/requests-log/
 local gii                 http://local.bubujka.org:3000/frontend/gii
 local                     http://local.bubujka.org:3000/
-jenkins                   http://local.bubujka.org:8080/
+jenkins                   http://local.bubujka.org:10080/
 local files               http://local.bubujka.org:3000/files.html
 local-prefixed            http://local.bubujka.org:3002/www/
 keystone local            http://local.bubujka.org:3000/keystone
