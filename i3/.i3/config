@@ -38,9 +38,13 @@ bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
 bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
-bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan
-bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan
+bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
+
+
+# bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/prj/tis/unsorted.md
 
 bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
@@ -62,7 +66,6 @@ bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
-bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
@@ -106,7 +109,6 @@ bindsym $mod+shift+s mode "movetochats"
 #bindsym $mod+t workspace toggl
 
 bindsym $mod+Shift+M move container to workspace mail
-bindsym $mod+Shift+T move container to workspace toggl
 
 bindsym F5 workspace chat
 bindsym F6 workspace workchat
