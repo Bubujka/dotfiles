@@ -161,7 +161,6 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 " hi OverLength ctermbg=darkred ctermfg=white guibg=#592929
 " match OverLength /\%81v.*/
 
-"set enc=cp1251
 function SMap(key, action, ...)
     let modes = " vi"
     if (a:0 > 0)
@@ -181,21 +180,14 @@ function SMap(key, action, ...)
     endif
 endfunction
 
-imap <F1> <C-^>
-call SMap("<F2>", ":bd<cr>")
-call SMap("<F12>", ":quit<cr>")
+" Ctrl-jk переходять по складкам
 call SMap("<C-J>", "<C-W>j")
 call SMap("<C-K>", "<C-W>k")
 call SMap("<C-о>", "<C-W>j")
 call SMap("<C-л>", "<C-W>k")
-syntax on
-au BufNewFile,BufRead *.t2t                 setf txt2tags
-noremap <silent> <F11> :cal VimCommanderToggle()<CR>
-imap <C-?> <C-H>
 
-" syn match ErrorMsg '\%>80v.+'
-" :au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
-" :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+syntax on
+
 set exrc
 set secure
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -203,94 +195,16 @@ hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 nnoremap <Leader>c :set cursorline! <CR>
 
 
-nnoremap <Leader>s !sort<CR>
-nnoremap <silent> <Leader>l
-	\ :if exists('w:long_line_match') <Bar>
-	\   silent! call matchdelete(w:long_line_match) <Bar>
-	\   unlet w:long_line_match <Bar>
-	\ elseif &textwidth > 0 <Bar>
-	\   let w:long_line_match = matchadd('ErrorMsg', '\%>'.&tw.'v.\+', -1) <Bar>
-	\ else <Bar>
-	\   let w:long_line_match = matchadd('ErrorMsg', '\%>80v.\+', -1) <Bar>
-	\ endif<CR>
-
-
-
-let s:pattern = '^\(.* \)\([1-9][0-9]*\)$'
-let s:minfontsize = 8
-let s:maxfontsize = 19
-let s:medfontsize = 12
-
-function! SetNormalFontSize()
-  if has("gui_gtk2") && has("gui_running")
-    let fontname = substitute(&guifont, s:pattern, '\1', '')
-      let newfont = fontname . s:medfontsize
-      let &guifont = newfont
-  else
-    echoerr "You need to run the GTK2 version of Vim to use this function."
-  endif
-endfunction
-
-
-
-function! AdjustFontSize(amount)
-  if has("gui_gtk2") && has("gui_running")
-    let fontname = substitute(&guifont, s:pattern, '\1', '')
-    let cursize = substitute(&guifont, s:pattern, '\2', '')
-    let newsize = cursize + a:amount
-    if (newsize >= s:minfontsize) && (newsize <= s:maxfontsize)
-      let newfont = fontname . newsize
-      let &guifont = newfont
-    endif
-  else
-    echoerr "You need to run the GTK2 version of Vim to use this function."
-  endif
-endfunction
-
-function! LargerFont()
-  call AdjustFontSize(1)
-endfunction
-command! LargerFont call LargerFont()
-
-function! SmallerFont()
-  call AdjustFontSize(-1)
-endfunction
-command! SmallerFont call SmallerFont()
-
 command! W w
-
-function! NormalFont()
-  call SetNormalFontSize()
-endfunction
-
-function! GrepIText(text)
-	exe ":0,$!grep -i '" . a:text . "'"
-endfunction
-command! -nargs=* Gi call GrepIText('<args>')
-
-
-
-"nnoremap :bdd :bufdo bd <CR>
-"nnoremap <Leader>[ :SmallerFont <CR>
-"nnoremap <Leader>] :LargerFont <CR>
-nnoremap <Leader>f :call NormalFont() <CR>
-nnoremap <Leader>p :!php -l %<CR>
-
-
-" Automatically update copyright notice with current year
-" autocmd BufWritePre *
-  " \ if &modified |
-  " \   exe "g#\\cCOPYRIGHT \\(".strftime("%Y")."\\)\\@![0-9]\\{4\\}\\(-".strftime("%Y")."\\)\\@!#s#\\([0-9]\\{4\\}\\)\\(-[0-9]\\{4\\}\\)\\?#\\1-".strftime("%Y") |
-  " \ endif>
 
 au BufRead,BufNewFile *nginx* set ft=nginx
 au BufRead,BufNewFile *io set ft=io
+
 set listchars=tab:··
-"set list
+set list
 
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%04l,%04v]\ [LEN=%L]
-filetype plugin indent on
 
+" Выключаем стрелки в виме
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
     exe prefix . "noremap " . key . " <Nop>"
@@ -303,30 +217,19 @@ set mouse=
 set noerrorbells visualbell t_vb=
 set cino=(0
 
-call SMap("<F8>", ":!aspell -c %<cr>")
-" set nohlsearch
 
 
-call SMap("<C-b>", "<esc><esc>:bufdo split<cr>")
+" Ctrl-f открывает поиск по файлам
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
-call SMap("<C-o>", ":r !xclip -o<cr>")
 
 au BufNewFile,BufRead *.less set filetype=less
 
+" Вставка пустых строк выше и ниже курсора
 map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
-" imap <Esc> <Esc>:w<cr>
-call SMap("<PageUp>", ":w<CR>")
-
-" autocmd FileType jade imap <Esc> <Esc>:w<cr>
-" autocmd FileType stylus imap <Esc> <Esc>:w<cr>
-
-" au BufRead,BufNewFile */wiki/* setfiletype markdown
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 
+" Сочетания alt-j|k передвигают строки вверх и вниз
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
@@ -335,16 +238,16 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 vnoremap Y :!xc<CR>
 
-let g:vim_markdown_folding_disabled=1
-let g:user_emmet_leader_key='<c-e>'
 
 " Еммет раскрывает свои шорткаты по сочетанию shift-tab
+let g:user_emmet_leader_key='<c-e>'
 let g:user_emmet_expandabbr_key='<S-Tab>'
 " -------------------------------------------
 
 
 " Сворачивание кода включено на основе отступов
 set fdm=indent
+
 " -------------------------------------------
 " Команда gb открывает ссылку под курсором в браузере
 " Консольная команда br - открывает ссылку в хроме и меняет фокус
@@ -379,8 +282,6 @@ let g:syntastic_check_on_open = 1
 " не проверяет файл при открытии
 let g:syntastic_check_on_wq = 0
 
-" -------------------------------------------
-
 " Включаем проверку правописания
 set spell spelllang=ru,en
 let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1) " format on save (autocmd)
@@ -393,6 +294,8 @@ let g:phpfmt_update_on_open = 0
 let g:formatters_javascript = [ 'jscs' ]
 "au BufWrite *.js :Autoformat
 
+" Главы в маркдаун файлах сворачиваются
 let g:vim_markdown_folding_disabled = 0
 
+" Какой питон использовать для проверки синтаксиса
 let g:syntastic_python_python_exec = '/usr/bin/python3'
