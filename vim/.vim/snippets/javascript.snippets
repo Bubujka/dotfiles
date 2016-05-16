@@ -15,6 +15,10 @@ snippet err
 	if(err){
 		return ${1:next}(err);
 	}${0}
+snippet terr
+	if(err){
+		throw err;
+	}${0}
 snippet fc
 	${1:main}(${0})
 snippet fc;
