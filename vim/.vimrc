@@ -134,7 +134,7 @@ set guioptions-=T
 set ch=1
 set autoindent
 " Преобразование Таба в пробелы
- set expandtab
+set expandtab
 " задать размер табуляции в четыре пробела
 
 " Размер табулации по умолчанию
@@ -288,6 +288,7 @@ let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1) " format on save (autocmd)
 let g:phpfmt_php_path = "/opt/php/bin/php"               " Path to PHP
 let g:phpfmt_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
 
+let g:phpfmt_on_save = 0
 let g:phpfmt_update_on_open = 0
 
 

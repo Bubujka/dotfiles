@@ -79,3 +79,9 @@
 [submodule "vim/.vim/bundle/vim-vagrant"]
 	path = vim/.vim/bundle/vim-vagrant
 	url = https://github.com/hashivim/vim-vagrant.git
+[submodule "vim/.vim/bundle/vim-raml"]
+	path = vim/.vim/bundle/vim-raml
+	url = https://github.com/kennethzfeng/vim-raml.git
+[submodule "vim/.vim/bundle/vim-log-syntax"]
+	path = vim/.vim/bundle/vim-log-syntax
+	url = https://github.com/dzeban/vim-log-syntax.git
