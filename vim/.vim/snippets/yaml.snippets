@@ -8,6 +8,8 @@ snippet $ref
 	$ref: '#/definitions/${0:what}'
 snippet $rref
 	$ref: '#/responses/${0:what}'
+snippet $pref
+	$ref: '#/parameters/${0:what}'
 snippet array
 	type: array
 	items:
@@ -34,6 +36,8 @@ snippet swagger
 		- "http"
 	produces: ['application/json']
 
-	tags:
-	paths:
-	definitions:
+	tags: []
+	paths: {}
+	responses: {}
+	parameters: {}
+	definitions: {}

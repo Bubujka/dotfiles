@@ -7,3 +7,9 @@ snippet cat
 	cat <<- EOF > ${1:file.pth}
 		${0:# What?}
 		EOF
+snippet #!
+	#!/bin/bash
+	set -o errexit
+	set -o nounset
+	set -o xtrace
+	set -o pipefail
