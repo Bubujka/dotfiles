@@ -40,6 +40,7 @@ bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+bindsym $mod+s exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 
 
@@ -104,7 +105,7 @@ bindsym F4 workspace sh2
 
 #bindsym $mod+s workspace skype; layout splith
 
-bindsym $mod+s mode "chats"
+#bindsym $mod+s mode "chats"
 bindsym $mod+shift+s mode "movetochats"
 #bindsym $mod+t workspace toggl
 
