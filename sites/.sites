@@ -1,3 +1,5 @@
+amazon api                http://docs.aws.amazon.com/aws-sdk-php/v3/api/namespace-Aws.html
+amazon sqs console        https://eu-west-1.console.aws.amazon.com/sqs/home?region=eu-west-1
 google spreadsheet        https://github.com/Bubujka/wiki/blob/gh-pages/spreadsheet-to-json.md
 ember                     http://local.bubujka.org:4200/
 drive                     https://drive.google.com/drive/u/0/starred
