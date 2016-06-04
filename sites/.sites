@@ -1,4 +1,5 @@
-amazon api                http://docs.aws.amazon.com/aws-sdk-php/v3/api/namespace-Aws.html
+aws php api               http://docs.aws.amazon.com/aws-sdk-php/v3/api/namespace-Aws.html
+aws nodejs api            http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html
 amazon sqs console        https://eu-west-1.console.aws.amazon.com/sqs/home?region=eu-west-1
 google spreadsheet        https://github.com/Bubujka/wiki/blob/gh-pages/spreadsheet-to-json.md
 ember                     http://local.bubujka.org:4200/
@@ -158,3 +159,4 @@ mule                      https://docs.mulesoft.com/
 json schema               http://spacetelescope.github.io/understanding-json-schema/
 
 oauth2 specification      https://tools.ietf.org/html/rfc6749
+
