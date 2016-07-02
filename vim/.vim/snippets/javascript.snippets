@@ -7,6 +7,14 @@ snippet rq
 snippet rq_
 	var _ = require('underscore');
 	${0}
+snippet .then
+	.then((${1}) => {
+		${0}
+	})
+snippet .catch
+	.catch((${1}) => {
+		${0}
+	})
 snippet f
 	function(${1}){
 		${0}
@@ -60,5 +68,9 @@ snippet describe
 	});
 snippet it
 	it('${1:whaaaat?}', function(){
+		${0}
+	});
+snippet promise
+	return new Promise((resolve, reject) => {
 		${0}
 	});

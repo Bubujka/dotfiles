@@ -121,8 +121,8 @@ bindsym Shift+F1 move container to workspace vim
 bindsym Shift+F2 move container to workspace www
 bindsym Shift+F3 move container to workspace sh
 bindsym Shift+F4 move container to workspace sh2
-bindsym Shift+F5 move container to workspace 5
-bindsym Shift+F6 move container to workspace 6
+bindsym Shift+F5 move container to workspace chat
+bindsym Shift+F6 move container to workspace workchat
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
 
