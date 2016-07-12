@@ -3,7 +3,7 @@ root = true
 [*]
 end_of_line = lf
 indent_style = space
-indent_size = 4
+indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = true
 
@@ -11,6 +11,16 @@ trim_trailing_whitespace = true
 end_of_line = lf
 indent_style = space
 indent_size = 2
+
+[*.js]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+[*.yaml]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
 [Makefile]
 indent_style = tab
 indent_size = 2
