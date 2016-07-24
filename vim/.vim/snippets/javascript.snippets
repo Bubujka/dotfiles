@@ -15,8 +15,12 @@ snippet .catch
 	.catch((${1}) => {
 		${0}
 	})
+snippet f)
+	(${1}) => {
+		${0}
+	})
 snippet f
-	function(${1}){
+	(${1}) => {
 		${0}
 	}
 snippet err
@@ -63,14 +67,28 @@ snippet cl
 	console.log(${0});
 
 snippet describe
-	describe('${1:whaaaat?}', function(){
+	describe('${1:whaaaat?}', () => {
 		${0}
 	});
 snippet it
-	it('${1:whaaaat?}', function(){
+	it('${1:whaaaat?}', (${2:done}) => {
 		${0}
 	});
 snippet promise
 	return new Promise((resolve, reject) => {
 		${0}
 	});
+snippet env
+	process.env.${0}
+snippet should
+	require('should');
+snippet dotenv
+	require('dotenv').load();
+snippet async
+	var async = require('async');
+snippet underscore
+	var _ = require('underscore');
+snippet fu
+	function(${1}){
+		${0}
+	}
