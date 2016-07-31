@@ -67,13 +67,18 @@ snippet cl
 	console.log(${0});
 
 snippet describe
-	describe('${1:whaaaat?}', () => {
+	describe('${1}', () => {
 		${0}
 	});
 snippet it
-	it('${1:whaaaat?}', (${2:done}) => {
+	it('${1}', (${2:done}) => {
 		${0}
 	});
+
+snippet supertest
+	var supertest = require('supertest');
+snippet agent
+	var agent = supertest.agent(process.env.API_SERVER_URI);
 snippet promise
 	return new Promise((resolve, reject) => {
 		${0}
