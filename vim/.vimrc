@@ -200,8 +200,8 @@ command! W w
 au BufRead,BufNewFile *nginx* set ft=nginx
 au BufRead,BufNewFile *io set ft=io
 
-set listchars=tab:··
-set list
+" set listchars=tab:··
+"set list
 
 
 " Выключаем стрелки в виме
@@ -301,3 +301,4 @@ let g:vim_markdown_folding_disabled = 0
 " Какой питон использовать для проверки синтаксиса
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_php_checkers = ["php", "phpcs"]
+let g:syntastic_json_checkers=[]
