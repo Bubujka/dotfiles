@@ -1,6 +1,8 @@
-set folder      = imaps://imap.gmail.com/
-set imap_user   = zendzirou@gmail.com
-set imap_pass   = `pass show Mail/Gmail`
+set mbox_type   = Maildir
+
+set folder      = ~/.mail
+#set imap_user   = zendzirou@gmail.com
+#set imap_pass   = `pass show Mail/Gmail`
 set spoolfile   = +INBOX
 mailboxes       = +INBOX
 
@@ -14,7 +16,7 @@ set header_cache = ~/.cache/mutt
 set message_cachedir = "~/.cache/mutt"
 
 # Specify where to save and/or look for postponed messages.
-set postponed = +[Gmail]/Drafts
+set postponed = "+[Gmail].Drafts"
 
 # Allow Mutt to open new imap connection automatically.
 unset imap_passive
@@ -38,7 +40,7 @@ set ssl_force_tls = yes
 
 
 # Проверить новую почту по нажатию на I
-bind index "I" imap-fetch-mail
+macro index "I" "<shell-escape>offlineimap<enter>" "Скачать почту"
 
 # В какой файл записывать адреса людей
 set alias_file = "~/.mutt/aliases"
