@@ -47,7 +47,8 @@ bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 # bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
 bindsym $mod+u exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki projects.md
 bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
-bindsym $mod+t exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/prj/tis/unsorted.md
+#bindsym $mod+t exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/prj/tis/unsorted.md
+bindsym $mod+c exec rm /home/bubujka/.timer
 
 bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
