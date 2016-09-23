@@ -65,6 +65,7 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/open-journal
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
+bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
@@ -112,7 +113,7 @@ bindsym F4 workspace sh2
 #bindsym $mod+s mode "chats"
 #bindsym $mod+t workspace toggl
 
-bindsym $mod+Shift+M move container to workspace mail
+#bindsym $mod+Shift+M move container to workspace mail
 
 bindsym F5 workspace chat
 bindsym F6 workspace workchat

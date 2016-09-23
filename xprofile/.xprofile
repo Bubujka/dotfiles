@@ -19,5 +19,6 @@ bash -c 'sleep 3 ; dropbox start'&
 bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1' &
 bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
 bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
+bash -c 'sleep 3 ; dunst' &
 nm-applet &
 i3
