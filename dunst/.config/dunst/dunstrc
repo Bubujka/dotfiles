@@ -161,7 +161,7 @@
 [urgency_critical]
     background = "#D8E0E3"
     foreground = "#412F27"
-    timeout = 5
+    timeout = 36000
 
 
 # Every section that isn't one of the above is interpreted as a rules
