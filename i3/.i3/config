@@ -20,23 +20,29 @@ bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
 bindsym $mod+o sticky toggle
 
-
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
-bindsym Control+Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
+bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/work-tgl continue
+bindsym F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
+bindsym shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
+bindsym F11 exec /home/bubujka/.bu.bin/bin/work-relax-tgl
+bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 
-bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
-bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
-
-bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
-bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
-bindsym $mod+F10 exec /home/bubujka/.bu.bin/bin/open-basecamp
-
-bindsym F11 exec /home/bubujka/.bu.bin/bin/tasklists
-
-
-bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
-bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
-bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
+# bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
+# bindsym Control+Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
+#
+# bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
+# bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
+#
+# bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
+# bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
+# bindsym $mod+F10 exec /home/bubujka/.bu.bin/bin/open-basecamp
+#
+# bindsym F11 exec /home/bubujka/.bu.bin/bin/tasklists
+#
+#
+# bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
+# bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
+# bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
