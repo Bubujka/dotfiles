@@ -71,10 +71,11 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/open-journal
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
-bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
+# bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
 bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md copy
 bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
