@@ -75,3 +75,6 @@ snippet slim
 			return $response;
 	});
 	$app->run();
+snippet dotenv
+	$dotenv = new Dotenv\Dotenv(__DIR__);
+	$dotenv->overload();

@@ -88,7 +88,7 @@ bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 bindcode 122 exec /home/bubujka/.bu.bin/bin/volume 5%-
 bindcode 123 exec /home/bubujka/.bu.bin/bin/volume 5%+
 
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec /home/bubujka/.bu.bin/bin/local-chrome
 
 # kill focused window
 bindsym $mod+Shift+Q kill
