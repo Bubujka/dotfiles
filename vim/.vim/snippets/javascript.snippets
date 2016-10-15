@@ -25,6 +25,10 @@ snippet f
 	(${1}) => {
 		${0}
 	}
+snippet terr
+	if(err){
+		throw err;
+	}${0}
 snippet err
 	if(err){
 		return ${1:next}(err);
@@ -101,3 +105,4 @@ snippet fu
 	}
 snippet 'u
 	'use strict';
+
