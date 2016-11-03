@@ -1,13 +1,13 @@
 snippet #!
 	#!/usr/bin/env node
 snippet rq!
-	var ${1:what} = require('${2:what}');
+	const ${1:what} = require('${2:what}');
 	${0}
 snippet rq
-	var ${1:what} = require('$1');
+	const ${1:what} = require('$1');
 	${0}
 snippet rq_
-	var _ = require('underscore');
+	const _ = require('underscore');
 	${0}
 snippet .then
 	.then((${1}) => {
@@ -96,9 +96,11 @@ snippet should
 snippet dotenv
 	require('dotenv').load();
 snippet async
-	var async = require('async');
+	const async = require('async');
 snippet underscore
-	var _ = require('underscore');
+	const _ = require('underscore');
+snippet chance
+	const chance = require('chance')();
 snippet fu
 	function(${1}){
 		${0}
