@@ -1,2 +1,2 @@
-text/html; br %s;  needsterminal
+text/html; mutt-open-chrome %s;  needsterminal
 image/jpeg; feh -. %s;
