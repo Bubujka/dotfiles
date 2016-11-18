@@ -1,0 +1,33 @@
+{
+  "max-len": 0,
+  "extends": "airbnb",
+  "rules": {
+    "indent": ["error", 2, { "VariableDeclarator": 1 }],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "arrow-body-style":0,
+    "global-require": 0,
+    "func-names": 0,
+    "prefer-rest-params": 1,
+    "strict": 2,
+    "no-param-reassign": 0,
+    "import/no-unresolved": 0,
+    "new-cap": 1,
+    "max-len": 0,
+    "no-new": 0
+  },
+  "globals": {
+    "NODE_ENV": "true",
+    "ENV": "true",
+    "DOMAIN": "true",
+    "API_ADDRESS": "true",
+    "STATIC_ADDRESS": "true",
+    "alert": "true",
+    "document": "true",
+    "window": "true",
+    "it": "true",
+    "describe": "true",
+    "google": "true",
+    "before": "true",
+    "describe": "true"
+  }
+}
