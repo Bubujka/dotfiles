@@ -52,6 +52,7 @@ bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 
 # bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
 bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
+bindsym $mod+shift+u exec /home/bubujka/.bu.bin/bin/wiki-commit-and-push
 bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/dmenu-timer
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
