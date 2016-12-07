@@ -1,9 +1,12 @@
 # Команды для перехода в различные места
 
-# Выбор и переход к проекту 
+# Выбор и переход к проекту
 p() {
-  local dir
-  dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
+	local dir
+	dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
+	if [ -f .nvmrc ]; then
+		nvm use;
+	fi
 }
 
 # Переход в подкаталог основного места хранения всего

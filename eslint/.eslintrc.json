@@ -8,12 +8,13 @@
     "global-require": 0,
     "func-names": 0,
     "prefer-rest-params": 1,
-    "strict": 2,
+    "strict": 0,
     "no-param-reassign": 0,
     "import/no-unresolved": 0,
     "new-cap": 1,
     "max-len": 0,
-    "no-new": 0
+    "no-new": 0,
+    "no-shadow": ["error", { "allow": ["err"]}]
   },
   "globals": {
     "NODE_ENV": "true",

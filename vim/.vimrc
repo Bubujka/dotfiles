@@ -303,3 +303,11 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_php_checkers = ["php", "phpcs"]
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_json_checkers = []
+
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+let g:fixmyjs_engine = 'eslint'
+noremap <Leader><Leader>f :Fixmyjs<CR>
+let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
