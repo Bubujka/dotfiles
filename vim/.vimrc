@@ -311,3 +311,6 @@ autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 let g:fixmyjs_engine = 'eslint'
 noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
+nmap <Leader>n "=system('nn')<C-M>p
+
+
