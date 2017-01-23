@@ -1,1 +1,1 @@
-alias mm='offlineimap; mutt'
+alias mm='offlineimap; butl event "Проверяю почту"; mutt'

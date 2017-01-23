@@ -20,3 +20,5 @@
 	quotepath = false
 [push]
 	default = simple
+[diff "ntl"]
+  textconv = "iconv -f utf-16le -t utf-8"

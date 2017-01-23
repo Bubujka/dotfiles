@@ -118,7 +118,7 @@ set t_Co=256
 set backspace=indent,eol,start
 highlight clear SignColumn
 
-set fileencodings=utf-8,cp1251,koi8-r,default
+set fileencodings=utf-8,utf-16le,cp1251,koi8-r,default
 
 "set enc=cp1251
 
@@ -311,3 +311,4 @@ autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 let g:fixmyjs_engine = 'eslint'
 noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
+au BufRead,BufNewFile *.ntl set filetype=javascript
