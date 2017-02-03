@@ -272,15 +272,7 @@ nnoremap :bdd :bufdo bd <CR>
 " Настройки библиотеки проверки синтаксиса
 " отображает количество ошибок в статусной строке
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-" позволяет переходить к следующей ошибке с помощью какого-то хоткея
-let g:syntastic_always_populate_loc_list = 1
-" проверяет файл при открытии
-let g:syntastic_check_on_open = 1
-" не проверяет файл при открытии
-let g:syntastic_check_on_wq = 0
 
 " Включаем проверку правописания
 set spell spelllang=ru,en
@@ -298,14 +290,6 @@ let g:formatters_javascript = [ 'jscs' ]
 " Главы в маркдаун файлах сворачиваются
 let g:vim_markdown_folding_disabled = 0
 
-" Какой питон использовать для проверки синтаксиса
-let g:syntastic_python_python_exec = '/usr/bin/python3'
-let g:syntastic_php_checkers = ["php", "phpcs"]
-let g:syntastic_javascript_checkers = ["eslint"]
-let g:syntastic_json_checkers = []
-
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 set ballooneval
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 let g:fixmyjs_engine = 'eslint'
@@ -313,5 +297,9 @@ noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
 au BufRead,BufNewFile *.ntl set filetype=javascript
 nmap <Leader>n "=system('nn')<C-M>p
-nmap <Leader>j ggVGgq
+nmap <Leader>j maggVGgq:w<CR>'a
 autocmd FileType javascript set formatprg=efx
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
