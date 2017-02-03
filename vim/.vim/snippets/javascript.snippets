@@ -77,7 +77,7 @@ snippet describe
 		${0}
 	});
 snippet it
-	it('${1}', (${2:done}) => {
+	it('${1}', () => {
 		${0}
 	});
 
@@ -101,6 +101,8 @@ snippet underscore
 	const _ = require('underscore');
 snippet chance
 	const chance = require('chance')();
+snippet bb
+	const Bluebird = require('bluebird');
 snippet fu
 	function(${1}){
 		${0}
@@ -110,3 +112,4 @@ snippet 'u
 
 snippet edl
 	// eslint-disable-line
+
