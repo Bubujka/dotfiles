@@ -11,8 +11,7 @@ def hostname():
 
 def common_configs():
     """Получить список каталогов общих конфигов"""
-    all_configs = [f for f in glob('*')
-            if isdir(f) and not is_overlay_dir(f)]
+    all_configs = [f for f in glob('*') if isdir(f) and not is_overlay_dir(f)]
     overlay = [f.replace('@{}'.format(hostname()), '') for f in overlay_configs()]
     return [f for f in set(all_configs) - set(overlay)]
 
@@ -21,6 +20,7 @@ def overlay_configs():
     return [f for f in glob("*@{}".format(hostname())) if isdir(f)]
 
 def install_configs(pathes):
+    """Установить конфиги с помощью stow"""
     for pth in pathes:
         print("Installing: {}".format(pth))
         call(["stow", pth, "-t", expanduser("~/")])

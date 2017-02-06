@@ -118,7 +118,7 @@ set t_Co=256
 set backspace=indent,eol,start
 highlight clear SignColumn
 
-set fileencodings=utf-8,utf-16le,cp1251,koi8-r,default
+set fileencodings=utf-8,cp1251,koi8-r,utf-16le,default
 
 "set enc=cp1251
 
