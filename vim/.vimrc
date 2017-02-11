@@ -3,11 +3,11 @@ execute pathogen#infect()
 
 " Настраиваем шрифт
 set gfn=Input\ Mono\ Condensed\ Regular\ 14
+"set guifont=DejaVu\ Sans\ Mono\ 16
 
 " Настройки цветовой схемы
-set background=light
-let g:solarized_contrast='high'
-colorscheme solarized
+set t_Co=256
+colorscheme xoria256
 
 " Возможность использовать часть команд в русской раскладке
 map ё `
@@ -275,7 +275,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 " Включаем проверку правописания
-set spell spelllang=ru,en
+set spelllang=ru,en
 let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1) " format on save (autocmd)
 let g:phpfmt_php_path = "/opt/php/bin/php"               " Path to PHP
 let g:phpfmt_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
@@ -298,8 +298,14 @@ let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
 au BufRead,BufNewFile *.ntl set filetype=javascript
 nmap <Leader>n "=system('nn')<C-M>p
 nmap <Leader>j maggVGgq:w<CR>'a
+nmap <Leader>l :ALENextWrap<CR>
 autocmd FileType javascript set formatprg=efx
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
+
+
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+autocmd BufRead *.md setlocal spell
