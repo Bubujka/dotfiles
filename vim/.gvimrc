@@ -3,3 +3,4 @@ nnoremap :q :bd <CR>
 set iskeyword+=-
 set novisualbell
 colorscheme xoria256
+set linespace=3

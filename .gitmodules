@@ -97,3 +97,6 @@
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/.vim/bundle/vim-blade"]
+	path = vim/.vim/bundle/vim-blade
+	url = https://github.com/jwalton512/vim-blade

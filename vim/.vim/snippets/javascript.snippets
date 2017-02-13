@@ -1,115 +1,162 @@
+
 snippet #!
 	#!/usr/bin/env node
+
 snippet rq!
 	const ${1:what} = require('${2:what}');
 	${0}
+
 snippet rq
 	const ${1:what} = require('$1');
 	${0}
+
 snippet rq_
 	const _ = require('underscore');
 	${0}
+
 snippet .then
 	.then((${1}) => {
 		${0}
 	})
+
 snippet .catch
 	.catch((${1}) => {
 		${0}
 	})
+
 snippet f)
 	(${1}) => {
 		${0}
 	})
+
 snippet f
 	(${1}) => {
 		${0}
 	}
+
 snippet terr
 	if(err){
 		throw err;
 	}${0}
+
 snippet err
 	if(err){
 		return ${1:next}(err);
 	}${0}
+
 snippet terr
 	if(err){
 		throw err;
 	}${0}
+
 snippet fc
 	${1:main}(${0})
+
 snippet fc;
 	${1:main}(${0});
+
 snippet var
 	var ${1:what} = ${0};
+
 snippet fd
 	function ${1:main}(${2}){
 		${0}
 	}
+
 snippet fa
 	${1:what} = function(${2}){
 		${0}
 	}
+
 snippet pr
-	${1:what}: ${0}
+	${1:what}: ${0},
+
 snippet if
 	if(${1:what}){
 		${0}
 	}
+
 snippet else
 	else{
 		${0}
 	}
+
 snippet eif
 	else if(${1:what}){
 		${0}
 	}
+
 snippet fe
 	for(var ${1:i} in ${2:arr}){
 		${0}
 	}
+
 snippet cl
 	console.log(${0});
+
 
 snippet describe
 	describe('${1}', () => {
 		${0}
 	});
+
 snippet it
 	it('${1}', () => {
 		${0}
 	});
 
+
 snippet supertest
 	var supertest = require('supertest');
+
 snippet agent
 	var agent = supertest.agent(process.env.API_SERVER_URI);
+
 snippet promise
 	return new Promise((resolve, reject) => {
 		${0}
 	});
+
 snippet env
 	process.env.${0}
+
 snippet should
 	require('should');
+
 snippet dotenv
 	require('dotenv').load();
+
 snippet async
 	const async = require('async');
+
 snippet underscore
 	const _ = require('underscore');
+
 snippet chance
 	const chance = require('chance')();
+
 snippet bb
 	const Bluebird = require('bluebird');
+
 snippet fu
 	function(${1}){
 		${0}
 	}
+
 snippet 'u
 	'use strict';
 
+
 snippet edl
 	// eslint-disable-line
+
+
+snippet cb
+	this.${1:what} = this.$1.bind(this);
+
+
+snippet cf
+	${1:what}() {
+		$0
+	}
 

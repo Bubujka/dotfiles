@@ -1,0 +1,1 @@
+alias tinker='./artisan tinker'
