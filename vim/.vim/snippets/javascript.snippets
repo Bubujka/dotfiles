@@ -159,4 +159,10 @@ snippet cf
 	${1:what}() {
 		$0
 	}
+snippet km
+	exports.up = function (knex) {
+		return knex.schema.${0};
+	};
 
+	exports.down = function () {
+	};
