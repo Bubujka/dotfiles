@@ -78,3 +78,30 @@ snippet slim
 snippet dotenv
 	$dotenv = new Dotenv\Dotenv(__DIR__);
 	$dotenv->overload();
+
+snippet phpmailer
+		$mail = new \PHPMailer;
+
+		$mail->isSMTP();
+		$mail->Host = $_SERVER['MAIL_SMTP_HOST'];
+		$mail->SMTPAuth = true;
+		$mail->Username = $_SERVER['MAIL_SMTP_USER'];
+		$mail->Password = $_SERVER['MAIL_SMTP_PASSWORD'];
+		$mail->SMTPSecure = 'tls';
+		$mail->Port = 587;
+
+		$mail->setFrom($_SERVER['MAIL_FROM'], $_SERVER['MAIL_FROM_NAME']);
+		$mail->addAddress($this->fidelioInfo()->email(), $this->fidelioInfo()->name());
+
+		$mail->CharSet = 'utf-8';
+		$mail->isHTML(true);
+
+		$mail->Subject = $_SERVER['MAIL_SUBJECT'];
+
+		$mail->Body    = static::view('mail-html', ['transaction'=>$this]);
+		$mail->AltBody = static::view('mail-txt', ['transaction'=>$this]);
+
+		if($mail->send()){
+			$this->mail_sended = true;
+			$this->save();
+		}
