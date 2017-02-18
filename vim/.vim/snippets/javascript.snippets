@@ -1,4 +1,3 @@
-
 snippet #!
 	#!/usr/bin/env node
 
@@ -9,25 +8,6 @@ snippet rq!
 snippet rq
 	const ${1:what} = require('$1');
 	${0}
-
-snippet rq_
-	const _ = require('underscore');
-	${0}
-
-snippet .then
-	.then((${1}) => {
-		${0}
-	})
-
-snippet .catch
-	.catch((${1}) => {
-		${0}
-	})
-
-snippet f)
-	(${1}) => {
-		${0}
-	})
 
 snippet f
 	(${1}) => {
@@ -49,14 +29,31 @@ snippet terr
 		throw err;
 	}${0}
 
+# function call
 snippet fc
 	${1:main}(${0})
 
-snippet fc;
-	${1:main}(${0});
+# chain call
+snippet cc
+	.${1:then}(${0})
 
-snippet var
-	var ${1:what} = ${0};
+# chain call
+snippet lcc
+	.${1:then}(${0});
+
+# arrow function
+snippet af
+	(${1}) => {
+		${0}
+	}
+
+# short arrow function
+snippet saf
+	(${1}) => ${0}
+
+# last function call
+snippet lfc
+	${1:main}(${0});
 
 snippet fd
 	function ${1:main}(${2}){
