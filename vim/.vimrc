@@ -311,3 +311,7 @@ autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('
 autocmd BufRead *.md setlocal spell
 autocmd BufRead plan.md setlocal nospell
 autocmd BufNewFile * :exe ': !mkdir -p ' . escape(fnamemodify(bufname('%'),':p:h'),'#% \\')
+
+command! MakeTags !ctags -R .
+
+
