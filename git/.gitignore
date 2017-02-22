@@ -8,3 +8,4 @@ npm-debug.log
 *.pyc
 .happypack
 yarn-error.log
+tags
