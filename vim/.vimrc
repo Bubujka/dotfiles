@@ -315,3 +315,4 @@ autocmd BufNewFile * :exe ': !mkdir -p ' . escape(fnamemodify(bufname('%'),':p:h
 command! MakeTags !ctags -R .
 
 
+set relativenumber
