@@ -5,12 +5,14 @@ p() {
 	local dir
 	dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
 	if [ -f .nvmrc ]; then
+		use-nvm
 		echo "Switching node: "
 		cat .nvmrc
 		nvm use;
 	fi
 
 	if [ -f .phpbrewrc ]; then
+		use-phpbrew
 		echo "Switching php: " `cat .phpbrewrc`
 		phpbrew use `cat .phpbrewrc`
 	fi

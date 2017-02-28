@@ -315,3 +315,9 @@ autocmd BufNewFile * :exe ': !mkdir -p ' . escape(fnamemodify(bufname('%'),':p:h
 command! MakeTags !ctags -R .
 
 
+" Показывать введённую команду
+set showcmd
+
+" Строки нумеровать относительно курсора
+set relativenumber
+set wildmenu
