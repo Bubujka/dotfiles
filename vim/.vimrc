@@ -155,7 +155,7 @@ set fo+=cr
 " Опции сесссий
 set sessionoptions=curdir,buffers,tabpages
 
-set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+set sessionoptions=blank,buffers,curdir,help,resize,tabpages,winsize
 
 
 " hi OverLength ctermbg=darkred ctermfg=white guibg=#592929
@@ -321,3 +321,6 @@ set showcmd
 " Строки нумеровать относительно курсора
 set relativenumber
 set wildmenu
+
+" Отключить фолдинг
+set nofoldenable
