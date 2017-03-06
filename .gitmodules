@@ -100,3 +100,6 @@
 [submodule "vim/.vim/bundle/vim-blade"]
 	path = vim/.vim/bundle/vim-blade
 	url = https://github.com/jwalton512/vim-blade
+[submodule "vim/.vim/bundle/vim-php-cs-fixer"]
+	path = vim/.vim/bundle/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
