@@ -9,3 +9,4 @@ npm-debug.log
 .happypack
 yarn-error.log
 tags
+.php_cs.cache
