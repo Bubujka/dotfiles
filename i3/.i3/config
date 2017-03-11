@@ -24,7 +24,6 @@ bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/work-tgl continue
 bindsym F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
 bindsym shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
-bindsym F11 exec /home/bubujka/.bu.bin/bin/work-relax-tgl
 bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 
 # bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
@@ -75,6 +74,7 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 # bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
+bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/tasklists.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
@@ -129,6 +129,7 @@ bindsym F5 workspace chat
 bindsym F6 workspace workchat
 bindsym F8 workspace 8
 bindsym F7 workspace 7
+bindsym F11 mode "unbind"
 
 # move focused container to workspace
 bindsym Shift+F1 move container to workspace vim
@@ -165,6 +166,10 @@ for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
 
 
+mode "unbind" {
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 mode "movetochats" {
   bindsym j move container to workspace chat; mode "default"
   bindsym k move container to workspace workchat; mode "default"
