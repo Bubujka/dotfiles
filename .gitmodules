@@ -103,3 +103,6 @@
 [submodule "vim/.vim/bundle/vim-php-cs-fixer"]
 	path = vim/.vim/bundle/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
+[submodule "vim/.vim/bundle/seabird"]
+	path = vim/.vim/bundle/seabird
+	url = https://github.com/nightsense/seabird.git

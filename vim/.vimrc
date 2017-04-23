@@ -2,12 +2,13 @@
 execute pathogen#infect()
 
 " Настраиваем шрифт
-set gfn=Input\ Mono\ Condensed\ Regular\ 14
-"set guifont=DejaVu\ Sans\ Mono\ 16
+"set gfn=Input\ Mono\ Condensed\ Regular\ 14
+set guifont=Iosevka\ 14
 
 " Настройки цветовой схемы
 set t_Co=256
-colorscheme xoria256
+" colorscheme xoria256
+colorscheme seagull
 
 " Возможность использовать часть команд в русской раскладке
 map ё `
