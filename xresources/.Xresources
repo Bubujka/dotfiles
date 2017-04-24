@@ -14,18 +14,18 @@ XTerm*faceSize: 12
 #define S_seagrey7 #e6eaed
 #define S_seagrey8 #ffffff
 
-*background:  S_seagrey8
-*foreground:  S_seagrey4
-*cursorColor: S_seagrey3
+XTerm*background:  S_seagrey8
+XTerm*foreground:  S_seagrey4
+XTerm*cursorColor: S_seagrey3
 
-*color8:  S_seagrey1
-*color0:  S_seagrey2
-*color10: S_seagrey3
-*color11: S_seagrey4
-*color12: S_seagrey5
-*color14: S_seagrey6
-*color7:  S_seagrey7
-*color15: S_seagrey8
+XTerm*color8:  S_seagrey1
+XTerm*color0:  S_seagrey2
+XTerm*color10: S_seagrey3
+XTerm*color11: S_seagrey4
+XTerm*color12: S_seagrey5
+XTerm*color14: S_seagrey6
+XTerm*color7:  S_seagrey7
+XTerm*color15: S_seagrey8
 
 #define S_red    #ff4053
 #define S_orange #ff6200
@@ -36,11 +36,11 @@ XTerm*faceSize: 12
 #define S_purple #9854ff
 #define S_pink   #ff549b
 
-*color1:  S_red
-*color9:  S_orange
-*color3:  S_yellow
-*color4:  S_blue
-*color6:  S_teal
-*color2:  S_green
-*color13: S_purple
-*color5:  S_pink
+XTerm*color1:  S_red
+XTerm*color9:  S_orange
+XTerm*color3:  S_yellow
+XTerm*color4:  S_blue
+XTerm*color6:  S_teal
+XTerm*color2:  S_green
+XTerm*color13: S_purple
+XTerm*color5:  S_pink
