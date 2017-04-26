@@ -7,8 +7,8 @@ set guifont=Iosevka\ 14
 
 " Настройки цветовой схемы
 set t_Co=256
-" colorscheme xoria256
-colorscheme seagull
+colorscheme xoria256
+"colorscheme seagull
 
 " Возможность использовать часть команд в русской раскладке
 map ё `
