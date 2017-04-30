@@ -1,3 +1,3 @@
 alias tinker='./artisan tinker'
-alias reseed='./artisan migrate:refresh --seed'
+alias reseed='./artisan reseed'
 alias cda='composer dumpautoload'
