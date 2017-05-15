@@ -337,3 +337,5 @@ let g:php_cs_fixer_verbose = 0                    " Return the output of command
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 " set colorcolumn=81
+
+highlight clear SignColumn

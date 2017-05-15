@@ -47,6 +47,7 @@ bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 #bindsym $mod+s exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
+bindsym $mod+Control+p exec /home/bubujka/.bu.bin/bin/passmenu
 
 
 # bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
