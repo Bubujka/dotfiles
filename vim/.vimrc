@@ -339,3 +339,5 @@ call matchadd('ColorColumn', '\%81v', 100)
 " set colorcolumn=81
 
 highlight clear SignColumn
+
+nnoremap <Leader>d :put=strftime('%F ')<CR>
