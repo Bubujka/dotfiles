@@ -253,8 +253,18 @@ set fdm=indent
 " Команда gb открывает ссылку под курсором в браузере
 " Консольная команда br - открывает ссылку в хроме и меняет фокус
 " оконного менеджера на рабочий стол с браузером
-let g:Browser_x = 'br'
-nnoremap <silent> gb :exe('!'.g:Browser_x.' "'.expand('<cfile>').'" &')<CR>
+"let g:Browser_x = 'br'
+"nnoremap <silent> gb :exe('!'.g:Browser_x.' "'.expand('<cfile>').'" &')<CR>
+function! HandleURL()
+  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
+  echo s:uri
+  if s:uri != ""
+    silent exec "!br '".s:uri."'"
+  else
+    echo "No URI found in line."
+  endif
+endfunction
+nnoremap <silent> gb :call HandleURL()<cr>
 " -------------------------------------------
 
 " Отключить автодополнение html, javascript для php
