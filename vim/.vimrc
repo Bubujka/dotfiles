@@ -352,3 +352,4 @@ highlight clear SignColumn
 
 nnoremap <Leader>d :put=strftime('%F ')<CR>
 map <leader>gf :e <cfile><cr>
+nnoremap <Leader>s ggVG:!fmts<CR>
