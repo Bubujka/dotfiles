@@ -11,6 +11,7 @@
   rao = remote add origin
   ras = remote add stage
   pu  = push -u origin master
+  mylog  = log --author='zendzirou@gmail.com'
 [color]
 	ui = true
 [user]
