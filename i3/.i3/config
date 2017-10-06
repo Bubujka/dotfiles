@@ -43,6 +43,7 @@ bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 # bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
 # bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
+bindsym $mod+shift+d exec /home/bubujka/.bu.bin/bin/open-devdocs
 bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 #bindsym $mod+s exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
