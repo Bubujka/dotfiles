@@ -69,7 +69,7 @@ bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
 bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 
 
-bindcode 78 exec /home/bubujka/.bu.bin/bin/open-journal
+bindcode 78 exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
