@@ -6,3 +6,10 @@ use-pyenv() {
 		eval "$(pyenv virtualenv-init -)"
 	fi
 }
+
+use-venv() {
+	if [[ $LANGVM != *venv* ]]; then
+		LANGVM+='venv '
+		. ./venv/bin/activate
+	fi
+}

@@ -16,6 +16,10 @@ p() {
 		echo "Switching php: " `cat .phpbrewrc`
 		phpbrew use `cat .phpbrewrc`
 	fi
+
+	if [ -d venv ]; then
+		use-venv
+	fi
 }
 
 # Переход в подкаталог основного места хранения всего
