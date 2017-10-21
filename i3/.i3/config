@@ -16,7 +16,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec st
 bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
 bindsym $mod+o sticky toggle
 
@@ -76,6 +76,7 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
 # bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
+bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/learning-links.md
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/tasklists.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
