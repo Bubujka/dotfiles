@@ -13,3 +13,5 @@ use-venv() {
 		. ./venv/bin/activate
 	fi
 }
+
+alias p3=python3

@@ -44,7 +44,7 @@ bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 # bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
 
 bindsym $mod+shift+d exec /home/bubujka/.bu.bin/bin/open-devdocs
-bindcode 127 exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+bindcode 127 exec /home/bubujka/.bu.bin/bin/add-image-to-anki
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 #bindsym $mod+s exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
@@ -72,13 +72,13 @@ bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 bindcode 78 exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 #bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
 
-bindsym $mod+e exec /home/bubujka/.bu.bin/bin/site-runner
-# bindsym $mod+m exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/meme.md
+bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
+# bindsym $mod+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
-bindsym $mod+r exec /home/bubujka/.bu.bin/bin/site-runner ~/.reps
-bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/learning-links.md
+bindsym $mod+r exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.reps
+bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
-bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/site-runner ~/.db/wiki/tasklists.md
+bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md

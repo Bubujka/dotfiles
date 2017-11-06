@@ -29,7 +29,7 @@ gleemail                  http://localhost:5000
 docs                      http://devdocs.io/
 vaz                       http://www.avtoall.ru/catalog/vaz-3/legkovye_avtomobili-18/vaz_2104-5/
 yii                       http://www.yiiframework.com/doc-2.0/guide-index.html
-yii migrations            'http://www.yiiframework.com/doc-2.0/guide-db-migrations.html#database-accessing-methods'
+yii migrations            http://www.yiiframework.com/doc-2.0/guide-db-migrations.html#database-accessing-methods
 mindbox wiki              https://mindbox.fogbugz.com/default.asp?W543
 mindbox wiki methods      https://mindbox.fogbugz.com/default.asp?W544
 momentjs doc              http://momentjs.com/docs/
@@ -40,7 +40,7 @@ teamgantt                 https://teamgantt.com/gantt/home/
 
 bootstrap components      http://getbootstrap.com/components/
 bootstrap css             http://getbootstrap.com/css/
-bootstrap glyphicons      'http://getbootstrap.com/components/#glyphicons'
+bootstrap glyphicons      http://getbootstrap.com/components/#glyphicons
 
 instagram api console     https://apigee.com/console/instagram
 
@@ -126,7 +126,7 @@ ember guide                    http://guides.emberjs.com/v2.2.0/
 --- Apiary
 apiary cli                http://client.apiary.io/
 apiary example            https://github.com/apiaryio/api-blueprint/tree/master/examples
-apiary blueprint spec     'https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#ResourceParametersSection'
+apiary blueprint spec     https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#ResourceParametersSection
 intervention image        http://image.intervention.io/
 
 
