@@ -75,7 +75,7 @@ bindcode 78 exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
 # bindsym $mod+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
-bindsym $mod+r exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.reps
+bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
