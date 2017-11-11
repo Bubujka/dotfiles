@@ -80,6 +80,7 @@ bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/l
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
 bindsym $mod+shift+l exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki checklist.md

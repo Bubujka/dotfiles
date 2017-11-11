@@ -1,0 +1,14 @@
+vim
+git
+ruby
+python
+python3
+st
+freemind
+gvim
+wine
+VirtualBox
+vagrant
+zip
+unzip
+gnucash

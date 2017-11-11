@@ -15,3 +15,5 @@ use-venv() {
 }
 
 alias p3=python3
+alias pd3=pydoc3
+alias p3d=pydoc3

@@ -1,11 +1,31 @@
 snippet #!
 	#!/usr/bin/env python3
 
-snippet d
+# Doc String
+snippet ds
+	"""${0}"""
+
+# Function Definition
+snippet fd
 	def ${1:name}():
+		"""${2}"""
 		$0
-snippet nm
+
+# Method Definition
+snippet md
+	def ${1:name}(self):
+		"""${2}"""
+		$0
+
+# If Name Main
+snippet inm
 	if __name__ == '__main__':
 		$0
+
+# With Open
+snippet wo
+	with open(${1}) as ${2:tfile}:
+		$0
+
 snippet utf8
 	# -*- coding: utf-8 -*-
