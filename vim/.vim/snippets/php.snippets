@@ -1,3 +1,9 @@
+
+snippet command
+	Artisan::command("${1:what}", function(){
+		$0
+	})->describe("${2:whaaaaat}");
+
 # use laravel facade
 snippet ulf
 	use Illuminate\Support\Facades\\${0};
