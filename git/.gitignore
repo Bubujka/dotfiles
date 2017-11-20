@@ -11,3 +11,4 @@ yarn-error.log
 tags
 .php_cs.cache
 _site
+venv
