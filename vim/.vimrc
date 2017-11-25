@@ -3,7 +3,6 @@ execute pathogen#infect()
 
 " Настраиваем шрифт
 "set gfn=Input\ Mono\ Condensed\ Regular\ 14
-set guifont=Iosevka\ 14
 
 " Настройки цветовой схемы
 set t_Co=256
@@ -131,7 +130,6 @@ set scrolloff=7
 set novisualbell
 set  t_vb=".
 set hidden
-set guioptions-=T
 set ch=1
 set autoindent
 " Преобразование Таба в пробелы
@@ -212,8 +210,6 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
-set guioptions-=T
-set guioptions-=m
 set mouse=
 set noerrorbells visualbell t_vb=
 set cino=(0

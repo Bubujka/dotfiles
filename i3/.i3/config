@@ -83,7 +83,7 @@ bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
-bindsym $mod+shift+l exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki checklist.md
+bindsym $mod+shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md copy
 bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
