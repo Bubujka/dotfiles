@@ -112,3 +112,6 @@
 [submodule "vim/.vim/bundle/fzf.vim"]
 	path = vim/.vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/.vim/bundle/i3-vim-syntax"]
+	path = vim/.vim/bundle/i3-vim-syntax
+	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
