@@ -17,7 +17,7 @@ floating_modifier $mod
 
 
 bindsym $mod+Return exec st
-bindsym $mod+Shift+Return exec /home/bubujka/.bu.bin/bin/prj-xterm
+bindsym $mod+Shift+Return exec st -e tmux new -s main -A
 bindsym $mod+o sticky toggle
 
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
