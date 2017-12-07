@@ -77,6 +77,10 @@ bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
 bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
+bindcode $mod+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py last_engine_search
+bindcode $mod+shift+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
+bindcode $mod+Control+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py last_query_search
+bindcode $mod+Control+Shift+51 exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md

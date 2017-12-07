@@ -14,6 +14,11 @@ use-venv() {
 	fi
 }
 
+if [ -d ~/venv ]; then
+	. ~/venv/bin/activate
+fi
+
+
 alias p3=python3
 alias pd3="python -m pydoc"
 alias p3d="python -m pydoc"
