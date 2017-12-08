@@ -94,6 +94,7 @@ bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wi
 bindsym $mod+Control+b exec /home/bubujka/.bu.bin/bin/open-backlog
 bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
+bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 
 # thinkpad special keys
