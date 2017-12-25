@@ -8,6 +8,7 @@ export NVM_DIR="/home/bubujka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . "$HOME/.password"
 #unity-settings-daemon &
+
 bash -c 'sleep 2 ; setxkbmap -layout us,ru -option grp:shifts_toggle'&
 bash -c 'sleep 2 ; synclient VertEdgeScroll=0'&
 bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
@@ -16,6 +17,7 @@ bash -c 'sleep 3 ; xset +fp ~/.fonts'&
 bash -c 'sleep 3 ; xset r rate 170 50'&
 bash -c 'sleep 3 ; killall xbindkeys && xbindkeys'&
 bash -c 'sleep 3 ; dropbox start'&
+bash -c 'sleep 3 ; ~/.bu.bin/bin/window_activity.py' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
