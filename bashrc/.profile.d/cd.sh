@@ -17,6 +17,12 @@ p() {
 		phpbrew use `cat .phpbrewrc`
 	fi
 
+	if [ -f .ruby-version ]; then
+		use-rvm
+		rvm use $(cat .ruby-version)
+		#echo "Switching php: " `cat .phpbrewrc`
+		#phpbrew use `cat .phpbrewrc`
+	fi
 	if [ -d venv ]; then
 		use-venv
 	fi
