@@ -68,7 +68,7 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 999
+    idle_threshold = 0
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -99,7 +99,7 @@
     separator_height = 2
 
     # padding between text and separator>
-    padding = 16
+    padding = 10
 
     # horizontal padding
     horizontal_padding = 2
@@ -124,8 +124,8 @@
     browser = /usr/bin/firefox -new-tab
 
 [frame]
-    width = 0
-    color = "#FFFFFF"
+    width = 1
+    color = "#000000"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -146,12 +146,14 @@
     # context menu
     context = ctrl+shift+period
 
+
+
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#D3D3A4"
-    foreground = "#404040"
-    timeout = 5
+    background = "#FFFFFF"
+    foreground = "#000000"
+    timeout = 1
 
 [urgency_normal]
     background = "#D3D3A4"
@@ -183,8 +185,8 @@
 # fitting options for rules.
 
 #[espeak]
-    summary = "*"
-    script = dunst_espeak.sh
+    #summary = "*"
+    #script = dunst_espeak.sh
 
 #[script-test]
 #    summary = "*script*"

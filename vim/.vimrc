@@ -354,6 +354,7 @@ nnoremap <Leader>s ggVG:!fmts<CR>
 autocmd BufRead,BufNewFile *sites-enabled/* set syntax=nginx
 autocmd BufRead,BufNewFile nginx.conf set syntax=nginx
 autocmd BufRead,BufNewFile nginx-*.conf set syntax=nginx
+autocmd BufRead,BufNewFile dunstrc set syntax=config
 
 
 let g:ale_python_pylint_executable = 'python $(which pylint)'

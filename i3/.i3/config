@@ -36,7 +36,6 @@ bindsym $mod+Shift+space floating toggle
 
 
 
-
 # Приложения
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+d exec zeal
@@ -139,10 +138,9 @@ bindsym Shift+F8 move container to workspace 8
 for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
 
-bindsym F11 mode "unbind"
+bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
 mode "unbind" {
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+  bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 # resize window (you can also use the mouse for that)
