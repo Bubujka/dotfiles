@@ -1,201 +1,150 @@
+# Непонятные мне настройки
 new_window none
 new_float none
 force_xinerama true
-workspace_auto_back_and_forth yes
-
-# Какую клавишу назначить модификатором
-# Mod4 == win
-set $mod Mod4
-
 default_orientation vertical
-
-# font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Переход между двумя последними рабочими столами при повторном нажатии кнопки
+workspace_auto_back_and_forth yes
+
+# Кнопки в системе
+# win
+set $mod Mod4
+set $print_screen 107
+set $scroll_lock 78
+set $terminal st
+# "\"
+set $search_key 51
+set $pause_break 127
 floating_modifier $mod
 
 
-bindsym $mod+Return exec st
-bindsym $mod+Shift+Return exec st -e tmux new -s main -A
+# Основные кнопки
+bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
+bindsym $mod+l exec gnome-screensaver-command -l
 bindsym $mod+o sticky toggle
+bindsym $mod+Shift+Q kill
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Control+p exec /home/bubujka/.bu.bin/bin/passmenu
+bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
+bindsym $mod+Shift+R restart
+bindsym $mod+Shift+E exit
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
 
+
+
+
+
+# Приложения
+bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+d exec zeal
+bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
+bindsym $mod+Shift+h exec st -e htop
+bindsym $mod+b exec /home/bubujka/.bu.bin/bin/local-chrome
+
+# Тайм трэкинг
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
-bindsym shift+F9 exec /home/bubujka/.bu.bin/bin/work-tgl continue
+bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-tgl continue
+
 bindsym F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
-bindsym shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
+bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
+
 bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 
-# bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
-# bindsym Control+Shift+F9 exec /home/bubujka/.bu.bin/bin/puffy-tgl
-#
-# bindsym Control+F9 exec /home/bubujka/.bu.bin/bin/stop-toggle
-# bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
-#
-# bindsym F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-latest-target
-# bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/write-to-basecamp
-# bindsym $mod+F10 exec /home/bubujka/.bu.bin/bin/open-basecamp
-#
-# bindsym F11 exec /home/bubujka/.bu.bin/bin/tasklists
-#
-#
-# bindsym F12 exec /home/bubujka/.bu.bin/bin/write-to-basecamp-my-target
-# bindsym shift+F12 exec /home/bubujka/.bu.bin/bin/personal-tgl
-# bindsym $mod+F12 exec /home/bubujka/.bu.bin/bin/open-my-basecamp
-
-bindsym $mod+shift+d exec /home/bubujka/.bu.bin/bin/open-devdocs
-bindcode 127 exec /home/bubujka/.bu.bin/bin/add-image-to-anki
-bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
-#bindsym $mod+s exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
-bindsym $mod+shift+p exec /home/bubujka/.bu.bin/bin/open-plan
-bindsym $mod+Control+p exec /home/bubujka/.bu.bin/bin/passmenu
-
-
-# bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/tis md
-bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
-bindsym $mod+shift+u exec /home/bubujka/.bu.bin/bin/wiki-commit-and-push
-bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
+# Таймер (pomodoro)
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/dmenu-timer
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 
-bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot
-bindcode 107 exec /home/bubujka/.bu.bin/bin/make-screenshot select
-#bindcode shift+107 exec /home/bubujka/.bu.bin/bin/make-screenshot comment
-bindsym $mod+l exec gnome-screensaver-command -l
-bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
-
-bindsym $mod+x exec /home/bubujka/.bu.bin/bin/write-to-basecamp
-bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
-bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/scy upload
+# --------------
 
 
-bindcode 78 exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
-#bindsym $mod+shift+V exec /home/bubujka/.bu.bin/bin/send-voice-mail
+bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+bindsym $mod+Shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 
+# Wiki
+bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
+bindcode $scroll_lock exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
+
+# Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
-# bindsym $mod+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
-bindsym $mod+shift+m exec /home/bubujka/.bu.bin/bin/xterm-mutt
-bindsym $mod+shift+h exec st -e htop
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
+bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
-bindcode $mod+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py last_engine_search
-bindcode $mod+shift+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
-bindcode $mod+Control+51 exec /home/bubujka/.bu.bin/bin/web_searcher.py last_query_search
-bindcode $mod+Control+Shift+51 exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
-bindsym $mod+Shift+a exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/achievements.md
-bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
-bindsym $mod+shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+bindsym $mod+Shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+
+# Запись экрана
+bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
+bindsym $mod+Shift+V exec /home/bubujka/.bu.bin/bin/scy upload
+bindcode Shift+$print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot
+bindcode $print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot select
+
+# Editor
+bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
-bindsym $mod+shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
-bindsym $mod+shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
-bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md copy
-bindsym $mod+shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
-bindsym $mod+shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
+bindsym $mod+Shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md
+bindsym $mod+Shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
+bindsym $mod+Shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
 bindsym $mod+Control+b exec /home/bubujka/.bu.bin/bin/open-backlog
-bindsym $mod+shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
-bindsym $mod+shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
+bindsym $mod+Shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
+bindsym $mod+Shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
-bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
+bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 
-# thinkpad special keys
+# Поиск
+bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
+bindcode $mod+Shift+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py last_engine_search
+bindcode $mod+Control+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py last_query_search
+bindcode $mod+Control+Shift+$search_key exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
+
+
+# Misc
+bindcode $pause_break exec /home/bubujka/.bu.bin/bin/add-image-to-anki
+bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md copy
+
+# Управление громкостью
 bindcode 122 exec /home/bubujka/.bu.bin/bin/volume 5%-
 bindcode 123 exec /home/bubujka/.bu.bin/bin/volume 5%+
 
-bindsym $mod+b exec /home/bubujka/.bu.bin/bin/local-chrome
-
-# kill focused window
-bindsym $mod+Shift+Q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
 
 # change focus
-bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
-#bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+l focus right
 
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# switch to workspace
-
+# Рабочие столы
 bindsym F1 workspace vim
 bindsym F2 workspace www
 bindsym F3 workspace sh
 bindsym F4 workspace sh2
-
-#bindsym $mod+s workspace skype; layout splith
-
-#bindsym $mod+s mode "chats"
-#bindsym $mod+t workspace toggl
-
-#bindsym $mod+Shift+M move container to workspace mail
-
-bindsym F5 workspace chat
-bindsym F6 workspace workchat
+bindsym F5 workspace 5
+bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
-bindsym F11 mode "unbind"
 
-# move focused container to workspace
 bindsym Shift+F1 move container to workspace vim
 bindsym Shift+F2 move container to workspace www
 bindsym Shift+F3 move container to workspace sh
 bindsym Shift+F4 move container to workspace sh2
-bindsym Shift+F5 move container to workspace chat
-bindsym Shift+F6 move container to workspace workchat
+bindsym Shift+F5 move container to workspace 5
+bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
 
-# class                 border  backgr. text    indicator
-#client.focused          #4c7899 #285577 #ffffff #2e9ef4
-#client.focused_inactive #333333 #5f676a #ffffff #484e50
-#client.unfocused        #333333 #222222 #888888 #292d2e
-#client.urgent           #2f343a #900000 #ffffff #900000
-#client.focused           #2f343a #900000 #ffffff #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000
-# reload the configuration file
-#bindsym $mod+Shift+C reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
-
-workspace vim output LVDS1
-workspace sh output LVDS1
-workspace sh2 output LVDS1
-
-workspace skype output VGA1
-workspace www output VGA1
 for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
 
-
+bindsym F11 mode "unbind"
 mode "unbind" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-mode "movetochats" {
-  bindsym j move container to workspace chat; mode "default"
-  bindsym k move container to workspace workchat; mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
-mode "chats" {
-  bindsym $mod+s workspace chat; layout splith; mode "default"
-  bindsym j workspace chat; layout splith; mode "default"
-  bindsym k workspace workchat; layout splith; mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -220,11 +169,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-#bindsym $mod+r mode "resize"
 
-
-
-# color defines for zenburn styled i3
+# Цвета zenburn
 set $bg     #303030
 set $fg     #9f9f9f
 set $hi     #efef8f
@@ -243,7 +189,6 @@ client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
 bar {
-    #tray_output none
     status_command my-i3status
 
     colors {

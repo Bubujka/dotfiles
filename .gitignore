@@ -4,3 +4,7 @@ newsbeuter/.newsbeuter/history.cmdline
 newsbeuter/.newsbeuter/history.search
 newsbeuter/.newsbeuter/cache.db.lock
 vim/.vim/_swap
+moc/.moc/cache/
+moc/.moc/last_directory
+moc/.moc/pid
+moc/.moc/playlist.m3u
