@@ -1,4 +1,8 @@
 # https://stackoverflow.com/questions/8475290/how-do-i-write-to-a-python-subprocess-stdin
+
+snippet memo
+	from functools import lru_cache as memo
+
 snippet subprocess_stdin
 	from subprocess import Popen, PIPE
 	p = Popen(['myapp'], stdout=PIPE, stdin=PIPE, stderr=PIPE)
