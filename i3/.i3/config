@@ -34,14 +34,13 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
 
-
-
 # Приложения
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+d exec zeal
 bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
 bindsym $mod+Shift+h exec st -e htop
 bindsym $mod+b exec /home/bubujka/.bu.bin/bin/local-chrome
+
 
 # Тайм трэкинг
 bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
@@ -56,16 +55,6 @@ bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/dmenu-timer
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 
-# --------------
-
-
-bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
-bindsym $mod+Shift+p exec /home/bubujka/.bu.bin/bin/open-plan
-
-# Wiki
-bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
-bindcode $scroll_lock exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
-
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
@@ -79,8 +68,14 @@ bindsym $mod+Shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 bindcode Shift+$print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode $print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot select
 
-# Editor
+# Редактор, заметки
+bindcode $scroll_lock exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
+bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+
 bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
+
+bindsym $mod+Shift+p exec /home/bubujka/.bu.bin/bin/open-plan
+bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
@@ -99,7 +94,6 @@ bindcode $mod+Shift+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py l
 bindcode $mod+Control+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py last_query_search
 bindcode $mod+Control+Shift+$search_key exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
 
-
 # Misc
 bindcode $pause_break exec /home/bubujka/.bu.bin/bin/add-image-to-anki
 bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.md copy
@@ -108,13 +102,11 @@ bindsym $mod+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki snippet.
 bindcode 122 exec /home/bubujka/.bu.bin/bin/volume 5%-
 bindcode 123 exec /home/bubujka/.bu.bin/bin/volume 5%+
 
-
 # change focus
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 # bindsym $mod+h focus left
 # bindsym $mod+l focus right
-
 
 # Рабочие столы
 bindsym F1 workspace vim
@@ -135,15 +127,17 @@ bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
 
+# Поведение окон
 for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
 
+# Режим отключения хоткеев
 bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
 mode "unbind" {
   bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-# resize window (you can also use the mouse for that)
+# Режим ресайза окон
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -180,12 +174,13 @@ set $yw     #ccdc90
 set $gn     #88b090
 set $rd     #e89393
 
-# set some nice colors      border     background  text
+#                           border     background  text
 client.focused              $ac        $ac         $tx
 client.unfocused            $bg        $bg         $ia
 client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
+# Настройки статусбара
 bar {
     status_command my-i3status
 
