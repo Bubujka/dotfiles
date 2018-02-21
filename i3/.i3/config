@@ -39,7 +39,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+d exec zeal
 bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
 bindsym $mod+Shift+h exec st -e htop
-bindsym $mod+b exec /home/bubujka/.bu.bin/bin/local-chrome
+bindsym $mod+b exec chromium-browser
 
 
 # Тайм трэкинг
