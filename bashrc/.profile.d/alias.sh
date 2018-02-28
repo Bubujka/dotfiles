@@ -1,0 +1,1 @@
+alias cu='cleanup.py'

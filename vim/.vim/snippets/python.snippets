@@ -1,5 +1,9 @@
 # https://stackoverflow.com/questions/8475290/how-do-i-write-to-a-python-subprocess-stdin
 
+snippet colorama
+	from colorama import Fore, Style, init
+	init()
+
 snippet memo
 	from functools import lru_cache as memo
 
@@ -47,8 +51,10 @@ snippet md
 
 # If Name Main
 snippet inm
+	def main():
+		pass
 	if __name__ == '__main__':
-		${0}
+		main()
 
 # With Open
 snippet wo
