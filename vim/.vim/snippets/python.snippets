@@ -13,9 +13,7 @@ snippet de
 	load_dotenv(find_dotenv())
 snippet class
 	class ${1:Whaaaaat}():
-		""" """
 		def __init__(self):
-			""" """
 			${0}
 snippet glob
 	from glob import glob
@@ -40,24 +38,22 @@ snippet ds
 # Function Definition
 snippet fd
 	def ${1:name}():
-		"""${2}"""
-		$0
+		${0}
 
 # Method Definition
 snippet md
 	def ${1:name}(self):
-		"""${2}"""
-		$0
+		${0}
 
 # If Name Main
 snippet inm
 	if __name__ == '__main__':
-		$0
+		${0}
 
 # With Open
 snippet wo
 	with open(${1}) as ${2:tfile}:
-		$0
+		${0}
 
 snippet utf8
 	# -*- coding: utf-8 -*-
