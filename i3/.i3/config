@@ -39,7 +39,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+d exec zeal
 bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
 bindsym $mod+Shift+h exec st -e htop
-bindsym $mod+b exec chromium-browser
+bindsym $mod+b exec chromium-browser --disable-background-networking --disable-gpu
 
 
 # Тайм трэкинг
@@ -187,7 +187,7 @@ client.urgent               $rd        $rd         $tx
 
 # Настройки статусбара
 bar {
-    status_command my-i3status
+    status_command i3status
 
     colors {
         background          $bg

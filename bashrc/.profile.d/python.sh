@@ -3,7 +3,7 @@ use-pyenv() {
 		LANGVM+='pyenv '
 		export PATH="/home/bubujka/.pyenv/bin:$PATH"
 		eval "$(pyenv init -)"
-		eval "$(pyenv virtualenv-init -)"
+		#eval "$(pyenv virtualenv-init -)"
 	fi
 }
 
