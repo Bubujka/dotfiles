@@ -23,4 +23,4 @@ bash -c 'sleep 3 ; pm2' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
 bash -c 'sleep 3 ; dunst' &
 nm-applet &
-i3
+#i3
