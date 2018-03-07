@@ -88,7 +88,7 @@ bindsym $mod+Shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+Shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
 
-bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/letters/ md
+bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 bindsym $mod+Shift+k exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/skills.md
 
