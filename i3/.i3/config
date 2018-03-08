@@ -23,11 +23,12 @@ floating_modifier $mod
 # Основные кнопки
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
 bindsym $mod+l exec gnome-screensaver-command -l
-bindsym $mod+o sticky toggle
-bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec /home/bubujka/.bu.bin/bin/passmenu
 bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
+
+bindsym $mod+o sticky toggle
+bindsym $mod+Shift+Q kill
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 bindsym $mod+f fullscreen
@@ -39,6 +40,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+d exec zeal
 bindsym $mod+g exec /home/bubujka/.bu.bin/bin/open-gvim
 bindsym $mod+Shift+h exec st -e htop
+bindsym $mod+Control+h exec st -e /home/bubujka/.bu.bin/bin/habit_maker.py
 bindsym $mod+b exec chromium-browser --disable-background-networking --disable-gpu
 
 
@@ -90,6 +92,7 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 
 bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
+bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
 bindsym $mod+Shift+k exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/skills.md
 
 #
