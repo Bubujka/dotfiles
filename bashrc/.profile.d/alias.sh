@@ -1,2 +1,2 @@
 alias cu='cleanup.py'
-alias hbt='habit_maker.py'
+alias hbt='cd ~/.db/prj/habit-maker; ./habit_maker2.py'
