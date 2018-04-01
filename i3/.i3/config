@@ -70,6 +70,10 @@ bindsym $mod+Shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 bindcode Shift+$print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode $print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot select
 
+bindsym $mod+Shift+k exec /home/bubujka/.bu.bin/bin/readlist.py next
+bindsym $mod+Control+k exec /home/bubujka/.bu.bin/bin/readlist.py unread
+bindsym $mod+Control+Shift+k exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/readlist.md
+
 # Редактор, заметки
 bindcode $scroll_lock exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec /home/bubujka/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
@@ -93,7 +97,6 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-bindsym $mod+Shift+k exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/skills.md
 
 #
 
