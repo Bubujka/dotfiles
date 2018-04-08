@@ -85,7 +85,7 @@ bindsym $mod+Shift+o exec /home/bubujka/.bu.bin/bin/open-progress
 bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
-bindsym $mod+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
+bindsym $mod+Control+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+Shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
 bindsym $mod+Shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+Shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
@@ -147,6 +147,15 @@ for_window [class="ffplay"] floating enable; sticky enable
 bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
 mode "unbind" {
   bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
+}
+
+
+bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
+
+mode "meta" {
+        bindsym s exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search; mode "default"
+        bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+        bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 # Режим ресайза окон
