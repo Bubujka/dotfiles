@@ -34,6 +34,12 @@ d() {
   dir=$(ls ~/.db/ | fzf +m) && cd ~/.db/"$dir"
 }
 
+# Переход к каталогу с файлами
+f() {
+  local dir
+  dir=$(ls ~/.db/files | fzf +m) && cd ~/.db/files/"$dir"
+}
+
 # Открытие в виме вики файла
 w() {
   local dir
