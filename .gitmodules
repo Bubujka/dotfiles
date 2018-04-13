@@ -115,3 +115,6 @@
 [submodule "vim/.vim/bundle/i3-vim-syntax"]
 	path = vim/.vim/bundle/i3-vim-syntax
 	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
+[submodule "vim/.vim/bundle/vim-prettier"]
+	path = vim/.vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
