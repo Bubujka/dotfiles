@@ -154,6 +154,8 @@ mode "open" {
         bindsym b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
         bindsym d exec zeal; mode "default"
         bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
+        bindsym Shift+v exec VirtualBox; mode "default"
+        bindsym m exec mysql-workbench; mode "default"
 
         bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
         bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
