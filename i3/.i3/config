@@ -22,7 +22,7 @@ floating_modifier $mod
 
 # Основные кнопки
 bindsym $mod+Control+r exec /home/bubujka/.bu.bin/bin/rekbd
-bindsym $mod+l exec gnome-screensaver-command -l
+bindsym $mod+Shift+l exec gnome-screensaver-command -l
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec /home/bubujka/.bu.bin/bin/passmenu
 bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
@@ -91,11 +91,8 @@ bindsym $mod+Shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+Shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
 
-bindsym $mod+Shift+l exec /home/bubujka/.bu.bin/bin/open-logbook
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-
-#
 
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
@@ -149,6 +146,18 @@ mode "unbind" {
 
 bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
 bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
+bindsym $mod+l mode "logbook"; exec notify-flash "i3" "mode logbook"
+
+
+mode "logbook" {
+  bindsym w exec /home/bubujka/.bu.bin/bin/week-logbook; mode "default"
+  bindsym t exec /home/bubujka/.bu.bin/bin/open-logbook; mode "default"
+  bindsym y exec /home/bubujka/.bu.bin/bin/open-logbook yesterday; mode "default"
+  bindsym l exec exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/logbook md; mode "default"
+
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+}
 
 mode "open" {
         bindsym b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
@@ -156,6 +165,7 @@ mode "open" {
         bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
         bindsym Shift+v exec VirtualBox; mode "default"
         bindsym m exec mysql-workbench; mode "default"
+        bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
 
         bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
         bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"

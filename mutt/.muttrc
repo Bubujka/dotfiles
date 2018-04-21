@@ -10,7 +10,7 @@ set realname = 'Aleksej Kamynin'
 set from = zendzirou@gmail.com
 set use_from = yes
 
-set smtp_url=smtps://$my_user:$my_pass@smtp.gmail.com
+set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com
 set ssl_force_tls = yes
 
 
@@ -18,10 +18,10 @@ set ssl_force_tls = yes
 #macro index "I" "<shell-escape>offlineimap<enter>" "Скачать почту"
 
 # В какой файл записывать адреса людей
-set alias_file = "~/.mutt/aliases"
+set alias_file = "~/.db/wiki/mutt.contacts.md"
 
 # Мутт сам этот файл не прочитает, надо попросить его об этом явно
-source ~/.mutt/aliases
+source ~/.db/wiki/mutt.contacts.md
 
 # Указание куда закидывать отправленные письма
 set record = ~/.mutt/sent
