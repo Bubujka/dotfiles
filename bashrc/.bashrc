@@ -8,6 +8,7 @@ for i in ~/.profile.d/*.sh; do
 done
 unset i
 
+export BROWSER='br'
 export ANDROID_HOME="/home/bubujka/.Android/Sdk"
 export ANDROID_PLATFORM_TOOLS="/home/bubujka/.Android/Sdk/platform-tools"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"

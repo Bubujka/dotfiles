@@ -160,22 +160,28 @@ mode "logbook" {
 }
 
 mode "open" {
-        bindsym b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
-        bindsym d exec zeal; mode "default"
-        bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
-        bindsym Shift+v exec VirtualBox; mode "default"
-        bindsym m exec mysql-workbench; mode "default"
-        bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
+  bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
+  bindsym b exec /home/bubujka/.bu.bin/bin/ssh_chromium; mode "default"
+  bindsym d exec zeal; mode "default"
+  bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
+  bindsym Shift+v exec VirtualBox; mode "default"
+  bindsym m exec mysql-workbench; mode "default"
+  bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
+  bindsym t exec /home/bubujka/.Telegram/Telegram; mode "default"
+  bindsym a exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
+  bindsym s exec slack; mode "default"
+  bindsym p exec pgadmin3; mode "default"
 
-        bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-        bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 mode "meta" {
-        bindsym s exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search; mode "default"
+  bindsym h exec /home/bubujka/.bu.bin/bin/hc-mode; mode "default"
+  bindsym s exec /home/bubujka/.bu.bin/bin/sc-mode; mode "default"
 
-        bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-        bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 # Режим ресайза окон
