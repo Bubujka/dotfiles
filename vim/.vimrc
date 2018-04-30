@@ -351,6 +351,9 @@ map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 
 " Синтаксис для конфигов nginx
+autocmd BufRead,BufNewFile *nginx/conf.d/* set syntax=nginx
+autocmd BufRead,BufNewFile *sites-available/* set syntax=nginx
+autocmd BufRead,BufNewFile *sites-available/* set syntax=nginx
 autocmd BufRead,BufNewFile *sites-enabled/* set syntax=nginx
 autocmd BufRead,BufNewFile nginx.conf set syntax=nginx
 autocmd BufRead,BufNewFile nginx-*.conf set syntax=nginx

@@ -8,6 +8,51 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Переход между двумя последними рабочими столами при повторном нажатии кнопки
 workspace_auto_back_and_forth yes
 
+
+
+mode "open" {
+  bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
+  bindsym b exec /home/bubujka/.bu.bin/bin/ssh_chromium; mode "default"
+  bindsym d exec zeal; mode "default"
+  bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
+  bindsym Shift+v exec VirtualBox; mode "default"
+  bindsym m exec mysql-workbench; mode "default"
+  bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
+  bindsym t exec /home/bubujka/.Telegram/Telegram; mode "default"
+  bindsym a exec /home/bubujka/.bu.bin/bin/run-anki ; mode "default"
+  bindsym Shift+h exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
+  bindsym s exec slack; mode "default"
+  bindsym p exec pgadmin3; mode "default"
+
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+}
+
+mode "logbook" {
+  bindsym w exec /home/bubujka/.bu.bin/bin/week-logbook; mode "default"
+  bindsym t exec /home/bubujka/.bu.bin/bin/open-logbook; mode "default"
+  bindsym y exec /home/bubujka/.bu.bin/bin/open-logbook yesterday; mode "default"
+  bindsym l exec exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/logbook md; mode "default"
+
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+}
+mode "meta" {
+  bindsym h exec /home/bubujka/.bu.bin/bin/hc-mode; mode "default"
+  bindsym s exec /home/bubujka/.bu.bin/bin/sc-mode; mode "default"
+
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+}
+
+
+
+
+
+
+
+
+
 # Кнопки в системе
 # win
 set $mod Mod4
@@ -56,6 +101,7 @@ bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
+bindsym $mod+Control+e exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/excel/ ods soffice
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
@@ -148,41 +194,6 @@ bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
 bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 bindsym $mod+l mode "logbook"; exec notify-flash "i3" "mode logbook"
 
-
-mode "logbook" {
-  bindsym w exec /home/bubujka/.bu.bin/bin/week-logbook; mode "default"
-  bindsym t exec /home/bubujka/.bu.bin/bin/open-logbook; mode "default"
-  bindsym y exec /home/bubujka/.bu.bin/bin/open-logbook yesterday; mode "default"
-  bindsym l exec exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/logbook md; mode "default"
-
-  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
-}
-
-mode "open" {
-  bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
-  bindsym b exec /home/bubujka/.bu.bin/bin/ssh_chromium; mode "default"
-  bindsym d exec zeal; mode "default"
-  bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
-  bindsym Shift+v exec VirtualBox; mode "default"
-  bindsym m exec mysql-workbench; mode "default"
-  bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
-  bindsym t exec /home/bubujka/.Telegram/Telegram; mode "default"
-  bindsym a exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
-  bindsym s exec slack; mode "default"
-  bindsym p exec pgadmin3; mode "default"
-
-  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
-}
-
-mode "meta" {
-  bindsym h exec /home/bubujka/.bu.bin/bin/hc-mode; mode "default"
-  bindsym s exec /home/bubujka/.bu.bin/bin/sc-mode; mode "default"
-
-  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
-}
 
 # Режим ресайза окон
 mode "resize" {
