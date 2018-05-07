@@ -131,6 +131,7 @@ bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snip
 bindsym $mod+Control+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm freemind
 bindsym $mod+Shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
 bindsym $mod+Shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
+bindsym $mod+Control+n exec /home/bubujka/.bu.bin/bin/search-name
 bindsym $mod+Shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
 bindsym $mod+Control+b exec /home/bubujka/.bu.bin/bin/open-backlog
 bindsym $mod+Shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file

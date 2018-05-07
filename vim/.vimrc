@@ -361,6 +361,5 @@ autocmd BufRead,BufNewFile dunstrc set syntax=config
 autocmd BufRead,BufNewFile userparameter_* set syntax=config
 
 
-let g:ale_python_pylint_executable = 'python3 $(which pylint)'
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
