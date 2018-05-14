@@ -9,7 +9,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 workspace_auto_back_and_forth yes
 
 
-
+bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
   bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
   bindsym b exec /home/bubujka/.bu.bin/bin/ssh_chromium; mode "default"
@@ -28,6 +28,7 @@ mode "open" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
+bindsym $mod+l mode "logbook"; exec notify-flash "i3" "mode logbook"
 mode "logbook" {
   bindsym w exec /home/bubujka/.bu.bin/bin/week-logbook; mode "default"
   bindsym t exec /home/bubujka/.bu.bin/bin/open-logbook; mode "default"
@@ -37,6 +38,8 @@ mode "logbook" {
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
+
+bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
 mode "meta" {
   bindsym h exec /home/bubujka/.bu.bin/bin/hc-mode; mode "default"
   bindsym s exec /home/bubujka/.bu.bin/bin/sc-mode; mode "default"
@@ -45,13 +48,11 @@ mode "meta" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-
-
-
-
-
-
-
+# Режим отключения хоткеев
+bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
+mode "unbind" {
+  bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
+}
 
 # Кнопки в системе
 # win
@@ -95,9 +96,13 @@ bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
 
 bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 
+# Taskwarrior
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/writ-to-tw
+bindsym $mod+Control+t exec st -e vit
+
 # Таймер (pomodoro)
-bindsym $mod+t exec /home/bubujka/.bu.bin/bin/dmenu-timer
 bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
+
 
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
@@ -107,15 +112,19 @@ bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/mem
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
 bindsym $mod+Shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 
+
 # Запись экрана
 bindsym $mod+v exec /home/bubujka/.bu.bin/bin/scy record
 bindsym $mod+Shift+V exec /home/bubujka/.bu.bin/bin/scy upload
 bindcode Shift+$print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot
 bindcode $print_screen exec /home/bubujka/.bu.bin/bin/make-screenshot select
 
+
+# Readlist
 bindsym $mod+Shift+k exec /home/bubujka/.bu.bin/bin/readlist.py next
 bindsym $mod+Control+k exec /home/bubujka/.bu.bin/bin/readlist.py unread
 bindsym $mod+Control+Shift+k exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/readlist.md
+
 
 # Редактор, заметки
 bindcode $scroll_lock exec /home/bubujka/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
@@ -141,11 +150,13 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
 
+
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
 bindcode $mod+Shift+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py last_engine_search
 bindcode $mod+Control+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py last_query_search
 bindcode $mod+Control+Shift+$search_key exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
+
 
 # Misc
 bindcode $pause_break exec /home/bubujka/.bu.bin/bin/add-image-to-anki
@@ -183,17 +194,6 @@ bindsym Shift+F8 move container to workspace 8
 # Поведение окон
 for_window [title="\[fzf\]"] floating enable
 for_window [class="ffplay"] floating enable; sticky enable
-
-# Режим отключения хоткеев
-bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
-mode "unbind" {
-  bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
-}
-
-
-bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
-bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
-bindsym $mod+l mode "logbook"; exec notify-flash "i3" "mode logbook"
 
 
 # Режим ресайза окон
