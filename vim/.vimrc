@@ -359,6 +359,7 @@ autocmd BufRead,BufNewFile nginx.conf set syntax=nginx
 autocmd BufRead,BufNewFile nginx-*.conf set syntax=nginx
 autocmd BufRead,BufNewFile dunstrc set syntax=config
 autocmd BufRead,BufNewFile userparameter_* set syntax=config
+autocmd BufRead,BufNewFile *i3status* set syntax=i3
 
 
 let g:prettier#config#trailing_comma = 'es5'

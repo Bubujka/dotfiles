@@ -36,3 +36,5 @@ reserved.lines=7
 
 color.project.beta=red
 color.keyword.купить=yellow
+
+include /home/bubujka/.taskrc-dynamic
