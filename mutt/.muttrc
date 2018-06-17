@@ -28,3 +28,5 @@ set record = ~/.mutt/sent
 
 # Как открывать разные форматы файлов
 set mailcap_path 	= ~/.mutt/mailcap
+
+macro index \cl '<limit>all<enter>'
