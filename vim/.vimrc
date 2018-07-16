@@ -350,6 +350,7 @@ nnoremap <Leader>d :put=strftime('%F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 
+vmap <Leader>t :!tap<CR>
 " Синтаксис для конфигов nginx
 autocmd BufRead,BufNewFile *nginx/conf.d/* set syntax=nginx
 autocmd BufRead,BufNewFile *sites-available/* set syntax=nginx
