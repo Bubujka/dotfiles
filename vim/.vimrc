@@ -368,3 +368,5 @@ autocmd BufRead,BufNewFile *i3status* set syntax=i3
 
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
+let g:ale_completion_enabled = 1
+
