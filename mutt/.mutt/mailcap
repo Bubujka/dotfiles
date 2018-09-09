@@ -1,2 +1,3 @@
-text/html; mutt-open-chrome %s;  needsterminal
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#text/html; mutt-open-chrome %s;  needsterminal
 image/jpeg; feh -. %s;

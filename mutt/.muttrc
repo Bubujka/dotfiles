@@ -18,10 +18,10 @@ set ssl_force_tls = yes
 #macro index "I" "<shell-escape>offlineimap<enter>" "Скачать почту"
 
 # В какой файл записывать адреса людей
-set alias_file = "~/.db/wiki/mutt.contacts"
+#set alias_file = "~/.db/wiki/mutt.contacts"
 
 # Мутт сам этот файл не прочитает, надо попросить его об этом явно
-source ~/.db/wiki/mutt.contacts
+#source ~/.db/wiki/mutt.contacts
 
 # Указание куда закидывать отправленные письма
 set record = ~/.mutt/sent
@@ -30,3 +30,13 @@ set record = ~/.mutt/sent
 set mailcap_path 	= ~/.mutt/mailcap
 
 macro index \cl '<limit>!~D<enter>'
+
+set query_command = "abook --mutt-query '%s'"
+set query_format="%4c %t %-30.30a %-50.50n %?e?(%e)?"
+macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
+
+auto_view text/html                                      # view html automatically
+alternative_order text/plain text/enriched text/html     # save html for last
+
+macro attach 'V' "<pipe-entry>cat >~/.cache/mutt/mail.html && mutt-open-chrome ~/.cache/mutt/mail.html && rm ~/.cache/mutt/mail.html<enter>"
