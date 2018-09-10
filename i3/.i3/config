@@ -100,7 +100,7 @@ bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
 bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
 
 # Taskwarrior
-bindsym $mod+t exec /home/bubujka/.bu.bin/bin/writ-to-tw
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/shellcast-selector
 bindsym $mod+Control+t exec st -e vit
 
 # Таймер (pomodoro)
