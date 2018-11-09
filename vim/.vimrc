@@ -350,7 +350,7 @@ nnoremap <Leader>d :put=strftime('%F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 
-map <leader>t Itask add project:
+map <leader>t Itask add project:<esc>V!bash<cr>
 vmap <Leader>t :!tap<CR>
 " Синтаксис для конфигов nginx
 autocmd BufRead,BufNewFile *nginx/conf.d/* set syntax=nginx

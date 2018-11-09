@@ -110,6 +110,7 @@ bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
 bindsym $mod+Control+e exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/excel/ ods soffice-calc
+bindsym $mod+Control+Shift+p exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/excel-prj/ ods soffice-calc
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
@@ -145,6 +146,7 @@ bindsym $mod+Shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/sn
 bindsym $mod+Shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+Control+n exec /home/bubujka/.bu.bin/bin/search-name
 bindsym $mod+Shift+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
+bindsym $mod+Control+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/prj md
 bindsym $mod+Control+b exec /home/bubujka/.bu.bin/bin/open-backlog
 bindsym $mod+Shift+b exec /home/bubujka/.bu.bin/bin/select-bin-file
 bindsym $mod+Shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file

@@ -1,6 +1,5 @@
 [alias]
   cdiff = diff --cached
-  ci = commit
   rh = reset --hard HEAD
   co = checkout
   br = branch

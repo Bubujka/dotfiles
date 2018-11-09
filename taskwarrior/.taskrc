@@ -34,7 +34,8 @@ data.location=~/.task
 # У меня очень большой promt, нужно больше места резервировать отчёту
 reserved.lines=7
 
-color.project.beta=red
+# color.project.beta=red
 color.keyword.купить=yellow
+urgency.user.project.learn.coefficient=-2
 
 include /home/bubujka/.taskrc-dynamic
