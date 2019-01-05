@@ -17,7 +17,9 @@ mode "open" {
   bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
+  bindsym f exec mindforger ~/.db/mf-wiki; mode "default"
   bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
+  bindsym e exec /home/bubujka/.bu.bin/bin/hebrew-kbd-help; mode "default"
   bindsym t exec /home/bubujka/.Telegram/Telegram; mode "default"
   bindsym a exec /home/bubujka/.bu.bin/bin/run-anki ; mode "default"
   bindsym Shift+h exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
@@ -52,9 +54,9 @@ mode "meta" {
 }
 
 # Режим отключения хоткеев
-bindsym F11 mode "unbind"; exec notify-flash "i3" "mode unbind"
+bindsym F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
 mode "unbind" {
-  bindsym F11 mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym F12 mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 # Кнопки в системе
@@ -91,13 +93,17 @@ bindsym $mod+Control+h exec st -e /home/bubujka/.bu.bin/bin/habit_maker.py
 
 
 # Тайм трэкинг
-bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
+#bindsym F9 exec /home/bubujka/.bu.bin/bin/work-tgl
 bindsym Shift+F9 exec /home/bubujka/.bu.bin/bin/work-tgl continue
 
-bindsym F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
+#bindsym F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl
 bindsym Shift+F10 exec /home/bubujka/.bu.bin/bin/work-beta-tgl continue
 
-bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
+#bindsym F12 exec /home/bubujka/.bu.bin/bin/stop-toggle
+bindsym F9 exec /home/bubujka/.bu.bin/bin/mykbd us
+bindsym F10 exec /home/bubujka/.bu.bin/bin/mykbd ru
+bindsym F11 exec /home/bubujka/.bu.bin/bin/mykbd il
+
 
 # Taskwarrior
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/shellcast-selector
@@ -153,8 +159,8 @@ bindsym $mod+Shift+c exec /home/bubujka/.bu.bin/bin/select-dotfile-file
 bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
 
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
-bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-
+#bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
+bindsym $mod+i sticky toggle
 
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search
@@ -198,6 +204,8 @@ bindsym Shift+F8 move container to workspace 8
 
 # Поведение окон
 for_window [title="\[fzf\]"] floating enable
+for_window [title="hebrewkbd"] floating enable
+for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
 
 
