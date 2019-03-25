@@ -147,7 +147,8 @@ bindsym $mod+Shift+o exec /home/bubujka/.bu.bin/bin/open-progress
 bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
-bindsym $mod+Control+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
+#bindsym $mod+Control+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
+bindsym $mod+Control+m exec st -e /home/bubujka/.bu.bin/bin/mebot
 bindsym $mod+Shift+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
 bindsym $mod+Shift+n exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+Control+n exec /home/bubujka/.bu.bin/bin/search-name
@@ -160,7 +161,7 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 #bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-bindsym $mod+i sticky toggle
+bindsym $mod+i exec /home/bubujka/.bu.bin/bin/initial-working-state
 
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search

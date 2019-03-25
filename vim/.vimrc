@@ -304,7 +304,6 @@ noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
 au BufRead,BufNewFile *.ntl set filetype=javascript
 nmap <Leader>n "=system('nn')<C-M>p
-nmap <Leader>j maggVGgq:w<CR>'a
 nmap <Leader>l :ALENextWrap<CR>
 autocmd FileType javascript set formatprg=efx
 

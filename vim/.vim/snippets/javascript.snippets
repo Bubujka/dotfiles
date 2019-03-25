@@ -1,3 +1,32 @@
+snippet ra-resource
+	import { ${1:Model}List, $1Edit, $1Show, $1Create } from './${2:model}'
+	<Resource name="$2" list={$1List} edit={$1Edit} show={$1Show} create={$1Create}/>
+
+snippet ra-field
+	import React from 'react';
+
+	const ${1:MyUrl}Field = ({ record = {}, source }) =>
+			<a href={record[source]}>
+					{record[source]}
+			</a>;
+
+	export default $1Field;
+snippet ra-model
+	import React from 'react'
+	import { ListGuesser, EditGuesser, ShowGuesser } from 'react-admin'
+	import {
+		List, Datagrid, TextField, ReferenceField,
+		Show, Edit, Create, SimpleForm, SimpleShowLayout, TextInput, ReferenceInput, SelectInput, DisabledInput, LongTextInput
+	} from 'react-admin';
+
+	export const ${1:Model}List = ListGuesser;
+	export const $1Edit = EditGuesser;
+	export const $1Show = ShowGuesser;
+	export const $1Create = props => (
+		<div></div>
+	);
+
+
 snippet pt
 	// @format
 
