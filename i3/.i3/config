@@ -81,7 +81,7 @@ bindsym $mod+u exec /home/bubujka/.bu.bin/bin/unchats
 # bindsym $mod+o sticky toggle
 bindsym $mod+Shift+Q kill
 bindsym $mod+Shift+R restart
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+X exit
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
@@ -161,7 +161,7 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 #bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-bindsym $mod+i exec /home/bubujka/.bu.bin/bin/initial-working-state
+bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/initial-working-state
 
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search

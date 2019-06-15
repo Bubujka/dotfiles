@@ -235,7 +235,6 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 vnoremap Y :!xc<CR>
 
-
 " Еммет раскрывает свои шорткаты по сочетанию shift-tab
 let g:user_emmet_leader_key='<c-e>'
 let g:user_emmet_expandabbr_key='<S-Tab>'
@@ -369,3 +368,14 @@ let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#bracket_spacing = 'true'
 let g:ale_completion_enabled = 1
 
+" .vimrc
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
+autocmd FileType vue syntax sync fromstart
+
+let g:ale_fixers = {'javascript.jsx': ['prettier'], 'typescript': ['prettier'], 'javascript': ['prettier'], 'typescript.tsx': ['prettier']}
+let g:ale_fix_on_save = 1

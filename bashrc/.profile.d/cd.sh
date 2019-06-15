@@ -46,6 +46,12 @@ w() {
   dir=$(ls ~/.db/wiki/ | fzf +m) && vim ~/.db/wiki/"$dir"
 }
 
+ww() {
+	cd ~/.db/prj/websites/wiki
+	use-rvm
+	rvm use $(cat .ruby-version)
+}
+
 # Переход на каталог выше
 alias ..='cd ../'
 

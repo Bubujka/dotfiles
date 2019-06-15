@@ -55,3 +55,12 @@ snippet swagger
 	responses: {}
 	parameters: {}
 	definitions: {}
+
+snippet fmd
+	defaults:
+		-
+			scope:
+				path: ""
+				type: "${0:collection}"
+			values:
+				layout: "default"
