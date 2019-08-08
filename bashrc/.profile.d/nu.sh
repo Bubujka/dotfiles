@@ -8,7 +8,7 @@ nu() {
     echo "Кэш старый +_+"
     find ~/ -type d -name '.git' > ~/.git-repos
   fi
-  for dir in `cat ~/.git-repos | grep -v .gvm`
+  for dir in `cat ~/.git-repos | grep -v .gvm | grep -v .nvm`
   do
     echo $dir
     if [ -d "$dir" ]; then

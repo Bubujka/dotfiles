@@ -5,12 +5,7 @@
   br = branch
   st = status
   ad = add . --all
-  mnc = merge --no-commit --no-ff
-  hist = log --pretty=format:\"% h % ad | % s% d [% an]\" --graph --date=short
   rao = remote add origin
-  ras = remote add stage
-  pu  = push -u origin master
-  mylog  = log --pretty=format:\"% ad | % s% d \" --graph --date=short --author='zendzirou@gmail.com'
 [color]
 	ui = true
 [user]
@@ -21,5 +16,3 @@
 	quotepath = false
 [push]
 	default = simple
-[diff "ntl"]
-  textconv = "iconv -f utf-16le -t utf-8"

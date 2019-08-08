@@ -3,6 +3,11 @@ snippet jcollection
 	collections:
 		${1:NAME}:
 			output: true
+
+snippet ait
+	- name: ${1:NAME}
+		include_tasks: tasks/${0:task}.yml
+
 # Jekyll LAYOUT
 snippet jlayout
 	defaults:
