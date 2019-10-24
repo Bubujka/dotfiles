@@ -64,7 +64,7 @@ mode "unbind" {
 set $mod Mod4
 set $print_screen 107
 set $scroll_lock 78
-set $terminal st
+set $terminal xterm
 # "\"
 set $search_key 51
 set $pause_break 127
