@@ -377,5 +377,5 @@ let g:user_emmet_settings = {
 \}
 autocmd FileType vue syntax sync fromstart
 
-let g:ale_fixers = {'javascript.jsx': ['prettier'], 'typescript': ['prettier'], 'javascript': ['prettier'], 'typescript.tsx': ['prettier']}
+let g:ale_fixers = {'javascript.jsx': ['prettier'], 'typescript': [], 'yaml': ['prettier'], 'javascript': ['prettier'], 'typescript.tsx': []}
 let g:ale_fix_on_save = 1
