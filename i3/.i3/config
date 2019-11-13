@@ -115,8 +115,9 @@ bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
-bindsym $mod+Control+e exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/excel/ ods soffice-calc
-bindsym $mod+Control+Shift+p exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/excel-prj/ ods soffice-calc
+bindsym $mod+Control+e exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel/ ods soffice-calc
+bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/checklists/ ods soffice-calc
+bindsym $mod+Control+Shift+p exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
@@ -161,7 +162,7 @@ bindsym $mod+Control+c exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/
 
 bindsym $mod+Control+Shift+l exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 #bindsym $mod+i exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
-bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/initial-working-state
+#bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/initial-working-state
 
 # Поиск
 bindcode $mod+$search_key exec /home/bubujka/.bu.bin/bin/web_searcher.py full_search

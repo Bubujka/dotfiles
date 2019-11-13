@@ -9,7 +9,7 @@ export NVM_DIR="/home/bubujka/.nvm"
 . "$HOME/.password"
 #unity-settings-daemon &
 
-#bash -c 'sleep 2 ; setxkbmap -layout us,ru,il -option grp:shifts_toggle'&
+bash -c 'sleep 2 ; setxkbmap -layout us,ru -option grp:shifts_toggle'&
 bash -c 'sleep 2 ; synclient VertEdgeScroll=0'&
 bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
 bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
