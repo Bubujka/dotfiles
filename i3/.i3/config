@@ -24,6 +24,7 @@ mode "open" {
   bindsym a exec /home/bubujka/.bu.bin/bin/run-anki ; mode "default"
   bindsym Shift+h exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
   bindsym s exec slack; mode "default"
+  bindsym n exec nautilus; mode "default"
   bindsym p exec pgadmin3; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
