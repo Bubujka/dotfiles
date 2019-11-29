@@ -8,5 +8,9 @@ alias sar='source .ssh_agent_info'
 
 fs() {
   local dir
-  dir=$(cat ~/.ssh/config  | grep '^host ' | cut -d' ' -f2 | fzf +m --header="Переход к серверу") && ssh "$dir"
+  if [ $# -eq "0" ] ; then
+	  dir=$(cat ~/.ssh/config  | grep '^host ' | cut -d' ' -f2 | fzf +m --header="Переход к серверу") && ssh "$dir"
+  else
+	  dir=$(cat ~/.ssh/config  | grep '^host ' | grep "$1" | cut -d' ' -f2 | fzf +m --header="Переход к серверу") && ssh "$dir"
+  fi
 }
