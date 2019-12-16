@@ -44,8 +44,7 @@ mode "logbook" {
 
 bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
 mode "meta" {
-  bindsym h exec /home/bubujka/.bu.bin/bin/hc-mode; mode "default"
-  bindsym s exec /home/bubujka/.bu.bin/bin/sc-mode; mode "default"
+  bindsym s exec systemctl suspend; mode "default"
 
   bindsym w exec /home/bubujka/.bu.bin/bin/work-mode; mode "default"
   bindsym p exec /home/bubujka/.bu.bin/bin/personal-mode; mode "default"
