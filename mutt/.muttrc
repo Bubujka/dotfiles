@@ -6,6 +6,7 @@ set spoolfile = +INBOX
 set record = "+[Gmail]/Sent Mail"
 set postponed = "+[Gmail]/Drafts"
 
+set index_format="%4C %Z %{%Y.%m.%d %H:%M} %-25.25L (%?l?%4l&%4c?) %s"
 set realname = 'Aleksej Kamynin'
 set from = zendzirou@gmail.com
 set use_from = yes
