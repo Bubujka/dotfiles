@@ -23,3 +23,9 @@ __prompt_command() {
         PS1+="\$${RCol} "
     fi
 }
+
+unpsgit () {
+	__git_ps1 () {
+		echo -n ""
+	}
+}
