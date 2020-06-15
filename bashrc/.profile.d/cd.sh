@@ -61,4 +61,9 @@ alias bin='cd ~/.bu.bin/bin'
 # Переход к папке с загрузками
 alias _='cd ~/.db/_'
 
+
+# Переход в db
+alias db='cd ~/.db'
+
+
 alias anki-media="cd \"$HOME/.local/share/Anki2/1-й пользователь/collection.media\""

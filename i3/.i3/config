@@ -20,7 +20,7 @@ mode "open" {
   bindsym f exec mindforger ~/.db/mf-wiki; mode "default"
   bindsym h exec /home/bubujka/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
   bindsym e exec /home/bubujka/.bu.bin/bin/hebrew-kbd-help; mode "default"
-  bindsym t exec /home/bubujka/.Telegram/Telegram; mode "default"
+  bindsym t exec /home/bubujka/.bu.bin/bin/run-telegram; mode "default"
   bindsym a exec /home/bubujka/.bu.bin/bin/run-anki ; mode "default"
   bindsym Shift+h exec /home/bubujka/.bu.bin/bin/run-tunnels ; mode "default"
   bindsym s exec slack; mode "default"
@@ -211,6 +211,7 @@ for_window [title="hebrewkbd"] floating enable
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
 
+for_window [title="Diablo"] floating enable; sticky enable; border 3
 
 # Режим ресайза окон
 mode "resize" {

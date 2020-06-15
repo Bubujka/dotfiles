@@ -7,6 +7,7 @@ execute pathogen#infect()
 " Настройки цветовой схемы
 set t_Co=256
 colorscheme xoria256
+set modeline
 "colorscheme seagull
 
 " Возможность использовать часть команд в русской раскладке
@@ -302,6 +303,8 @@ let g:fixmyjs_engine = 'eslint'
 noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_rc_path = '$HOME/.eslintrc.json'
 au BufRead,BufNewFile *.ntl set filetype=javascript
+au BufRead,BufNewFile *.dbj set filetype=javascript
+au BufRead,BufNewFile *.nip set filetype=javascript
 nmap <Leader>n "=system('nn')<C-M>p
 nmap <Leader>l :ALENextWrap<CR>
 autocmd FileType javascript set formatprg=efx
@@ -324,7 +327,7 @@ command! MakeTags !ctags -R .
 set showcmd
 
 " Строки нумеровать относительно курсора
-set relativenumber
+"set relativenumber
 set wildmenu
 
 " Отключить фолдинг
