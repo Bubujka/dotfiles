@@ -6,6 +6,7 @@
   st = status
   ad = add . --all
   rao = remote add origin
+  mnc = merge --no-commit --squash
 [color]
 	ui = true
 [user]
