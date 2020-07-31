@@ -13,7 +13,7 @@ bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
   bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
   bindsym b exec /home/bubujka/.bu.bin/bin/ssh_chromium; mode "default"
-  bindsym d exec zeal; mode "default"
+  bindsym d exec /opt/digikam-7.0.0-x86-64.appimage; mode "default"
   bindsym v exec /home/bubujka/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
@@ -106,7 +106,7 @@ bindsym F11 exec /home/bubujka/.bu.bin/bin/mykbd il
 
 
 # Taskwarrior
-bindsym $mod+t exec /home/bubujka/.bu.bin/bin/shellcast-selector
+bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
 bindsym $mod+Control+t exec st -e vit
 
 # Таймер (pomodoro)
@@ -211,7 +211,7 @@ for_window [title="hebrewkbd"] floating enable
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
 
-for_window [title="Diablo"] floating enable; sticky enable; border 3
+#for_window [title="Diablo"] floating enable; sticky enable; border 3
 
 # Режим ресайза окон
 mode "resize" {
