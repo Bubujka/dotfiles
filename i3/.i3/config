@@ -107,6 +107,7 @@ bindsym F11 exec /home/bubujka/.bu.bin/bin/mykbd il
 
 # Taskwarrior
 bindsym $mod+t exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
+bindsym $mod+Control+Shift+t exec soffice ~/.db/wiki/timing/template.ods
 bindsym $mod+Control+t exec st -e vit
 
 # Таймер (pomodoro)
