@@ -130,3 +130,6 @@
 [submodule "vim/.vim/bundle/vim-jsx"]
 	path = vim/.vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/.vim/bundle/vim-javacomplete2"]
+	path = vim/.vim/bundle/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git
