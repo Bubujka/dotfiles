@@ -26,6 +26,7 @@ mode "open" {
   bindsym s exec slack; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym p exec pgadmin3; mode "default"
+  bindsym l exec /home/bubujka/.bu.bin/bin/open-logbook ; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
