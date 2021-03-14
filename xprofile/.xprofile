@@ -4,7 +4,7 @@ export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого разм
 export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video
 export PATH=$PATH:$HOME/.bu.bin/bin
 export PATH=$PATH:$HOME/.usr/bin
-export NVM_DIR="/home/bubujka/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . "$HOME/.password"
 #unity-settings-daemon &
