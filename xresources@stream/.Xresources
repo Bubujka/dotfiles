@@ -3,7 +3,7 @@ XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
 XTerm*faceName: Input Mono Condensed Regular
 ! XTerm*faceName: DejaVu Sans Mono
-XTerm*faceSize: 18
+XTerm*faceSize: 28
 
 
 ! Схема tangoesque

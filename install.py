@@ -4,9 +4,12 @@ from glob import glob
 from subprocess import call
 from os.path import isdir, expanduser
 import socket
+import sys
 
 def hostname():
     """Узнать имя машины, где скрипт запущен"""
+    if len(sys.argv) > 1:
+        return sys.argv[1]
     return socket.gethostname()
 
 def common_configs():
