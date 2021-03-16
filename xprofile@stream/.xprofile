@@ -1,0 +1,27 @@
+#!/bin/bash
+export VIDEO_RECORDING_RESOLUTION='1920x1080' # у меня такой экран
+export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого размера пожмёт всё равно. Заливать меньше
+export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video
+export PATH=$PATH:$HOME/.bu.bin/bin
+export PATH=$PATH:$HOME/.usr/bin
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+. "$HOME/.password"
+#unity-settings-daemon &
+
+bash -c 'sleep 2 ; setxkbmap -layout us,ru -option grp:shifts_toggle'&
+bash -c 'sleep 2 ; synclient VertEdgeScroll=0'&
+bash -c 'sleep 3 ; xmodmap ~/.xmodmap'&
+bash -c 'sleep 3 ; xrdb -load ~/.Xresources'&
+bash -c 'sleep 3 ; xset +fp ~/.fonts'&
+bash -c 'sleep 3 ; xset r rate 170 50'&
+bash -c 'sleep 3 ; killall xbindkeys && xbindkeys'&
+bash -c 'sleep 3 ; dropbox start'&
+bash -c 'sleep 3 ; pm2' &
+bash -c 'sleep 3 ; xsetroot -solid "#333333"' &
+#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1' &
+#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
+#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
+bash -c 'sleep 3 ; dunst' &
+nm-applet &
+#i3
