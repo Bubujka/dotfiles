@@ -2,7 +2,7 @@ use-nvm() {
 	if [[ $LANGVM != *nvm* ]]; then
 		LANGVM+='nvm '
 		export NODE_ENV='development'
-		export NVM_DIR="/home/bubujka/.nvm"
+		export NVM_DIR="~/.nvm"
 		[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 	fi
 }

@@ -18,6 +18,7 @@ bash -c 'sleep 3 ; xset r rate 170 50'&
 bash -c 'sleep 3 ; killall xbindkeys && xbindkeys'&
 bash -c 'sleep 3 ; dropbox start'&
 bash -c 'sleep 3 ; pm2' &
+bash -c 'sleep 3 ; xsetroot -solid "#333333"' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
 #bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
