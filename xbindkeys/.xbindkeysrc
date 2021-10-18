@@ -38,8 +38,8 @@
 #keystate_scrolllock= enable
 
 # Examples of commands:
-"/home/bubujka/.bu.bin/bin/selection-google"
-  b:9
+#"/home/bubujka/.bu.bin/bin/selection-google"
+  #b:9
 # "xbindkeys_show"
 # control+shift + q
 
@@ -69,3 +69,8 @@
 ##################################
 # End of xbindkeys configuration #
 ##################################
+"xte 'keydown Alt_L' 'keydown Left' 'keyup Left' 'keyup Alt_L'"
+     b:8
+
+"xte 'keydown Alt_L' 'keydown Right' 'keyup Right' 'keyup Alt_L'"
+     b:9

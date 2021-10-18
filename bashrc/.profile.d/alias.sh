@@ -1,5 +1,6 @@
 alias aves='ansible-vault encrypt_string'
 alias ap='ansible-playbook'
+alias apc='ansible-playbook --check --diff'
 alias cu='cleanup.py'
 alias hbt='cd ~/.db/prj/habit-maker; ./habit_maker2.py ; cd -'
 alias lbs='logbook-status.py'

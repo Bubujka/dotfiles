@@ -351,8 +351,6 @@ nnoremap <Leader>d :put=strftime('%F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 
-map <leader>t Itask add project:<esc>V!bash<cr>
-vmap <Leader>t :!tap<CR>
 " Синтаксис для конфигов nginx
 autocmd BufRead,BufNewFile *nginx/conf.d/* set syntax=nginx
 autocmd BufRead,BufNewFile *sites-available/* set syntax=nginx
@@ -384,4 +382,15 @@ let g:ale_fixers = {'javascript.jsx': ['prettier'], 'typescript': [], 'yaml': ['
 let g:ale_fix_on_save = 1
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+" Если файл менялся извне - перезагрузить его
+set autoread
 
+let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
+                        \ 'checkbox': { 'toggles': [' ', '+'] },
+                        \ 'map': { 'prefix': '<leader>' },
+                        \ 'enter': { 'shift': 1 },
+                        \ 'links': { 'external': { 'enable': 1 } },
+                        \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+                        \ 'fold': { 'enable': 1 } }
+
+let g:polyglot_disabled = ['markdown']

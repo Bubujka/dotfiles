@@ -118,13 +118,14 @@ bindsym $mod+c exec /home/bubujka/.bu.bin/bin/stop-timer
 # Runners
 bindsym $mod+e exec /home/bubujka/.bu.bin/bin/siterunner.py
 bindsym $mod+Control+e exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel/ ods soffice-calc
-bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/checklists/ ods soffice-calc
 bindsym $mod+Control+Shift+p exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/keys pub copy
 #bindsym $mod+Control+Shift+p exec /home/bubujka/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
 bindsym $mod+r exec /home/bubujka/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+Control+l exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
 bindsym $mod+Shift+t exec /home/bubujka/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+
+bindsym $mod+Shift+a exec /home/bubujka/.bu.bin/bin/start-activity
 
 
 # Запись экрана
@@ -149,7 +150,8 @@ bindsym $mod+p exec /home/bubujka/.bu.bin/bin/select-prj
 bindsym $mod+Shift+p exec /home/bubujka/.bu.bin/bin/open-plan
 bindsym $mod+Shift+o exec /home/bubujka/.bu.bin/bin/open-progress
 bindsym $mod+a exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
-bindsym $mod+w exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+w       exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+Shift+i exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/checklists md
 bindsym $mod+Control+s exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 #bindsym $mod+Control+m exec /home/bubujka/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
 bindsym $mod+Control+m exec st -e /home/bubujka/.bu.bin/bin/mebot
