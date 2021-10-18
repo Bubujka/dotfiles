@@ -13,7 +13,7 @@
 	name = Aleksej Kamynin
 	email = zendzirou@gmail.com
 [core]
-	excludesfile = /home/bubujka/.gitignore
+	excludesfile = ~/.gitignore
 	quotepath = false
 [push]
 	default = simple

@@ -40,9 +40,6 @@
 [submodule "bin/.bin/git-extras"]
 	path = bin/.bin/git-extras
 	url = https://github.com/tj/git-extras.git
-[submodule "vim/.vim/bundle/vim-markdown"]
-	path = vim/.vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/.vim/bundle/emmet-vim"]
 	path = vim/.vim/bundle/emmet-vim
 	url = https://github.com/Bubujka/emmet-vim.git
@@ -67,9 +64,6 @@
 [submodule "vim/.vim/bundle/vim-autoformat"]
 	path = vim/.vim/bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git
-[submodule "vim/.vim/bundle/vim-markdown-folding"]
-	path = vim/.vim/bundle/vim-markdown-folding
-	url = https://github.com/nelstrom/vim-markdown-folding.git
 [submodule "vim/.vim/bundle/vim-puppet"]
 	path = vim/.vim/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
@@ -133,3 +127,6 @@
 [submodule "vim/.vim/bundle/vim-javacomplete2"]
 	path = vim/.vim/bundle/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "vim/.vim/bundle/mkdx"]
+	path = vim/.vim/bundle/mkdx
+	url = https://github.com/SidOfc/mkdx.git
