@@ -381,7 +381,10 @@ let g:user_emmet_settings = {
 autocmd FileType vue syntax sync fromstart
 
 let g:ale_fixers = {'javascript.jsx': ['prettier'], 'typescript': [], 'yaml': ['prettier'], 'javascript': ['prettier'], 'typescript.tsx': []}
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
+let g:snipMate = { 'snippet_version' : 1 }
+
+set rtp+=~/.fzf
