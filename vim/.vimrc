@@ -350,6 +350,7 @@ highlight clear SignColumn
 nnoremap <Leader>d :put=strftime('%F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
+nnoremap <Leader>yc "*yi`
 
 " Синтаксис для конфигов nginx
 autocmd BufRead,BufNewFile *nginx/conf.d/* set syntax=nginx
@@ -390,7 +391,7 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
                         \ 'map': { 'prefix': '<leader>' },
                         \ 'enter': { 'shift': 1 },
                         \ 'links': { 'external': { 'enable': 1 } },
-                        \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+                        \ 'toc': { 'text': 'Оглавление', 'update_on_write': 1 },
                         \ 'fold': { 'enable': 1 } }
 
 let g:polyglot_disabled = ['markdown']

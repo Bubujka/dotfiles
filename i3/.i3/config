@@ -79,7 +79,7 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
 bindsym $mod+u exec ~/.bu.bin/bin/unchats
 
-bindsym $mod+i sticky toggle
+#bindsym $mod+i sticky toggle
 bindsym $mod+Shift+Q kill
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+X exit
@@ -151,7 +151,8 @@ bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
 bindsym $mod+a exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
-bindsym $mod+Shift+i exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/checklists md
+bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/wiki/checklists
+bindsym $mod+shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/inventory2/howto
 bindsym $mod+Control+s exec ~/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 #bindsym $mod+Control+m exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
 bindsym $mod+Control+m exec st -e ~/.bu.bin/bin/mebot
@@ -212,6 +213,7 @@ bindsym Shift+F8 move container to workspace 8
 # Поведение окон
 for_window [title="\[fzf\]"] floating enable
 for_window [title="hebrewkbd"] floating enable
+for_window [title="my-check-list-selector"] fullscreen
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
 
