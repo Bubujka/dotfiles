@@ -13,7 +13,7 @@ bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
   bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
   bindsym b exec ~/.bu.bin/bin/ssh_chromium; mode "default"
-  bindsym d exec /opt/digikam-7.0.0-x86-64.appimage; mode "default"
+  bindsym d exec /opt/digiKam-7.2.0-x86-64.appimage; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
@@ -71,10 +71,15 @@ set $search_key 51
 set $pause_break 127
 floating_modifier $mod
 
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # Основные кнопки
-bindsym $mod+Control+r exec ~/.bu.bin/bin/rekbd
-bindsym $mod+Shift+l exec gnome-screensaver-command -l
+bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
+bindsym $mod+Shift+l exec slock
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
 bindsym $mod+u exec ~/.bu.bin/bin/unchats
@@ -89,7 +94,6 @@ bindsym $mod+Shift+space floating toggle
 
 # Приложения
 bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+h exec st -e htop
 bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
 
 
@@ -148,6 +152,7 @@ bindsym $mod+n exec ~/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 bindsym $mod+p exec ~/.bu.bin/bin/select-prj
 
 bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
+bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
 bindsym $mod+a exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md

@@ -1,1 +1,1 @@
-export BROWSER='br'
+#export BROWSER='br'

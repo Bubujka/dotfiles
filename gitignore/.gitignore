@@ -20,3 +20,4 @@ ubuntu-xenial-16.04-cloudimg-console.log
 .vagrant
 venv
 yarn-error.log
+.jekyll-cache

@@ -3,7 +3,7 @@ nnoremap :q :bd <CR>
 set iskeyword+=-
 set novisualbell
 set linespace=3
-set guifont=Iosevka\ 14
+set guifont=Iosevka\ 18
 
 " Скрыть правый скролл
 set guioptions-=r

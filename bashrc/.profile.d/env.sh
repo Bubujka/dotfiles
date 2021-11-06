@@ -1,5 +1,5 @@
 # Всякие разные настройки окружения
-export BROWSER="br"
+#export BROWSER="br"
 export EDITOR=vim
 
 export VIDEO_RECORDING_RESOLUTION='1920x1080' # у меня такой экран
