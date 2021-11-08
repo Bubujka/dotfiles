@@ -25,7 +25,8 @@ mode "open" {
   bindsym Shift+h exec ~/.bu.bin/bin/run-tunnels ; mode "default"
   bindsym s exec slack; mode "default"
   bindsym n exec nautilus; mode "default"
-  bindsym p exec pgadmin3; mode "default"
+  bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
+  bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
   bindsym l exec ~/.bu.bin/bin/open-logbook ; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
@@ -156,8 +157,12 @@ bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
 bindsym $mod+a exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
 bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
-bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/wiki/checklists
-bindsym $mod+shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/inventory2/howto
+
+bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
+bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
+
+bindsym $mod+Control+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/beta/howto-basic/howtos
+bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/howto-basic/howtos howtobasic.beta.agency
 bindsym $mod+Control+s exec ~/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 #bindsym $mod+Control+m exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
 bindsym $mod+Control+m exec st -e ~/.bu.bin/bin/mebot

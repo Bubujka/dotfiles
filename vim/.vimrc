@@ -393,7 +393,7 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
                         \ 'checkbox': { 'toggles': [' ', '+'] },
                         \ 'map': { 'prefix': '<leader>' },
                         \ 'enter': { 'shift': 1 },
-                        \ 'links': { 'external': { 'enable': 1 } },
+                        \ 'links': { 'fragment': { 'complete': 0 }, 'external': { 'enable': 1 } },
                         \ 'toc': { 'text': 'Оглавление', 'update_on_write': 1 },
                         \ 'fold': { 'enable': 1 } }
 
