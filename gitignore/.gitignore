@@ -21,3 +21,4 @@ ubuntu-xenial-16.04-cloudimg-console.log
 venv
 yarn-error.log
 .jekyll-cache
+nohup.out
