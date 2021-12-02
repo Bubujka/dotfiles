@@ -27,6 +27,7 @@ mode "open" {
   bindsym n exec nautilus; mode "default"
   bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
   bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
+  bindsym s exec soffice ~/.db/wiki/excel/sleep.ods; mode "default"
   bindsym l exec ~/.bu.bin/bin/open-logbook ; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
