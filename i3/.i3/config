@@ -81,7 +81,7 @@ bindsym $mod+Shift+Right move right
 
 # Основные кнопки
 bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
-bindsym $mod+Shift+l exec slock
+bindsym $mod+Control+l exec slock
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
 bindsym $mod+u exec ~/.bu.bin/bin/unchats
@@ -128,7 +128,7 @@ bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/keys p
 #bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
 bindsym $mod+r exec ~/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
-bindsym $mod+Control+l exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
+#bindsym $mod+Control+l exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
 bindsym $mod+Shift+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 
 bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
