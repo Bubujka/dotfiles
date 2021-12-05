@@ -26,7 +26,7 @@ def install_configs(pathes):
     """Установить конфиги с помощью stow"""
     for pth in pathes:
         print("Installing: {}".format(pth))
-        call(["stow", pth, "-t", expanduser("~/")])
+        call(["stow", "--dotfiles", pth, "-t", expanduser("~/")])
 
 def is_overlay_dir(pth):
     """Является ли каталог оверлеем?"""
