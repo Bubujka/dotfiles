@@ -12,7 +12,7 @@ workspace_auto_back_and_forth yes
 bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
   bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
-  bindsym b exec ~/.bu.bin/bin/ssh_chromium; mode "default"
+  bindsym b exec google-chrome; mode "default"
   bindsym d exec /opt/digiKam-7.2.0-x86-64.appimage; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
@@ -81,7 +81,7 @@ bindsym $mod+Shift+Right move right
 
 # Основные кнопки
 bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
-bindsym $mod+Control+l exec slock
+bindsym $mod+Control+l exec i3lock
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
 bindsym $mod+u exec ~/.bu.bin/bin/unchats
