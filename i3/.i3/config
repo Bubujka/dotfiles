@@ -34,7 +34,6 @@ mode "open" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-bindsym $mod+l mode "logbook"; exec notify-flash "i3" "mode logbook"
 mode "logbook" {
   bindsym w exec ~/.bu.bin/bin/week-logbook; mode "default"
   bindsym t exec ~/.bu.bin/bin/open-logbook; mode "default"
@@ -81,7 +80,7 @@ bindsym $mod+Shift+Right move right
 
 # Основные кнопки
 bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+l exec ~/.bu.bin/bin/lock-screen
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
 bindsym $mod+u exec ~/.bu.bin/bin/unchats
