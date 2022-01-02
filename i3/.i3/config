@@ -23,7 +23,7 @@ mode "open" {
   bindsym t exec ~/.bu.bin/bin/run-telegram; mode "default"
   bindsym a exec ~/.bu.bin/bin/run-anki ; mode "default"
   bindsym Shift+h exec ~/.bu.bin/bin/run-tunnels ; mode "default"
-  bindsym s exec slack; mode "default"
+  bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
   bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
