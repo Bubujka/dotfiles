@@ -65,6 +65,7 @@ mode "unbind" {
 # win
 set $mod Mod4
 set $print_screen 107
+set $altenter 104
 set $scroll_lock 78
 set $terminal xterm
 # "\"
@@ -95,6 +96,7 @@ bindsym $mod+Shift+space floating toggle
 
 # Приложения
 bindsym $mod+Return exec $terminal
+#bindcode $altenter exec $terminal
 bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
 
 
