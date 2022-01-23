@@ -1,8 +1,9 @@
-#!/bin/bash -xe
+#!/bin/bash
 for file in *; do
 	if [ -d "$file" ]; then
 		cd "$file"
-		git pull origin master &
+		echo "$file"
+		git pull origin master
 		cd ..
 	fi
 
