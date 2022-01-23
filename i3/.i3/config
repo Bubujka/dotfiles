@@ -26,7 +26,8 @@ mode "open" {
   bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
-  bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
+  bindsym w exec open-prj-wikis "~/.db/wiki/excel/prj.ods" "personal prj"; mode "default"
+  #bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
   bindsym s exec soffice ~/.db/wiki/excel/sleep.ods; mode "default"
   bindsym l exec ~/.bu.bin/bin/open-logbook ; mode "default"
 
