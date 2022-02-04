@@ -6,7 +6,7 @@ p() {
 	dir=$(_projects | fzf +m) && cd $(_projects -e "$dir")
 	set_xterm_title "xterm WORKING in $dir"
 	if [ -f .nvmrc ]; then
-		use-nvm
+		#use-nvm
 		echo "Switching node: "
 		cat .nvmrc
 		nvm use;

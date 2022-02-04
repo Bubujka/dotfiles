@@ -13,23 +13,26 @@ bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
 mode "open" {
   bindsym Shift+b exec chromium-browser --disable-background-networking --disable-gpu; mode "default"
   bindsym b exec google-chrome; mode "default"
-  bindsym d exec /opt/digiKam-7.2.0-x86-64.appimage; mode "default"
+  bindsym d exec digikam; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
   bindsym f exec mindforger ~/.db/mf-wiki; mode "default"
-  bindsym h exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/help.md; mode "default"
-  bindsym e exec ~/.bu.bin/bin/hebrew-kbd-help; mode "default"
   bindsym t exec ~/.bu.bin/bin/run-telegram; mode "default"
   bindsym a exec ~/.bu.bin/bin/run-anki ; mode "default"
-  bindsym Shift+h exec ~/.bu.bin/bin/run-tunnels ; mode "default"
   bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
   bindsym w exec open-prj-wikis "~/.db/wiki/excel/prj.ods" "personal prj"; mode "default"
-  #bindsym w exec soffice ~/.db/wiki/excel/waiting.ods; mode "default"
-  bindsym s exec soffice ~/.db/wiki/excel/sleep.ods; mode "default"
-  bindsym l exec ~/.bu.bin/bin/open-logbook ; mode "default"
+
+  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
+}
+
+bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
+mode "meta" {
+  bindsym w exec open-warpa-prj-wikis "~/.db/wiki/excel/warpa-prj.ods" "warpa prj"; mode "default"
+  bindsym p exec ~/.bu.bin/bin/open-personal; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
@@ -45,16 +48,6 @@ mode "logbook" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
-mode "meta" {
-  bindsym s exec systemctl suspend; mode "default"
-
-  bindsym w exec ~/.bu.bin/bin/work-mode; mode "default"
-  bindsym p exec ~/.bu.bin/bin/personal-mode; mode "default"
-
-  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
-}
 
 # Режим отключения хоткеев
 bindsym F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
