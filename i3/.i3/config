@@ -108,9 +108,10 @@ bindsym F11 exec ~/.bu.bin/bin/mykbd il
 
 
 # Taskwarrior
-bindsym $mod+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
-bindsym $mod+Control+Shift+t exec soffice ~/.db/wiki/timing/template.ods
-bindsym $mod+Control+t exec st -e vit
+bindsym $mod+t exec ~/.bu.bin/bin/today-timing
+bindsym $mod+Shift+t exec ~/.bu.bin/bin/today-personal-timing
+bindsym $mod+Control+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
+bindsym $mod+Control+Shift+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
 
 # Таймер (pomodoro)
 bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
@@ -124,7 +125,7 @@ bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/keys p
 bindsym $mod+r exec ~/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 #bindsym $mod+Control+l exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
-bindsym $mod+Shift+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+#bindsym $mod+Shift+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 
 bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
 

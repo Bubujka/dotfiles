@@ -22,3 +22,4 @@ venv
 yarn-error.log
 .jekyll-cache
 nohup.out
+.php-cs-fixer.cache
