@@ -12,3 +12,4 @@ alias smutt='set_xterm_title "@mutt SPITZ" && /usr/bin/mutt -F ~/.muttrc-spitz; 
 alias wmutt='set_xterm_title "@mutt WORK" && /usr/bin/mutt -F ~/.muttrc-work; set_xterm_title "xterm"'
 alias mutt='set_xterm_title "@mutt PERSONAL" && /usr/bin/mutt -F ~/.muttrc; set_xterm_title "xterm"'
 alias w1='watch -n1'
+alias cat='bat --paging=never'
