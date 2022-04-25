@@ -15,5 +15,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	quotepath = false
+  commentChar = ^
+
 [push]
 	default = simple
