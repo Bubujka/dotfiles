@@ -398,3 +398,5 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
 "\ 'fold': { 'enable': 1 }
                         "\ 'enter': { 'shift': 1 },
 let g:polyglot_disabled = ['markdown']
+
+call ale#Set('php_phpcs_options', '--standard=/home/bubujka/.db/wiki/bubujka-code-standard.xml')
