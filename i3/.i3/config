@@ -96,15 +96,15 @@ bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
 
 # Тайм трэкинг
 #bindsym F9 exec ~/.bu.bin/bin/work-tgl
-bindsym Shift+F9 exec ~/.bu.bin/bin/work-tgl continue
+#bindsym Shift+F9 exec ~/.bu.bin/bin/work-tgl continue
 
 #bindsym F10 exec ~/.bu.bin/bin/work-beta-tgl
-bindsym Shift+F10 exec ~/.bu.bin/bin/work-beta-tgl continue
+#bindsym Shift+F10 exec ~/.bu.bin/bin/work-beta-tgl continue
 
 #bindsym F12 exec ~/.bu.bin/bin/stop-toggle
-bindsym F9 exec ~/.bu.bin/bin/mykbd us
-bindsym F10 exec ~/.bu.bin/bin/mykbd ru
-bindsym F11 exec ~/.bu.bin/bin/mykbd il
+#bindsym F9 exec ~/.bu.bin/bin/mykbd us
+#bindsym F10 exec ~/.bu.bin/bin/mykbd ru
+#bindsym F11 exec ~/.bu.bin/bin/mykbd il
 
 
 # Taskwarrior
@@ -147,7 +147,7 @@ bindsym $mod+Control+Shift+k exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/readlist
 bindcode $scroll_lock exec ~/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec ~/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
 
-bindsym $mod+p exec ~/.bu.bin/bin/select-prj
+bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
 
 bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
 bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
@@ -207,6 +207,9 @@ bindsym F5 workspace 5
 bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
+bindsym F9 workspace 9
+bindsym F10 workspace 10
+bindsym F11 workspace 11
 
 bindsym Shift+F1 move container to workspace vim
 bindsym Shift+F2 move container to workspace www
@@ -216,6 +219,9 @@ bindsym Shift+F5 move container to workspace 5
 bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
+bindsym Shift+F9 move container to workspace 8
+bindsym Shift+F10 move container to workspace 10
+bindsym Shift+F11 move container to workspace 11
 
 # Поведение окон
 for_window [title="\[fzf\]"] floating enable
