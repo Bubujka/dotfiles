@@ -23,20 +23,12 @@ mode "open" {
   bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
-  bindsym w exec open-prj-wikis "~/.db/wiki/excel/prj.ods" "personal prj"; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-bindsym $mod+m mode "meta"; exec notify-flash "i3" "mode meta"
-mode "meta" {
-  bindsym w exec open-warpa-prj-wikis "~/.db/wiki/excel/warpa-prj.ods" "warpa prj"; mode "default"
-  bindsym p exec ~/.bu.bin/bin/open-personal; mode "default"
-
-  bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
-  bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
-}
+bindsym $mod+m exec ~/.db/bu.bin-private/bin/online-meeting
 
 mode "logbook" {
   bindsym w exec ~/.bu.bin/bin/week-logbook; mode "default"
@@ -50,9 +42,9 @@ mode "logbook" {
 
 
 # Режим отключения хоткеев
-bindsym F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
+bindsym Control+Shift+F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
 mode "unbind" {
-  bindsym F12 mode "default"; exec notify-flash "i3" "normal mode"
+  bindsym Control+Shift+F12 mode "default"; exec notify-flash "i3" "normal mode"
 }
 
 # Кнопки в системе
@@ -188,6 +180,15 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
 
+bindsym F9 exec ~/.bu.bin/bin/br http://howto.lxd/howto.html?pth=howtos/index.md
+bindsym Shift+F9 exec open-prj-wikis "~/.db/wiki/excel/prj.ods" "personal prj"; mode "default"
+bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
+bindsym F10 exec ~/.bu.bin/bin/br http://howto-warpa.lxd/howto.html?pth=howtos/index.md
+bindsym Shift+F10 exec open-prj-wikis "~/.db/wiki/excel/warpa-prj.ods" "warpa prj"; mode "default"
+bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
+bindsym F11 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/daily.ods ; exec soffice ~/.db/wiki/excel/monthly.ods
+bindsym F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
+
 # Управление громкостью
 bindcode 122 exec ~/.bu.bin/bin/volume 5%-
 bindcode 123 exec ~/.bu.bin/bin/volume 5%+
@@ -207,9 +208,9 @@ bindsym F5 workspace 5
 bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
-bindsym F9 workspace 9
-bindsym F10 workspace 10
-bindsym F11 workspace 11
+#bindsym F9 workspace 9
+#bindsym F10 workspace 10
+#bindsym F11 workspace 11
 
 bindsym Shift+F1 move container to workspace vim
 bindsym Shift+F2 move container to workspace www
@@ -219,9 +220,9 @@ bindsym Shift+F5 move container to workspace 5
 bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
-bindsym Shift+F9 move container to workspace 8
-bindsym Shift+F10 move container to workspace 10
-bindsym Shift+F11 move container to workspace 11
+#bindsym Shift+F9 move container to workspace 8
+#bindsym Shift+F10 move container to workspace 10
+#bindsym Shift+F11 move container to workspace 11
 
 # Поведение окон
 for_window [title="\[fzf\]"] floating enable
