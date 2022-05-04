@@ -188,6 +188,7 @@ bindsym Shift+F10 exec open-prj-wikis "~/.db/wiki/excel/warpa-prj.ods" "warpa pr
 bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
 bindsym F11 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/daily.ods ; exec soffice ~/.db/wiki/excel/monthly.ods
 bindsym F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
+bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/daily
 
 # Управление громкостью
 bindcode 122 exec ~/.bu.bin/bin/volume 5%-
