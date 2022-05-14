@@ -14,3 +14,4 @@ alias mutt='set_xterm_title "@mutt PERSONAL" && /usr/bin/mutt -F ~/.muttrc; set_
 alias w1='watch -n1'
 alias cat='bat --paging=never'
 alias gvd='gvim-dir'
+alias mrj='mr -j'
