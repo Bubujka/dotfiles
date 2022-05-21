@@ -24,3 +24,4 @@ yarn-error.log
 nohup.out
 .php-cs-fixer.cache
 ruleset.xml
+public/cov-report
