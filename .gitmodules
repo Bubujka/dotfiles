@@ -57,10 +57,10 @@
 	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/.vim/bundle/vim-phpfmt"]
 	path = vim/.vim/bundle/vim-phpfmt
-  url = https://github.com/Bubujka/vim-phpfmt.git
+	url = https://github.com/Bubujka/vim-phpfmt.git
 [submodule "vim/.vim/bundle/vim-autoformat"]
 	path = vim/.vim/bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git
