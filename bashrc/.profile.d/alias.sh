@@ -16,3 +16,4 @@ alias cat='bat --paging=never'
 alias gvd='gvim-dir'
 alias mrj='mr -j'
 alias mrc='mr -j commit -m правки...'
+alias k=kubectl

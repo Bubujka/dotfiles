@@ -13,7 +13,6 @@ export VENV_DIR="$HOME/venv"
 [ -f $VENV_DIR/bin/activate ] && . $VENV_DIR/bin/activate
 
 . "$HOME/.password"
-#unity-settings-daemon &
 
 bash -c 'sleep 2 ; setxkbmap -layout us,ru -option grp:shifts_toggle'&
 bash -c 'sleep 2 ; synclient VertEdgeScroll=0'&
@@ -23,11 +22,7 @@ bash -c 'sleep 3 ; xset +fp ~/.fonts'&
 bash -c 'sleep 3 ; xset r rate 170 50'&
 bash -c 'sleep 3 ; killall xbindkeys && xbindkeys'&
 bash -c 'sleep 3 ; dropbox start'&
-#bash -c 'sleep 3 ; compton -c'&
 bash -c 'sleep 3 ; pm2' &
-#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1' &
-#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 0' &
-#bash -c 'sleep 3 ; xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200' &
 bash -c 'sleep 3 ; dunst' &
+bash -c 'sleep 3 ; xss-lock -- i3lock -n' &
 nm-applet &
-#i3
