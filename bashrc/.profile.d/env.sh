@@ -10,6 +10,6 @@ export VOICEMAIL_SAVING_PATH=~/.db/history/voicemail
 export NAMED_MIC_SAVING_PATH=~/.db/history/talk
 export PRJ_REPOSITORY="git@github.com:Bubujka/prj.git" # реп для мелких приватных проектов
 export ADMIN_EMAIL="zendzirou@gmail.com"
-export DEBUG='app*'
+#export DEBUG='app*'
 export PHP_ENV='development'
 export PRJ_ENV='dev'
