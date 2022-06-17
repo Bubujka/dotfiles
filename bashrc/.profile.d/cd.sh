@@ -29,10 +29,16 @@ p() {
 	fi
 }
 
-lfs() {
+lfsr() {
   local dir
   dir=$(lxc list | grep 'RUNNING'|  awk '{ print $2 }'| sort | uniq | fzf +m) && lxc exec $dir bash
 }
+
+lfs() {
+  local dir
+  dir=$(lxc list | grep 'RUNNING'|  awk '{ print $2 }'| sort | uniq | fzf +m) && lxc exec $dir -- su -l www-data ||  lxc exec $dir -- su -l prj
+}
+
 
 # Переход в подкаталог основного места хранения всего
 d() {
