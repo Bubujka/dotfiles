@@ -17,4 +17,4 @@ alias gvd='gvim-dir'
 alias mrj='mr -j'
 alias mrc='mr -j commit -m правки...'
 alias k=kubectl
-alias vmr='mr -c ~/.vmrconfig'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
