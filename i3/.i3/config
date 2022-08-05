@@ -100,10 +100,10 @@ bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
 
 
 # Taskwarrior
-bindsym $mod+t exec ~/.bu.bin/bin/today-timing
-bindsym $mod+Shift+t exec ~/.bu.bin/bin/today-personal-timing
-bindsym $mod+Control+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
-bindsym $mod+Control+Shift+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
+#bindsym $mod+t exec ~/.bu.bin/bin/today-timing
+#bindsym $mod+Shift+t exec ~/.bu.bin/bin/today-personal-timing
+#bindsym $mod+Control+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
+#bindsym $mod+Control+Shift+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
 
 # Таймер (pomodoro)
 bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
@@ -111,13 +111,15 @@ bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
 
 # Runners
 bindsym $mod+e exec ~/.bu.bin/bin/siterunner.py
+bindsym $mod+Shift+e exec ~/.bu.bin/bin/open-in-gvim ~/.sites
 bindsym $mod+Control+e exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel/ ods soffice-calc
 bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/keys pub copy
 #bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
 bindsym $mod+r exec ~/.bu.bin/bin/open-reps
 bindsym $mod+Shift+m exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 #bindsym $mod+Control+l exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
-#bindsym $mod+Shift+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+bindsym $mod+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
+bindsym $mod+Shift+t exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/tasklists.md
 
 bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
 
