@@ -1,10 +1,10 @@
 [alias]
-  cdiff = diff --cached
   rh = reset --hard HEAD
+  ad = add . --all
+  cdiff = diff --cached
   co = checkout
   br = branch
   st = status
-  ad = add . --all
   rao = remote add origin
   mnc = merge --no-commit --squash
 [color]
