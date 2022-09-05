@@ -333,12 +333,12 @@ set wildmenu
 " Отключить фолдинг
 set nofoldenable
 
-let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
-
-let g:php_cs_fixer_php_path = "php"               " Path to PHP
-let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
-let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
-let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+" let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+"
+" let g:php_cs_fixer_php_path = "php"               " Path to PHP
+" let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+" let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
+" let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
 
 " Раскрасить 81 колонку в красный цвет
 " highlight ColorColumn ctermbg=magenta
@@ -401,3 +401,6 @@ let g:polyglot_disabled = ['markdown']
 
 "call ale#Set('php_phpcs_options', '--standard=/home/bubujka/.db/wiki/bubujka-code-standard.xml')
 call ale#Set('php_phpcs_options', '--standard=PSR2')
+
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+

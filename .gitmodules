@@ -130,3 +130,6 @@
 [submodule "vim/.vim/bundle/mkdx"]
 	path = vim/.vim/bundle/mkdx
 	url = https://github.com/SidOfc/mkdx.git
+[submodule "vim/.vim/bundle/md-img-paste.vim"]
+	path = vim/.vim/bundle/md-img-paste.vim
+	url = https://github.com/md-img-paste-devs/md-img-paste.vim.git
