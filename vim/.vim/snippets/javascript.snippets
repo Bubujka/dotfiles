@@ -2,6 +2,11 @@ snippet ra-resource
 	import { ${1:Model}List, $1Edit, $1Show, $1Create } from './${2:model}'
 	<Resource name="$2" list={$1List} edit={$1Edit} show={$1Show} create={$1Create}/>
 
+snippet setup
+	<script setup>
+		${0}
+	</script>
+
 snippet ra-field
 	import React from 'react';
 
