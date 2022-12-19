@@ -9,6 +9,9 @@
   mnc = merge --no-commit --squash
 [color]
 	ui = true
+[credential]
+  helper = store
+
 [user]
 	name = Aleksej Kamynin
 	email = zendzirou@gmail.com
