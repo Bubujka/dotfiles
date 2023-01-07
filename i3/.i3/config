@@ -183,7 +183,7 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
 
-bindsym F9 exec ~/.bu.bin/bin/br http://howto.lxd/howto.html?pth=howtos/index.md
+bindsym F9 exec ~/.bu.bin/bin/br http://check.bubujka.org
 bindsym Shift+F9 exec open-prj-wikis "~/.db/wiki/excel/prj.ods" "personal prj"; mode "default"
 bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 bindsym F10 exec ~/.bu.bin/bin/br http://howto-warpa.lxd/howto.html?pth=howtos/index.md
