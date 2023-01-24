@@ -219,6 +219,8 @@ set cino=(0
 
 " Ctrl-f открывает поиск по файлам
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
+call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
+call SMap("<S-C-c>", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 
 au BufNewFile,BufRead *.less set filetype=less
 
