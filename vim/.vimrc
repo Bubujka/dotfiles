@@ -218,10 +218,6 @@ set cino=(0
 
 
 " Ctrl-f открывает поиск по файлам
-call SMap("<C-f>", "<esc><esc>:FZF<cr>")
-call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
-call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
-"call SMap("<C-x>", "<esc><esc>:r ! blade-component-wrapper --full<cr>")
 
 au BufNewFile,BufRead *.less set filetype=less
 
@@ -407,3 +403,11 @@ call ale#Set('php_phpcs_options', '--standard=PSR2')
 
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
+
+
+
+call SMap("<C-f>", "<esc><esc>:FZF<cr>")
+call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
+call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
+call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
+"call SMap("<C-x>", "<esc><esc>:r ! blade-component-wrapper --full<cr>")
