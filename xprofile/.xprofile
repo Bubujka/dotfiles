@@ -25,4 +25,7 @@ bash -c 'sleep 3 ; dropbox start'&
 bash -c 'sleep 3 ; pm2' &
 bash -c 'sleep 3 ; dunst' &
 bash -c 'sleep 3 ; xss-lock -- i3lock -n' &
+
+bash -c 'sleep 3 ; feh --bg-scale ~/.db/dotfiles/howtogetmotivated-2560x1440.png' &
+
 nm-applet &
