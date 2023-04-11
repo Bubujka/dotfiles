@@ -263,7 +263,7 @@ nnoremap <silent> gb :call HandleURL()<cr>
 " -------------------------------------------
 
 " Отключить автодополнение html, javascript для php
-let g:snipMate = {}
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
 " -------------------------------------------

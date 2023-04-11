@@ -1,12 +1,10 @@
 snippet ulf
 	use Illuminate\\Support\\Facades\\${0};
 
-# function definition
-snippet fd
-	public function ${1:main}(${0})
-	{
+# function
+snippet f
+	function ${1:main}(${0}){
 	}
-snippet css
-		<link rel="stylesheet" href="${0}.css">
-snippet js
-		<script src="${0}.js"></script>
+
+snippet af
+	fn( (${1}) => ${0} )

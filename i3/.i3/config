@@ -141,6 +141,7 @@ bindsym $mod+Control+Shift+k exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/readlist
 # Редактор, заметки
 bindcode $scroll_lock exec ~/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
 bindsym $mod+n exec ~/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
+bindsym $mod+Shift+n exec ~/.db/bu.bin-private/bin/open-check-note
 
 bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
 
@@ -159,7 +160,7 @@ bindsym $mod+Control+s exec ~/.bu.bin/bin/selectwikifile ~/.vim/snippets snippet
 #bindsym $mod+Control+m exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
 bindsym $mod+Control+m exec st -e ~/.bu.bin/bin/mebot
 bindsym $mod+Shift+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
-bindsym $mod+Shift+n exec ~/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
+# bindsym $mod+Shift+n exec ~/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+Control+n exec ~/.bu.bin/bin/search-name
 bindsym $mod+Shift+w exec ~/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
 bindsym $mod+Control+w exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/prj md
@@ -191,6 +192,7 @@ bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/
 bindsym Shift+F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-company-calendar
 bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
 bindsym F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-checklists
+bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-company-checklists
 bindsym F12 exec ~/.db/bu.bin-private/bin/daily
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/shift-daily
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
