@@ -54,7 +54,7 @@ set $mod Mod4
 set $print_screen 107
 set $altenter 104
 set $scroll_lock 78
-set $terminal xterm
+set $terminal kitty
 # "\"
 set $search_key 51
 set $pause_break 127
