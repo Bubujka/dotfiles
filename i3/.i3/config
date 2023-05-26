@@ -169,6 +169,8 @@ bindsym $mod+Shift+b exec ~/.bu.bin/bin/select-bin-file
 bindsym $mod+Shift+c exec ~/.bu.bin/bin/select-dotfile-file
 bindsym $mod+Control+c exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
 
+bindsym $mod+b exec exec br http://localhost:3000/dev/backport; mode "default"
+
 bindsym $mod+Control+Shift+l exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
 #bindsym $mod+i exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/index.md
 #bindsym $mod+Shift+i exec ~/.bu.bin/bin/initial-working-state
@@ -192,7 +194,7 @@ bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/
 bindsym Shift+F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-company-calendar
 bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
 bindsym F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-checklists
-bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-company-checklists
+bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
 bindsym F12 exec ~/.db/bu.bin-private/bin/daily
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/shift-daily
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
