@@ -413,3 +413,10 @@ call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
 call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
 "call SMap("<C-x>", "<esc><esc>:r ! blade-component-wrapper --full<cr>")
+
+" Отключаем ёбаный ридонли
+set noro
+
+if &diff
+    highlight! link DiffText MatchParen
+endif
