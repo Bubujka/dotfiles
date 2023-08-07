@@ -15,6 +15,8 @@ mode "open" {
   bindsym b exec google-chrome; mode "default"
   bindsym d exec br http://localhost:3000/dev; mode "default"
   bindsym o exec br http://localhost:3000/nova; mode "default"
+  bindsym l exec br http://localhost:3000/; mode "default"
+  bindsym e exec br http://localhost:3000/telescope; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
@@ -186,8 +188,8 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
 
-bindsym F9 exec ~/.bu.bin/bin/br http://check.bubujka.org
-bindsym Shift+F9 exec ~/.bu.bin/bin/br http://check.bubujka.org/speedrun
+bindsym F9 exec ~/.bu.bin/bin/br https://check.bubujka.org
+bindsym Shift+F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru
 
 bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 #bindsym F10 exec ~/.db/bu.bin-private/bin/open-activity
