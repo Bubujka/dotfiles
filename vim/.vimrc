@@ -347,7 +347,7 @@ set nofoldenable
 
 highlight clear SignColumn
 
-nnoremap <Leader>d :put=strftime('### %F ')<CR>
+nnoremap <Leader>d :put=strftime('# %F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 nnoremap <Leader>yc "*yi`
@@ -405,13 +405,15 @@ call ale#Set('php_phpcs_options', '--standard=PSR2')
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 
-
+vmap <Leader>e ! make-part<cr>
 
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
+call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
 call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
-call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
+"call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
+call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot <cr>")
 "call SMap("<C-x>", "<esc><esc>:r ! blade-component-wrapper --full<cr>")
 
 " Отключаем ёбаный ридонли

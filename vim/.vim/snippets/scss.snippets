@@ -2,7 +2,26 @@ snippet md
 	@include media-breakpoint-down(${1:md})  {
 		${0}
 	}
+snippet dbg
+	.debug & { background: ${0}; }
+
+snippet bw
+	@include media-breakpoint-between(${1:md, xl}) {
+		${0}
+	}
 snippet mw
 	@media (max-width: ${1:1920}px) {
 		${0}
 	}
+
+snippet triplet
+	@include media-breakpoint-up(xl)  {
+			.debug & { background: blue; }
+	}
+	@include media-breakpoint-between(md, xl) {
+			.debug & { background: magenta; }
+	}
+	@include media-breakpoint-down(md)  {
+			.debug & { background: red; }
+	}
+

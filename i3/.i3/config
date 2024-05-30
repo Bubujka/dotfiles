@@ -17,15 +17,18 @@ mode "open" {
   bindsym o exec br http://localhost:3000/nova; mode "default"
   bindsym l exec br http://localhost:3000/; mode "default"
   bindsym e exec br http://localhost:3000/telescope; mode "default"
+  bindsym c exec br http://localhost:3000/dev/changelog/edit; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
-  bindsym f exec mindforger ~/.db/mf-wiki; mode "default"
+  bindsym f exec open-in-gvim ~/.db/wiki/food-dairy.md; mode "default"
   bindsym t exec ~/.bu.bin/bin/run-telegram; mode "default"
   bindsym a exec ~/.bu.bin/bin/run-anki ; mode "default"
   bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
-  bindsym p exec soffice ~/.db/wiki/excel/prj.ods; mode "default"
+  bindsym s exec br http://localhost:3000/swagger; mode "default"
+  bindsym p exec soffice ~/.db/wiki/excel/prices.ods; mode "default"
+  bindsym r exec soffice ~/.db/wiki/excel/rates.ods; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
@@ -109,7 +112,8 @@ bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
 #bindsym $mod+Control+Shift+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
 
 # Таймер (pomodoro)
-bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
+#bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
+bindsym $mod+c exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/changelog.md
 
 
 # Runners
