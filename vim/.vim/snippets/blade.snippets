@@ -14,6 +14,9 @@ snippet ex
 snippet dp
 	<x-demo.panel title="${0}">
 	</x-demo.panel>
+snippet df
+	<x-demo.field>
+	</x-demo.field>
 snippet h2
 	<x-h2>
 		${0}
@@ -22,6 +25,10 @@ snippet td
 	<x-to-dev>
 		${0}
 	</x-to-dev>
+snippet td2
+	<x-to-dev>
+		<x-h2>${0}</x-h2>
+	</x-to-dev>
 snippet bn
 	<x-bunote>
 		${0}
@@ -29,3 +36,10 @@ snippet bn
 snippet sl
 	<x-slot:${0}>
 	</x-slot>
+
+snippet fv
+	@aware(['data'])
+	@fillvalue
+
+snippet br
+	<x-br ${0} />

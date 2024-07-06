@@ -285,7 +285,7 @@ set statusline+=%*
 set spelllang=ru,en
 let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1) " format on save (autocmd)
 "let g:phpfmt_php_path = "/opt/php/bin/php"               " Path to PHP
-let g:phpfmt_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+let g:phpfmt_enable_default_mapping = 2     " Enable the mapping by default (<leader>pcd)
 
 let g:phpfmt_on_save = 0
 let g:phpfmt_update_on_open = 0
@@ -402,10 +402,12 @@ let g:polyglot_disabled = ['markdown']
 "call ale#Set('php_phpcs_options', '--standard=/home/bubujka/.db/wiki/bubujka-code-standard.xml')
 call ale#Set('php_phpcs_options', '--standard=PSR2')
 
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
+"autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 
 vmap <Leader>e ! make-part<cr>
+nmap <Leader>l ! ./node_modules/.bin/prettier --write % <cr>
 
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
@@ -414,6 +416,7 @@ call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
 "call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
 call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot <cr>")
+call SMap("<Leader>p", "<esc><esc>:r ! insert-good-screenshot docs <cr>")
 "call SMap("<C-x>", "<esc><esc>:r ! blade-component-wrapper --full<cr>")
 
 " Отключаем ёбаный ридонли

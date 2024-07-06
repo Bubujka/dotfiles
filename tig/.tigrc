@@ -1,2 +1,3 @@
 bind generic   v >git difftool %(file)
-
+bind status    d >git checkout -- %(file)
+bind status    ! >rm %(file)

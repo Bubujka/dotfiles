@@ -11,6 +11,10 @@ snippet f
 	function ${1:main}(${0}){
 	}
 
+snippet gc
+	Gate::authorize('${1:view}', ${2:Model}::class);
+snippet gm
+	Gate::authorize('${1:update}', \$model);
 snippet af
 	fn( (${1}) => ${0} )
 
