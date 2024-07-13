@@ -36,7 +36,7 @@ nu() {
 
 
   # Это мой файл. Что хочу то и копипащу
-  for dir in `cat ~/.db/prj/.mrconfig | fgrep '[' | grep -v DEFAULT | tr -d '[]'`
+  for dir in `ls ~/.db/prj`
   do
     echo $dir
     if [ -d "$HOME/.db/prj/$dir" ]; then
