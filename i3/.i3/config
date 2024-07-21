@@ -192,8 +192,7 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
 
-bindsym F9 exec ~/.bu.bin/bin/br https://check.bubujka.org
-bindsym Shift+F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru
+bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
 
 bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 #bindsym F10 exec ~/.db/bu.bin-private/bin/open-activity
