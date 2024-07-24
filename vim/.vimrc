@@ -409,9 +409,22 @@ call ale#Set('php_phpcs_options', '--standard=PSR2')
 vmap <Leader>e ! make-part<cr>
 nmap <Leader>l ! ./node_modules/.bin/prettier --write % <cr>
 
+nmap <Leader>ar o<esc>S#[RelatedComponent('')]<esc>F'i
+nmap <Leader>aa o<esc>S#[Attr('', '')]<esc>3F'i
+
+nmap <Leader>an o<esc>S#[Name('')]<esc>F'i
+nmap <Leader>ae o<esc>S#[EventName('')]<esc>F'i
+nmap <Leader>ad o<esc>S#[DataName('')]<esc>F'i
+nmap <Leader>ag o<esc>S#[Group('')]<esc>F'i
+
+nmap <Leader>aw o<esc>S#[Working]<esc>
+nmap <Leader>ai o<esc>S#[IsDev]<esc>
+nmap <Leader>ac o<esc>S#[Compact]<esc>
+
+
 call SMap("<C-f>", "<esc><esc>:FZF<cr>")
 call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
-call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
+"call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
 call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
 "call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
