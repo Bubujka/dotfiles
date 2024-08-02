@@ -159,6 +159,7 @@ bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
 
 bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
 bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
+bindsym $mod+shift+f exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 
 bindsym $mod+Control+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/beta/howto-basic/howtos
 bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/howto-basic/howtos howtobasic.beta.agency
