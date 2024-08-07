@@ -128,7 +128,7 @@ bindsym $mod+Shift+m exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
 bindsym $mod+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
 bindsym $mod+Shift+t exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/tasklists.md
 
-bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
+#bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
 
 
 # Запись экрана
@@ -154,7 +154,8 @@ bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
 bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
 bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
-bindsym $mod+a exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki next.md
+bindsym $mod+a exec exec br https://abox.bubujka.org
+bindsym $mod+shift+a exec exec br https://abox.bubujka.org/add
 bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
 
 bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
