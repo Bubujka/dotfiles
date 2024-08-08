@@ -52,6 +52,11 @@ f() {
   dir=$(ls ~/.db/files | fzf +m --header="Переход к папке в хранилище" --preview='ls --color ~/.db/files/{} | head -$LINES') && cd ~/.db/files/"$dir"
 }
 
+# Переход к каталогу с архивом
+a() {
+  local dir
+  dir=$(ls /pool/archive | fzf +m --header="Переход к папке в архиве" --preview='ls --color /pool/archive/{} | head -$LINES') && cd /pool/archive/"$dir"
+}
 
 # Открытие в виме вики файла
 w() {

@@ -6,13 +6,6 @@ av() {
 
 
 fap() {
-	echo "Выполняем команду";
-	cat .fap~
-	sleep 1
-	. .fap~
-}
-
-refap() {
   local dir
   unset DEBUG;
   GROUP=$(cat hosts.ini  | grep '^\[' | tr -d '[]' | sort | \
@@ -22,10 +15,9 @@ refap() {
 	  fzf +m --header="Выбор плэйбука" --preview='bat --color always {} | head -$LINES')
 
 
-  echo "Команда для запуска (или просто fap)"
+  echo "Команда для запуска уже в буфере обмена"
   echo "ansible-playbook -l \"$GROUP\" $PLAYBOOK"
-  echo "ansible-playbook -l \"$GROUP\" $PLAYBOOK" |xclip
-  echo "ansible-playbook -l \"$GROUP\" $PLAYBOOK" > .fap~
+  echo "ansible-playbook -l \"$GROUP\" $PLAYBOOK" | xclip
 }
 
 
