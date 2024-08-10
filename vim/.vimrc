@@ -425,6 +425,7 @@ nmap <Leader>ac o<esc>S#[Compact]<esc>
 call SMap("<C-f>", "<esc><esc>:call fzf#run({'sink': 'sp', 'down': '40%'})<cr>")
 call SMap("<C-l>", "<esc><esc>:Lines<cr>")
 call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
+call SMap("<C-t>", "<esc><esc>:r ! task-wrapper <cr>")
 call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
 call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot <cr>")
