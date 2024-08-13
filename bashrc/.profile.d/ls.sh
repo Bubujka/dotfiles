@@ -13,6 +13,7 @@ x() {
   if [[ "$CMD" != "" ]]; then
     echo $CMD
     echo $CMD | xclip
+    history -s "$CMD"
     $CMD
   fi
 }

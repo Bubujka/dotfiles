@@ -11,6 +11,8 @@ fs() {
   local dir
   if [ $# -eq "0" ] ; then
 	  dir=$(cat ~/.ssh/config  | grep '^host ' | cut -d' ' -f2 | fzf +m --header="Переход к серверу") && set_xterm_title "xterm SSH to $dir" && ssh "$dir" ; set_xterm_title "xterm"
+
+	history -s "ssh $dir"
   else
 	  dir=$(cat ~/.ssh/config  | grep '^host ' | grep "$1" | cut -d' ' -f2 | fzf +m --header="Переход к серверу") && set_xterm_title "xterm SSH to $dir" && ssh "$dir"; set_xterm_title "xterm"
   fi
