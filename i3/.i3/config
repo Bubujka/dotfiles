@@ -156,7 +156,8 @@ bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
 bindsym $mod+a exec exec br https://abox.bubujka.org
 bindsym $mod+shift+a exec exec br https://abox.bubujka.org/add
-bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
+#bindsym $mod+w       exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki md
+bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki
 
 bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
 bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
@@ -167,7 +168,7 @@ bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/sele
 bindsym $mod+Control+s exec ~/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
 #bindsym $mod+Control+m exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/ mm /usr/bin/freeplane
 bindsym $mod+Control+m exec st -e ~/.bu.bin/bin/mebot
-bindsym $mod+Shift+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
+#bindsym $mod+Shift+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh
 # bindsym $mod+Shift+n exec ~/.bu.bin/bin/selectwikifile ~/.db/prj/najomi_data md
 bindsym $mod+Control+n exec ~/.bu.bin/bin/search-name
 bindsym $mod+Shift+w exec ~/.bu.bin/bin/selectwikifile ~/.db/beta/wiki md
@@ -192,7 +193,9 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 
 # Misc
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
-bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
+#bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
+bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet copy ~/.db/wiki/snippets
+bindsym $mod+Shift+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki/snippets
 
 bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
 
@@ -243,6 +246,7 @@ bindsym Shift+F8 move container to workspace 8
 #bindsym Shift+F11 move container to workspace 11
 
 # Поведение окон
+for_window [title="\[fullscreen\]"] fullscreen
 for_window [title="\[fzf\]"] floating enable
 for_window [title="hebrewkbd"] floating enable
 for_window [title="my-check-list-selector"] fullscreen
