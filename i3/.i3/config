@@ -154,12 +154,18 @@ bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
 bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
 bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
 bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
-bindsym $mod+a exec br https://abox.bubujka.org
-bindsym $mod+shift+a exec br https://abox.bubujka.org/add
 
 bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki
 bindsym $mod+Shift+w exec ~/.bu.bin/bin/wiki-next
 bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet copy ~/.db/wiki
+
+
+bindsym $mod+a exec br https://abox.bubujka.org
+bindsym $mod+Shift+a exec br https://abox.bubujka.org/add
+bindsym $mod+Control+a exec ~/.bu.bin/bin/save-link
+
+
+
 
 bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
 bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
