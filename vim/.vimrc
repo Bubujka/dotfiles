@@ -143,7 +143,7 @@ set softtabstop=2
 set tabstop=2
 
 " Формат строки состояния
-set statusline=%<%f%h%m%r\ %b\ %{&fileencoding}\ 0x\ \ %l,%c%V\ %P
+set statusline=%<%f%h%m%r\ %b\ %{&fileencoding}\ 0x\ \ %l,%c%V\ %P\ ---\ %{wordcount().words}\ words
 set laststatus=2
 
 " Включаем "умные" отспупы ( например, автоотступ после {)
@@ -440,3 +440,8 @@ set noro
 if &diff
     highlight! link DiffText MatchParen
 endif
+
+nnoremap gf <C-W>f
+vnoremap gf <C-W>f
+set clipboard=unnamed
+
