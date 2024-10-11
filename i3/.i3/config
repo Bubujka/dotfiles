@@ -162,14 +162,14 @@ bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet 
 
 bindsym $mod+a exec br https://abox.bubujka.org
 bindsym $mod+Shift+a exec br https://abox.bubujka.org/add
-bindsym $mod+Control+a exec ~/.bu.bin/bin/save-link
+#bindsym $mod+Control+a exec ~/.bu.bin/bin/save-link
 
 
 
 
 bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
 bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
-bindsym $mod+shift+f exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
+#bindsym $mod+shift+f exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 
 bindsym $mod+Control+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/beta/howto-basic/howtos
 bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/howto-basic/howtos howtobasic.beta.agency
@@ -206,11 +206,15 @@ bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
 
 bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 #bindsym F10 exec ~/.db/bu.bin-private/bin/open-activity
-bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-calendar
-bindsym Shift+F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-company-calendar
+#bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-calendar
+bindsym F10 exec ~/.bu.bin/bin/open-numbered-link
+bindsym Shift+F10 exec ~/.bu.bin/bin/save-link
+#bindsym Shift+F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-company-calendar
 bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
-bindsym F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-checklists
-bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
+#bindsym F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-checklists
+bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
+bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
+#bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
 bindsym F12 exec ~/.db/bu.bin-private/bin/daily
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/shift-daily
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
@@ -254,6 +258,10 @@ bindsym Shift+F8 move container to workspace 8
 for_window [title="\[fullscreen\]"] fullscreen
 for_window [title="\[fzf\]"] floating enable
 for_window [title="hebrewkbd"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="Nautilus"] resize set 1400 800
+for_window [class="Nautilus"] move [absolute] position center
+
 for_window [title="my-check-list-selector"] fullscreen
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
