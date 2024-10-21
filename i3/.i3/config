@@ -84,6 +84,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+X exit
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+s sticky toggle
 
 
 # Приложения
@@ -214,6 +215,7 @@ bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wik
 #bindsym F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-checklists
 bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
 bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
+bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 #bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
 bindsym F12 exec ~/.db/bu.bin-private/bin/daily
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/shift-daily
@@ -258,10 +260,7 @@ bindsym Shift+F8 move container to workspace 8
 for_window [title="\[fullscreen\]"] fullscreen
 for_window [title="\[fzf\]"] floating enable
 for_window [title="hebrewkbd"] floating enable
-for_window [class="Nautilus"] floating enable
-for_window [class="Nautilus"] resize set 1400 800
-for_window [class="Nautilus"] move [absolute] position center
-
+for_window [class="Nautilus"] floating enable ; sticky enable ; resize set 1400 800 ; move [absolute] position center
 for_window [title="my-check-list-selector"] fullscreen
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable

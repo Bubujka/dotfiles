@@ -19,3 +19,4 @@ alias mrc='mr -j commit -m правки...'
 alias k=kubectl
 alias kv="KUBECONFIG=~/.kube-vidaq/config kubectl"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias tclsh='rlwrap tclsh'
