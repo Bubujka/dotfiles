@@ -348,6 +348,7 @@ set nofoldenable
 highlight clear SignColumn
 
 nnoremap <Leader>d :put=strftime('# %F ')<CR>
+nnoremap <Leader>yd :put=strftime('date: %F ')<CR>
 map <leader>gf :e <cfile><cr>
 nnoremap <Leader>s ggVG:!fmts<CR>
 nnoremap <Leader>yc "*yi`
@@ -407,7 +408,7 @@ call ale#Set('php_phpcs_options', '--standard=PSR2')
 
 
 vmap <Leader>e ! make-part<cr>
-nmap <Leader>l ! ./node_modules/.bin/prettier --write % <cr>
+nmap <Leader>l ! ./node_modules/.bin/prettier --write % --log-level silent <cr>
 
 nmap <Leader>ar o<esc>S#[RelatedComponent('')]<esc>F'i
 nmap <Leader>aa o<esc>S#[Attr('', '')]<esc>3F'i

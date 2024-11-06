@@ -1,0 +1,8 @@
+snippet tk
+	package require Tk
+
+	wm title . {[fzf]}
+	wm geometry . 800x600
+	ttk::style theme use clam
+
+	grid [ttk::frame .f] -padx 20 -pady 10

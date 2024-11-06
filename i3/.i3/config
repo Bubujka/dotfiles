@@ -21,7 +21,7 @@ mode "open" {
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
-  bindsym f exec open-in-gvim ~/.db/wiki/food-dairy.md; mode "default"
+  bindsym f exec ~/.db/prj/tpl-collector/0001-fetch-budebug.tcl; mode "default"
   bindsym t exec ~/.bu.bin/bin/run-telegram; mode "default"
   bindsym a exec ~/.bu.bin/bin/run-anki ; mode "default"
   bindsym g exec gnucash; mode "default"
@@ -217,8 +217,8 @@ bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
 bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 #bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
-bindsym F12 exec ~/.db/bu.bin-private/bin/daily
-bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/shift-daily
+bindsym F12 exec ~/.db/bu.bin-private/bin/plan-opener
+bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener dev
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
 
 # Управление громкостью
