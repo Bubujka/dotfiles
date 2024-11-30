@@ -412,6 +412,7 @@ nmap <Leader>l ! ./node_modules/.bin/prettier --write % --log-level silent <cr>
 
 nmap <Leader>ar o<esc>S#[RelatedComponent('')]<esc>F'i
 nmap <Leader>aa o<esc>S#[Attr('', '')]<esc>3F'i
+nmap <Leader>aq o<esc>S#[Queue]<esc>3F'i
 
 nmap <Leader>an o<esc>S#[Name('')]<esc>F'i
 nmap <Leader>ae o<esc>S#[EventName('')]<esc>F'i
@@ -429,7 +430,8 @@ call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
 call SMap("<C-t>", "<esc><esc>:r ! task-wrapper <cr>")
 call SMap("<Leader>c", "<esc><esc>:r ! blade-component-wrapper --full <cr>")
 call SMap("<Leader>v", "<esc><esc>:r ! insert-vue-app-wrapper <cr>")
-call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot <cr>")
+call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot  <cr>")
+call SMap("<Leader>w", "<esc><esc>:r ! insert-work-wiki-link % <cr>")
 call SMap("<Leader>p", "<esc><esc>:r ! insert-good-screenshot docs <cr>")
 "call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
 "call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
@@ -445,4 +447,3 @@ endif
 nnoremap gf <C-W>f
 vnoremap gf <C-W>f
 set clipboard=unnamed
-

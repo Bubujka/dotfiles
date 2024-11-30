@@ -17,7 +17,7 @@ mode "open" {
   bindsym o exec obs; mode "default"
   bindsym l exec br http://localhost:3000/; mode "default"
   bindsym e exec br http://localhost:3000/telescope; mode "default"
-  bindsym c exec br http://localhost:3000/dev/changelog/edit; mode "default"
+  bindsym c exec br http://localhost:3000/copycat; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
@@ -203,9 +203,13 @@ bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wi
 bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 #bindsym $mod+s exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/snippets sh copy
 
-bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
+#bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
+#bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 
-bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
+bindsym F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener
+bindsym Control+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener new
+bindsym Shift+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener dev
+
 #bindsym F10 exec ~/.db/bu.bin-private/bin/open-activity
 #bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-calendar
 bindsym F10 exec ~/.bu.bin/bin/open-numbered-link
@@ -217,8 +221,11 @@ bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
 bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 #bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
+
 bindsym F12 exec ~/.db/bu.bin-private/bin/plan-opener
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener dev
+
+
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
 
 # Управление громкостью
@@ -240,9 +247,6 @@ bindsym F5 workspace 5
 bindsym F6 workspace 6
 bindsym F8 workspace 8
 bindsym F7 workspace 7
-#bindsym F9 workspace 9
-#bindsym F10 workspace 10
-#bindsym F11 workspace 11
 
 bindsym Shift+F1 move container to workspace vim
 bindsym Shift+F2 move container to workspace www
@@ -252,18 +256,18 @@ bindsym Shift+F5 move container to workspace 5
 bindsym Shift+F6 move container to workspace 6
 bindsym Shift+F7 move container to workspace 7
 bindsym Shift+F8 move container to workspace 8
-#bindsym Shift+F9 move container to workspace 8
-#bindsym Shift+F10 move container to workspace 10
-#bindsym Shift+F11 move container to workspace 11
 
 # Поведение окон
 for_window [title="\[fullscreen\]"] fullscreen
-for_window [title="\[fzf\]"] floating enable
+for_window [title="\[fzf\]"] floating enable ; border pixel 0
 for_window [title="hebrewkbd"] floating enable
 for_window [class="Nautilus"] floating enable ; sticky enable ; resize set 1400 800 ; move [absolute] position center
 for_window [title="my-check-list-selector"] fullscreen
 for_window [title="hebrewkbd"] sticky enable
 for_window [class="ffplay"] floating enable; sticky enable
+
+
+
 
 #for_window [title="Diablo"] floating enable; sticky enable; border 3
 
