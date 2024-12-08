@@ -206,9 +206,9 @@ bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
 #bindsym F9 exec ~/.bu.bin/bin/br https://hello.new-and-blue.ru/plans
 #bindsym Control+F9 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/prj.ods
 
-bindsym F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener
+bindsym Shift+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener
 bindsym Control+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener new
-bindsym Shift+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener dev
+bindsym F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener dev
 
 #bindsym F10 exec ~/.db/bu.bin-private/bin/open-activity
 #bindsym F10 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/run-calendar
@@ -222,8 +222,8 @@ bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 #bindsym Shift+F11 workspace --no-auto-back-and-forth 5; exec ~/.db/bu.bin-private/bin/open-fav-editor
 
-bindsym F12 exec ~/.db/bu.bin-private/bin/plan-opener
-bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener dev
+bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener
+bindsym F12 exec ~/.db/bu.bin-private/bin/plan-opener dev
 
 
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
@@ -260,6 +260,7 @@ bindsym Shift+F8 move container to workspace 8
 # Поведение окон
 for_window [title="\[fullscreen\]"] fullscreen
 for_window [title="\[fzf\]"] floating enable ; border pixel 0
+for_window [title="DB Browser"] floating enable ; border pixel 0
 for_window [title="hebrewkbd"] floating enable
 for_window [class="Nautilus"] floating enable ; sticky enable ; resize set 1400 800 ; move [absolute] position center
 for_window [title="my-check-list-selector"] fullscreen
