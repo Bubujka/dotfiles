@@ -1,7 +1,6 @@
 " Подробнее у меня информация лежит
 " s:0216-vimrc
 
-
 " Подключаем все модули что есть для вима
 execute pathogen#infect()
 
@@ -12,7 +11,6 @@ execute pathogen#infect()
 set t_Co=256
 colorscheme xoria256
 set modeline
-"colorscheme seagull
 
 " Возможность использовать часть команд в русской раскладке
 map ё `
@@ -451,14 +449,32 @@ if &diff
     highlight! link DiffText MatchParen
 endif
 
-nnoremap gf <C-W>f
-vnoremap gf <C-W>f
 set clipboard=unnamed
 
 
+" Открыть то что под курсором
 function! OpenMyCode()
     silent exec "!open-my-code ".shellescape(expand('<cWORD>'), 1)
     silent redraw!
 endfunction
-nnoremap <silent> go :call OpenMyCode()<cr>
 
+
+" Перейти к стилям компонента, над которым мы сейчас работаем
+function! OpenSassFile()
+    let s:pth = expand('%')
+    let s:pth = substitute(s:pth, '\/views\/', '/css/', "")
+    let s:pth = substitute(s:pth, '\.blade\.php$', '.scss', "")
+    exec "split ".s:pth
+endfunction
+
+" Вместо открытия файла под курсором в текущем буфере
+" открыть его в соседнем
+"
+" мне так удобнее
+nnoremap gf <C-W>f
+vnoremap gf <C-W>f
+
+" ------------------------------
+" Персонально моё
+nnoremap <silent> go :call OpenMyCode()<cr>
+nnoremap <silent> gs :call OpenSassFile()<cr>

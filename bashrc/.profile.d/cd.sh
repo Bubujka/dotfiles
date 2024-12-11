@@ -49,7 +49,7 @@ d() {
 # Переход к каталогу с файлами
 f() {
   local dir
-  dir=$(ls ~/.db/files | fzf +m --header="Переход к папке в хранилище" --preview='ls --color ~/.db/files/{} | head -$LINES') && cd ~/.db/files/"$dir"
+  dir=$(ls ~/.db/files | tac | fzf +m --header="Переход к папке в хранилище" --preview='ls --color ~/.db/files/{} | head -$LINES') && cd ~/.db/files/"$dir"
 }
 
 # Переход к каталогу с архивом
