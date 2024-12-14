@@ -160,8 +160,8 @@ set sessionoptions=curdir,buffers,tabpages
 set sessionoptions=blank,buffers,curdir,help,resize,tabpages,winsize
 
 
-" hi OverLength ctermbg=darkred ctermfg=white guibg=#592929
-" match OverLength /\%81v.*/
+"hi OverLength ctermbg=darkred ctermfg=white guibg=#592929
+"match OverLength /\%81v.*/
 
 function SMap(key, action, ...)
     let modes = " vi"
@@ -458,6 +458,10 @@ function! OpenMyCode()
     silent redraw!
 endfunction
 
+" Вставить путь до файла под курсор
+function! InsertFileDir()
+    silent exec "r !get-file-path "
+endfunction
 
 " Перейти к стилям компонента, над которым мы сейчас работаем
 function! OpenSassFile()
@@ -476,5 +480,16 @@ vnoremap gf <C-W>f
 
 " ------------------------------
 " Персонально моё
+nnoremap <silent> go :call InsertFileDir()<cr>
 nnoremap <silent> go :call OpenMyCode()<cr>
 nnoremap <silent> gs :call OpenSassFile()<cr>
+
+
+
+" Я вообще не догоняю как этот синтаксис работает
+hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#f5e900 guifg=#000000
+hi MyPersonalWiki ctermbg=green ctermfg=black guibg=#5c753c guifg=#000000
+autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
+autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/
+autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/
+autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
