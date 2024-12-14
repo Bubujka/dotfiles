@@ -112,9 +112,6 @@
 [submodule "vim/.vim/bundle/vim-prettier"]
 	path = vim/.vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
-[submodule "vim/.vim/bundle/vim-vue"]
-	path = vim/.vim/bundle/vim-vue
-	url = https://github.com/posva/vim-vue.git
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
