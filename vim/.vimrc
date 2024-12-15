@@ -159,10 +159,6 @@ set sessionoptions=curdir,buffers,tabpages
 
 set sessionoptions=blank,buffers,curdir,help,resize,tabpages,winsize
 
-
-"hi OverLength ctermbg=darkred ctermfg=white guibg=#592929
-"match OverLength /\%81v.*/
-
 function SMap(key, action, ...)
     let modes = " vi"
     if (a:0 > 0)
@@ -493,3 +489,15 @@ autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/ containedin=.*Commen
 autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/
 autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/
 autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
+
+
+hi GreenWord ctermfg=green guifg=#6EF8BE
+hi BlueWord ctermfg=blue guifg=#6AA2FF
+hi RedWord ctermfg=red guifg=#E46060
+
+autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/ containedin=javaScriptFuncDef
+autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/
+autocmd FileType javascript syntax match BlueWord /[A-Za-z_0-9]*El/
+autocmd FileType javascript syntax match RedWord /[A-Za-z_0-9]*Els/
+
+autocmd FileType vue set ft=javascript
