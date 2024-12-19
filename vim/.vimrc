@@ -250,7 +250,6 @@ set fdm=indent
 "nnoremap <silent> gb :exe('!'.g:Browser_x.' "'.expand('<cfile>').'" &')<CR>
 function! HandleURL()
   let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
-  echo s:uri
   if s:uri != ""
     silent exec "!br '".s:uri."'"
   else
@@ -467,6 +466,22 @@ function! OpenSassFile()
     exec "split ".s:pth
 endfunction
 
+" Пометить markdown чекбокс сделанным
+" Или наоборот
+function! MarkAsDone()
+  " https://vi.stackexchange.com/questions/40097/vim-substitution-and-keep-cursor-in-place
+  let l:pos = winsaveview()
+
+  let s:match = matchstr(getline("."), '^- \[ \]')
+  if s:match != ""
+    exec ".s/^- \\[ \\]/- [x]/"
+  else
+    exec ".s/^- \\[x\\]/- [ ]/"
+  endif
+
+  call winrestview(l:pos)
+endfunction
+
 " Вместо открытия файла под курсором в текущем буфере
 " открыть его в соседнем
 "
@@ -476,15 +491,24 @@ vnoremap gf <C-W>f
 
 " ------------------------------
 " Персонально моё
-nnoremap <silent> go :call InsertFileDir()<cr>
 nnoremap <silent> go :call OpenMyCode()<cr>
+nnoremap <silent> пщ :call OpenMyCode()<cr>
 nnoremap <silent> gs :call OpenSassFile()<cr>
 
+" Вставить файл под курсор
+nnoremap <silent> <leader>f :call InsertFileDir()<cr>
+nnoremap <silent> <leader>а :call InsertFileDir()<cr>
+
+" Чекбокс поставить
+nnoremap <silent> <leader>x :call MarkAsDone()<cr>
+nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 
 
 " Я вообще не догоняю как этот синтаксис работает
 hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#f5e900 guifg=#000000
 hi MyPersonalWiki ctermbg=green ctermfg=black guibg=#5c753c guifg=#000000
+hi MyJsConstants ctermfg=green guifg=#a2d12a
+
 autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
 autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/
 autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/
@@ -499,5 +523,8 @@ autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/ containedi
 autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/
 autocmd FileType javascript syntax match BlueWord /[A-Za-z_0-9]*El/
 autocmd FileType javascript syntax match RedWord /[A-Za-z_0-9]*Els/
+autocmd FileType javascript syntax keyword BlueWord         el
+
+autocmd FileType javascript syntax keyword MyJsConstants         dataset slots querySlots selector state\.value state popups
 
 autocmd FileType vue set ft=javascript
