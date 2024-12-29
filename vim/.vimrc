@@ -431,6 +431,8 @@ call SMap("<Leader>i", "<esc><esc>:r ! insert-screenshot % <cr>")
 
 call SMap("<Leader>w", "<esc><esc>:r ! insert-work-wiki-link % <cr>")
 call SMap("<Leader>s", "<esc><esc>:r ! insert-my-wiki-link % <cr>")
+call SMap("<Leader>rm", "<esc><esc>:r ! insert-model-rpc <cr>")
+call SMap("<Leader>rs", "<esc><esc>:r ! insert-service-rpc <cr>")
 
 call SMap("<Leader>p", "<esc><esc>:r ! insert-good-screenshot docs <cr>")
 "call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
@@ -505,8 +507,8 @@ nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 
 
 " Я вообще не догоняю как этот синтаксис работает
-hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#f5e900 guifg=#000000
-hi MyPersonalWiki ctermbg=green ctermfg=black guibg=#5c753c guifg=#000000
+hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#c0aa4c guifg=#000000
+hi MyPersonalWiki ctermbg=green ctermfg=black guibg=#99b554 guifg=#000000
 hi MyJsConstants ctermfg=green guifg=#a2d12a
 
 autocmd FileType * syntax match MyWorkWiki /ww:[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
@@ -515,16 +517,40 @@ autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/
 autocmd FileType * syntax match MyPersonalWiki /s:\d\d\d\d-[0-9a-z_-]*/ containedin=.*Comment,vimCommentTitle,cCommentL
 
 
-hi GreenWord ctermfg=green guifg=#6EF8BE
-hi BlueWord ctermfg=blue guifg=#6AA2FF
-hi RedWord ctermfg=red guifg=#E46060
+" lum 89, chroma 43
 
-autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/ containedin=javaScriptFuncDef
-autocmd FileType javascript syntax match GreenWord /[A-Za-z_0-9]*Dom/
-autocmd FileType javascript syntax match BlueWord /[A-Za-z_0-9]*El/
-autocmd FileType javascript syntax match RedWord /[A-Za-z_0-9]*Els/
+hi DarkerGreenWord ctermfg=green guifg=#A7B172
+
+hi GreenWord ctermfg=green guifg=#95DBB0
+hi BlueWord ctermfg=blue guifg=#96D5F1
+hi RedWord ctermfg=red guifg=#FFBAC5
+hi YellowWord ctermfg=yellow guifg=#DECB95
+hi OrangeWord ctermfg=yellow guifg=#F6C0AA
+hi SkyWord ctermfg=blue guifg=#87D8E8
+hi PurpleWord ctermfg=red guifg=#CCC6FC
+hi LimeWord ctermfg=green guifg=#C7D294
+
+
+
+autocmd FileType javascript syntax match DarkerGreenWord /\<[A-Za-z_0-9]*Handler\>/ containedin=javaScriptFuncDef
+autocmd FileType javascript syntax match DarkerGreenWord /\<[A-Za-z_0-9]*Handler\>/
+autocmd FileType javascript syntax match DarkerGreenWord /\<[A-Za-z_0-9]*Action\>/ containedin=javaScriptFuncDef
+autocmd FileType javascript syntax match DarkerGreenWord /\<[A-Za-z_0-9]*Action\>/
+
+autocmd FileType javascript syntax match GreenWord /\<[A-Za-z_0-9]*Dom\>/ containedin=javaScriptFuncDef
+autocmd FileType javascript syntax match GreenWord /\<[A-Za-z_0-9]*Dom\>/
+
+
+autocmd FileType javascript syntax match BlueWord /\<[A-Za-z_0-9]*El\>/
+autocmd FileType javascript syntax match RedWord /\<[A-Za-z_0-9]*Els\>/
 autocmd FileType javascript syntax keyword BlueWord         el
 
-autocmd FileType javascript syntax keyword MyJsConstants         dataset slots querySlots selector state\.value state popups
+autocmd FileType javascript syntax match LimeWord /\<[A-Za-z_0-9]*Opts\>/
+autocmd FileType javascript syntax keyword LimeWord         opts
+
+autocmd FileType javascript syntax keyword OrangeWord         dispatchEvent addEventListener setTimeout setInterval watchEffect computed
+
+autocmd FileType javascript syntax keyword MyJsConstants         dataset slots querySlots selector state.value state popups vpered
 
 autocmd FileType vue set ft=javascript
+autocmd FileType javascript.jsx set ft=javascript
