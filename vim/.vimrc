@@ -405,7 +405,6 @@ call ale#Set('php_phpcs_options', '--standard=PSR2')
 
 
 vmap <Leader>e ! make-part<cr>
-nmap <Leader>l ! ./node_modules/.bin/prettier --write % --log-level silent <cr>
 
 nmap <Leader>ar o<esc>S#[RelatedComponent('')]<esc>F'i
 nmap <Leader>aa o<esc>S#[Attr('', '')]<esc>3F'i
@@ -505,6 +504,12 @@ nnoremap <silent> <leader>а :call InsertFileDir()<cr>
 nnoremap <silent> <leader>x :call MarkAsDone()<cr>
 nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 
+" Полинтить файл
+function! LintAndReload()
+  silent exec "! ./node_modules/.bin/prettier --write % --log-level silent"
+  silent redraw!
+endfunction
+nnoremap <silent> <Leader>l :call LintAndReload()<cr>
 
 " Я вообще не догоняю как этот синтаксис работает
 hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#c0aa4c guifg=#000000
@@ -543,6 +548,7 @@ autocmd FileType javascript syntax match GreenWord /\<[A-Za-z_0-9]*Dom\>/
 
 autocmd FileType javascript syntax match BlueWord /\<[A-Za-z_0-9]*El\>/
 autocmd FileType javascript syntax match RedWord /\<[A-Za-z_0-9]*Els\>/
+autocmd FileType javascript syntax keyword RedWord         els
 autocmd FileType javascript syntax keyword BlueWord         el
 
 autocmd FileType javascript syntax match LimeWord /\<[A-Za-z_0-9]*Opts\>/
