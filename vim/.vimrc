@@ -211,7 +211,8 @@ endfor
 
 set mouse=
 set noerrorbells visualbell t_vb=
-set cino=(0
+
+"set cino=(0
 
 
 
@@ -345,6 +346,7 @@ set nofoldenable
 highlight clear SignColumn
 
 nnoremap <Leader>d :put=strftime('# %F ')<CR>
+nnoremap <Leader>в :put=strftime('# %F ')<CR>
 nnoremap <Leader>yd :put=strftime('date: %F ')<CR>
 map <leader>gf :e <cfile><cr>
 " nnoremap <Leader>s ggVG:!fmts<CR>
@@ -556,7 +558,10 @@ autocmd FileType javascript syntax keyword LimeWord         opts
 
 autocmd FileType javascript syntax keyword OrangeWord         dispatchEvent addEventListener setTimeout setInterval watchEffect computed
 
-autocmd FileType javascript syntax keyword MyJsConstants         dataset slots querySlots selector state.value state popups vpered
+autocmd FileType javascript syntax keyword MyJsConstants dataset slots querySlots selector state.value state popups vpered
+
+autocmd FileType blade syntax match MyJsConstants /\<data-slot=['"].*['"]\>/ contained
+autocmd FileType blade syntax match MyJsConstants /data-slot/
 
 autocmd FileType vue set ft=javascript
 autocmd FileType javascript.jsx set ft=javascript
