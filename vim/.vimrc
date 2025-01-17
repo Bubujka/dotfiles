@@ -422,7 +422,8 @@ nmap <Leader>ai o<esc>S#[IsDev]<esc>
 nmap <Leader>ac o<esc>S#[Compact]<esc>
 
 
-call SMap("<C-f>", "<esc><esc>:call fzf#run({'sink': 'sp', 'down': '40%'})<cr>")
+
+call SMap("<C-f>", "<esc><esc>:call fzf#run({'sink': 'sp', 'down': '80%'})<cr>")
 call SMap("<C-l>", "<esc><esc>:Lines<cr>")
 call SMap("<C-c>", "<esc><esc>:r ! blade-component-wrapper <cr>")
 call SMap("<C-t>", "<esc><esc>:r ! task-wrapper <cr>")
@@ -506,6 +507,9 @@ nnoremap <silent> <leader>а :call InsertFileDir()<cr>
 nnoremap <silent> <leader>x :call MarkAsDone()<cr>
 nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 
+" Открыть список doccofile и выбрать из них
+nnoremap <A-d> :call fzf#run({'source': './redocco.tcl list', 'sink': 'sp', 'down': '80%'})<cr>
+
 " Полинтить файл
 function! LintAndReload()
   silent exec "! ./node_modules/.bin/prettier --write % --log-level silent"
@@ -556,7 +560,7 @@ autocmd FileType javascript syntax keyword BlueWord         el
 autocmd FileType javascript syntax match LimeWord /\<[A-Za-z_0-9]*Opts\>/
 autocmd FileType javascript syntax keyword LimeWord         opts
 
-autocmd FileType javascript syntax keyword OrangeWord         dispatchEvent addEventListener setTimeout setInterval watchEffect computed
+autocmd FileType javascript syntax keyword OrangeWord         dispatchEvent addEventListener setTimeout setInterval watchEffect computed reactive evalScript evalScripts
 
 autocmd FileType javascript syntax keyword MyJsConstants dataset slots querySlots selector state.value state popups vpered
 
@@ -565,3 +569,10 @@ autocmd FileType blade syntax match MyJsConstants /data-slot/
 
 autocmd FileType vue set ft=javascript
 autocmd FileType javascript.jsx set ft=javascript
+
+
+function! ReformatHumanText()
+  exec "'<,'>!fmt -120 -s"
+  redraw!
+endfunction
+vmap  f :call ReformatHumanText() <cr>

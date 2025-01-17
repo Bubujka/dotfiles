@@ -15,10 +15,12 @@ mode "open" {
   bindsym b exec google-chrome; mode "default"
   bindsym d exec br http://localhost:3000/dev; mode "default"
   bindsym h exec br http://localhost:3000/docc; mode "default"
+  bindsym u exec br http://localhost:3000/coll; mode "default"
+  bindsym c exec br http://localhost:3000/copycat; mode "default"
+
   bindsym o exec obs; mode "default"
   bindsym l exec br http://localhost:3000/; mode "default"
   bindsym e exec br http://localhost:3000/telescope; mode "default"
-  bindsym c exec br http://localhost:3000/copycat; mode "default"
   bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"

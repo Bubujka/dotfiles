@@ -1,3 +1,21 @@
+wx() {
+  local CMD
+
+  CMD=$( cd ~/.db/wiki; find . -maxdepth 1 -perm -111 -type f -printf '%f\n' | \
+	  grep -v artisan | \
+	  sort -n | tac | \
+	  fzf +m \
+	  --header="Выбор скрипта серверов" \
+	  --preview-window '70%' \
+	  --preview='bat --color always {} |  head -$LINES')
+  if [[ "$CMD" != "" ]]; then
+    echo . ~/.db/wiki/$CMD
+    echo . ~/.db/wiki/$CMD | xclip
+    history -s ". ~/.db/wiki/$CMD"
+    . ~/.db/wiki/$CMD
+  fi
+}
+
 x() {
   local CMD
 
