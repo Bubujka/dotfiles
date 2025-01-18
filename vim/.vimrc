@@ -509,6 +509,11 @@ nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 
 " Открыть список doccofile и выбрать из них
 nnoremap <A-d> :call fzf#run({'source': './redocco.tcl list', 'sink': 'sp', 'down': '80%'})<cr>
+nnoremap <A-в> :call fzf#run({'source': './redocco.tcl list', 'sink': 'sp', 'down': '80%'})<cr>
+
+" Открыть список related и выбрать из них
+nnoremap <A-r> :call fzf#run({'source': './redocco.tcl related '.expand("%"), 'sink': 'sp', 'down': '80%'})<cr>
+nnoremap <A-к> :call fzf#run({'source': './redocco.tcl related '.expand("%"), 'sink': 'sp', 'down': '80%'})<cr>
 
 " Полинтить файл
 function! LintAndReload()
