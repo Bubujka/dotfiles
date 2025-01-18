@@ -576,3 +576,7 @@ function! ReformatHumanText()
   redraw!
 endfunction
 vmap  f :call ReformatHumanText() <cr>
+
+
+"https://keleshev.com/my-book-writing-setup/
+set virtualedit=all
