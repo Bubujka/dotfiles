@@ -415,6 +415,7 @@ nmap <Leader>aq o<esc>S#[Queue]<esc>3F'i
 nmap <Leader>an o<esc>S#[Name('')]<esc>F'i
 nmap <Leader>ae o<esc>S#[EventName('')]<esc>F'i
 nmap <Leader>ad o<esc>S#[DataName('')]<esc>F'i
+nmap <Leader>ao o<esc>S#[Doc('')]<esc>F'i
 nmap <Leader>ag o<esc>S#[Group('')]<esc>F'i
 
 nmap <Leader>aw o<esc>S#[Working]<esc>
@@ -511,9 +512,19 @@ nnoremap <silent> <leader>ч :call MarkAsDone()<cr>
 nnoremap <A-d> :call fzf#run({'source': './redocco.tcl list', 'sink': 'sp', 'down': '80%'})<cr>
 nnoremap <A-в> :call fzf#run({'source': './redocco.tcl list', 'sink': 'sp', 'down': '80%'})<cr>
 
+" --------------------
 " Открыть список related и выбрать из них
+" Есть ещё конфиг в ~/.gvimrc
+" Там эти хоткеи открывают RelatedGui()
+function! RelatedGui()
+  silent let f = system('./redocco.tcl fzf '.expand("%"))
+  exec "split ".f
+endfunction
+
 nnoremap <A-r> :call fzf#run({'source': './redocco.tcl related '.expand("%"), 'sink': 'sp', 'down': '80%'})<cr>
 nnoremap <A-к> :call fzf#run({'source': './redocco.tcl related '.expand("%"), 'sink': 'sp', 'down': '80%'})<cr>
+" -------------------
+
 
 " Полинтить файл
 function! LintAndReload()
@@ -521,6 +532,22 @@ function! LintAndReload()
   silent redraw!
 endfunction
 nnoremap <silent> <Leader>l :call LintAndReload()<cr>
+
+
+function! YoinkFile()
+  silent exec "! yoink %"
+  silent redraw!
+  echo "Yoink!"
+endfunction
+nnoremap <silent> <Leader>y :call YoinkFile()<cr>
+
+function! YeetFile()
+  silent exec "! yeet %"
+  silent redraw!
+  echo "Yeet!"
+endfunction
+nnoremap <silent> <Leader>t :call YeetFile()<cr>
+
 
 " Я вообще не догоняю как этот синтаксис работает
 hi MyWorkWiki ctermbg=yellow ctermfg=black guibg=#c0aa4c guifg=#000000

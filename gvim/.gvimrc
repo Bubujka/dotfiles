@@ -18,3 +18,5 @@ set guioptions-=T
 " Скрыть меню
 set guioptions-=m
 
+nnoremap <A-r> :call RelatedGui()<cr>
+nnoremap <A-к> :call RelatedGui()<cr>
