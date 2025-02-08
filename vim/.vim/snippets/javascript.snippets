@@ -4,6 +4,19 @@ snippet ra-resource
 
 snippet dc
 	// doccofile: ${0}
+
+
+snippet withPanel
+	withPanel(debugPanel, {
+		name: '${0}-panel',
+		tbg: 'corp',
+		ico: 'acorn'
+	})
+
+	function debugPanel(gui, adder){
+		// let add = adder(state);
+	}
+
 snippet setup
 	<script setup>
 		${0}

@@ -262,7 +262,7 @@ nnoremap <silent> gb :call HandleURL()<cr>
 
 " Отключить автодополнение html, javascript для php
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
-let g:snipMate.no_default_aliases = {}
+let g:snipMate.no_default_aliases = 1
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases.php = 'php'
 " -------------------------------------------
@@ -595,6 +595,8 @@ autocmd FileType javascript syntax keyword LimeWord         opts
 autocmd FileType javascript syntax keyword OrangeWord         dispatchEvent addEventListener setTimeout setInterval watchEffect computed reactive evalScript evalScripts
 
 autocmd FileType javascript syntax keyword MyJsConstants dataset slots querySlots selector state.value state popups vpered
+autocmd FileType javascript syntax match MyJsConstants /\<[A-Za-z_0-9]*State\>/
+autocmd FileType javascript syntax match MyJsConstants /\<[A-Za-z_0-9]*_state\>/
 
 autocmd FileType blade syntax match MyJsConstants /\<data-slot=['"].*['"]\>/ contained
 autocmd FileType blade syntax match MyJsConstants /data-slot/
