@@ -207,7 +207,7 @@ bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 
 bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener
-bindsym F12 exec ~/.db/bu.bin-private/bin/plan-opener dev
+bindsym F12 exec ~/.db/bu.bin-private/bin/open-work-site
 
 
 bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
