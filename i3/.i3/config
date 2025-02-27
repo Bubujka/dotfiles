@@ -1,3 +1,10 @@
+# Если думается "да как ты помнишь все эти хоткеи?!"
+#
+# Ну... Я их не помню (((
+
+
+
+
 # Непонятные мне настройки
 new_window none
 new_float none
@@ -5,8 +12,41 @@ force_xinerama true
 default_orientation vertical
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-# Переход между двумя последними рабочими столами при повторном нажатии кнопки
+# Переход между двумя последними рабочими столами
+# при повторном нажатии кнопки
 workspace_auto_back_and_forth yes
+
+# ----------------------
+
+
+# Кнопки в системе
+# win
+set $mod Mod4
+set $print_screen 107
+set $altenter 104
+set $scroll_lock 78
+set $terminal xterm
+# "\"
+set $search_key 51
+set $pause_break 127
+
+floating_modifier $mod
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+# ------------------------------------------------
+
+
+
+# Режим отключения хоткеев
+bindsym Control+Shift+F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
+mode "unbind" {
+  bindsym Control+Shift+F12 mode "default"; exec notify-flash "i3" "normal mode"
+}
 
 
 bindsym $mod+o mode "open"; exec notify-flash "i3" "mode open"
@@ -49,30 +89,26 @@ mode "logbook" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
+# ------------
 
-# Режим отключения хоткеев
-bindsym Control+Shift+F12 mode "unbind"; exec notify-flash "i3" "mode unbind"
-mode "unbind" {
-  bindsym Control+Shift+F12 mode "default"; exec notify-flash "i3" "normal mode"
+# Режим хоткеев связанный с работой
+# Их стало очень много
+# Теперь они в отдельном режиме
+mode "workings" {
+  # повторное нажатие - откроет рабочий сайт
+  bindsym F12 exec ~/.db/bu.bin-private/bin/open-work-site; mode "default"
+
+  # Открывашка для рисования
+  bindsym d exec ~/.db/bu.bin-private/bin/drawer-opener ; mode "default"
+
+  # Возврат обратно
+  bindsym Escape mode "default"
 }
 
-# Кнопки в системе
-# win
-set $mod Mod4
-set $print_screen 107
-set $altenter 104
-set $scroll_lock 78
-set $terminal xterm
-# "\"
-set $search_key 51
-set $pause_break 127
-floating_modifier $mod
+bindsym F12 mode "workings"
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+
+# ----------------------------
 
 # Основные кнопки
 bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
@@ -206,11 +242,6 @@ bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
 bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 
-bindsym Shift+F12 exec ~/.db/bu.bin-private/bin/plan-opener
-bindsym F12 exec ~/.db/bu.bin-private/bin/open-work-site
-
-
-bindsym Control+F12 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/do.ods
 
 # Управление громкостью
 bindcode 122 exec ~/.bu.bin/bin/volume 5%-
