@@ -99,9 +99,9 @@ mode "workings" {
   bindsym F12 exec ~/.db/bu.bin-private/bin/open-work-site; mode "default"
 
   # Открывашка для рисования
-  bindsym d exec ~/.db/bu.bin-private/bin/drawer-opener ; mode "default"
+  bindsym F11 exec ~/.db/bu.bin-private/bin/drawer-opener ; mode "default"
   # Открывать для шаринга
-  bindsym Shift+d exec ~/.db/bu.bin-private/bin/drawer-opener share; mode "default"
+  bindsym Shift+F11 exec ~/.db/bu.bin-private/bin/drawer-opener share; mode "default"
 
   # Возврат обратно
   bindsym Escape mode "default"
