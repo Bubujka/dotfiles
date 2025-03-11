@@ -437,6 +437,8 @@ call SMap("<Leader>s", "<esc><esc>:r ! insert-my-wiki-link % <cr>")
 call SMap("<Leader>rm", "<esc><esc>:r ! insert-model-rpc <cr>")
 call SMap("<Leader>rs", "<esc><esc>:r ! insert-service-rpc <cr>")
 
+call SMap("<A-f>", "<esc><esc>:r ! insert-function-call <cr>")
+
 call SMap("<Leader>p", "<esc><esc>:r ! insert-good-screenshot docs <cr>")
 "call SMap("<Leader>a", "<esc><esc>:r ! blade-partial-wrapper <cr>")
 "call SMap("<Leader>e", "<esc><esc>:r ! insert-emmet-class <cr>$a")
