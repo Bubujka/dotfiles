@@ -2,10 +2,11 @@
 export VIDEO_RECORDING_RESOLUTION='1920x1080' # у меня такой экран
 export VIDEO_CONVERT_RESOLUTION='1280x720' # ютуб до такого размера пожмёт всё равно. Заливать меньше
 export VIDEO_SAVING_PATH=/home/bubujka/.db/history/video
-export PATH=$PATH:$HOME/.bu.bin/bin
-export PATH=$PATH:$HOME/.db/bu.bin-private/bin
+export PATH=$PATH:$HOME/.db/workspace/bin
 export PATH=$PATH:$HOME/.usr/bin
+
 export NVM_DIR="~/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 

@@ -1,14 +1,13 @@
-
 # По каким путям доступны исполняемые команды
-export PATH=/opt/php/bin:$PATH
-export PATH=/opt/java/bin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin
-export PATH=$PATH:$HOME/.omega.bin/bin
-export PATH=$PATH:$HOME/.bu.cards/bin
-export PATH=$PATH:$HOME/.bu.bin/bin
-export PATH=$PATH:$HOME/.db/bu.bin-private/bin
-export PATH=$PATH:$HOME/.beta.bin/bin
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
-export PATH=$PATH:$HOME/.composer/vendor/bin
+
+# Основная папка со скриптами
+export PATH=$PATH:$HOME/.db/workspace/bin
+
+# Ansible сюда установился
 export PATH=$PATH:$HOME/.local/bin
+
+# Руби. Но пока я не использую его
+export PATH=$PATH:$HOME/.rvm/bin
+
+# Хз что это
 . ~/.bin_path

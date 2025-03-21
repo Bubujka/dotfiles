@@ -61,12 +61,12 @@ mode "open" {
   bindsym o exec obs; mode "default"
   bindsym l exec br http://localhost:3000/; mode "default"
   bindsym e exec br http://localhost:3000/telescope; mode "default"
-  bindsym v exec ~/.bu.bin/bin/open-gvim; mode "default"
+  bindsym v exec ~/.db/workspace/bin/open-gvim; mode "default"
   bindsym Shift+v exec VirtualBox; mode "default"
   bindsym m exec mysql-workbench; mode "default"
   bindsym f exec ~/.db/prj/tpl-collector/0001-fetch-budebug.tcl; mode "default"
-  bindsym t exec ~/.bu.bin/bin/run-telegram; mode "default"
-  bindsym a exec ~/.bu.bin/bin/run-anki ; mode "default"
+  bindsym t exec ~/.db/workspace/bin/run-telegram; mode "default"
+  bindsym a exec ~/.db/workspace/bin/run-anki ; mode "default"
   bindsym g exec gnucash; mode "default"
   bindsym n exec nautilus; mode "default"
   bindsym s exec br http://localhost:3000/swagger; mode "default"
@@ -77,13 +77,13 @@ mode "open" {
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
 }
 
-bindsym $mod+m exec ~/.db/bu.bin-private/bin/online-meeting
+bindsym $mod+m exec ~/.db/workspace/bin/online-meeting
 
 mode "logbook" {
-  bindsym w exec ~/.bu.bin/bin/week-logbook; mode "default"
-  bindsym t exec ~/.bu.bin/bin/open-logbook; mode "default"
-  bindsym y exec ~/.bu.bin/bin/open-logbook yesterday; mode "default"
-  bindsym l exec exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/logbook md; mode "default"
+  bindsym w exec ~/.db/workspace/bin/week-logbook; mode "default"
+  bindsym t exec ~/.db/workspace/bin/open-logbook; mode "default"
+  bindsym y exec ~/.db/workspace/bin/open-logbook yesterday; mode "default"
+  bindsym l exec exec ~/.db/workspace/bin/selectwikifile ~/.db/wiki/logbook md; mode "default"
 
   bindsym Return mode "default"; exec notify-flash "i3" "normal mode"
   bindsym Escape mode "default"; exec notify-flash "i3" "normal mode"
@@ -96,14 +96,14 @@ mode "logbook" {
 # Теперь они в отдельном режиме
 mode "workings" {
   # повторное нажатие - откроет рабочий сайт
-  bindsym F12 exec ~/.db/bu.bin-private/bin/open-work-site; mode "default"
+  bindsym F12 exec ~/.db/workspace/bin/open-work-site; mode "default"
 
   # Открывашка для рисования
-  bindsym F11 exec ~/.db/bu.bin-private/bin/drawer-opener ; mode "default"
+  bindsym F11 exec ~/.db/workspace/bin/drawer-opener ; mode "default"
   # Открывать для шаринга
-  bindsym Shift+F11 exec ~/.db/bu.bin-private/bin/drawer-opener share; mode "default"
+  bindsym Shift+F11 exec ~/.db/workspace/bin/drawer-opener share; mode "default"
   # Открыть тупо следующий файл
-  bindsym F10 exec ~/.db/bu.bin-private/bin/drawer-opener next; mode "default"
+  bindsym F10 exec ~/.db/workspace/bin/drawer-opener next; mode "default"
 
   # Возврат обратно
   bindsym Escape mode "default"
@@ -117,22 +117,22 @@ bindsym F12 mode "workings"
 
 # ----------------------------
 # Работа с Wiki
-bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
-bindsym $mod+Shift+w exec ~/.bu.bin/bin/wiki-next
+bindsym $mod+Shift+p exec ~/.db/workspace/bin/open-plan
+bindsym $mod+Shift+w exec ~/.db/workspace/bin/wiki-next
 
-bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki
-bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet copy ~/.db/wiki
+bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.db/workspace/bin/select-snippet edit ~/.db/wiki
+bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.db/workspace/bin/select-snippet copy ~/.db/wiki
 
 
 
 # ----------------------------
 
 # Основные кнопки
-bindsym $mod+Control+R exec ~/.bu.bin/bin/rescreen
-bindsym $mod+l exec ~/.bu.bin/bin/lock-screen
+bindsym $mod+Control+R exec ~/.db/workspace/bin/rescreen
+bindsym $mod+l exec ~/.db/workspace/bin/lock-screen
 bindsym $mod+d exec dmenu_run
-bindsym $mod+Control+p exec ~/.bu.bin/bin/passmenu
-bindsym $mod+u exec ~/.bu.bin/bin/unchats
+bindsym $mod+Control+p exec ~/.db/workspace/bin/passmenu
+bindsym $mod+u exec ~/.db/workspace/bin/unchats
 
 #bindsym $mod+i sticky toggle
 bindsym $mod+Shift+Q kill
@@ -146,67 +146,67 @@ bindsym $mod+Shift+s sticky toggle
 # Приложения
 bindsym $mod+Return exec $terminal
 #bindcode $altenter exec $terminal
-bindsym $mod+Control+h exec st -e ~/.bu.bin/bin/habit_maker.py
+bindsym $mod+Control+h exec st -e ~/.db/workspace/bin/habit_maker.py
 
 
 # Тайм трэкинг
-#bindsym F9 exec ~/.bu.bin/bin/work-tgl
-#bindsym Shift+F9 exec ~/.bu.bin/bin/work-tgl continue
+#bindsym F9 exec ~/.db/workspace/bin/work-tgl
+#bindsym Shift+F9 exec ~/.db/workspace/bin/work-tgl continue
 
-#bindsym F10 exec ~/.bu.bin/bin/work-beta-tgl
-#bindsym Shift+F10 exec ~/.bu.bin/bin/work-beta-tgl continue
+#bindsym F10 exec ~/.db/workspace/bin/work-beta-tgl
+#bindsym Shift+F10 exec ~/.db/workspace/bin/work-beta-tgl continue
 
-#bindsym F12 exec ~/.bu.bin/bin/stop-toggle
-#bindsym F9 exec ~/.bu.bin/bin/mykbd us
-#bindsym F10 exec ~/.bu.bin/bin/mykbd ru
-#bindsym F11 exec ~/.bu.bin/bin/mykbd il
+#bindsym F12 exec ~/.db/workspace/bin/stop-toggle
+#bindsym F9 exec ~/.db/workspace/bin/mykbd us
+#bindsym F10 exec ~/.db/workspace/bin/mykbd ru
+#bindsym F11 exec ~/.db/workspace/bin/mykbd il
 
 
 # Taskwarrior
-#bindsym $mod+t exec ~/.bu.bin/bin/today-timing
-#bindsym $mod+Shift+t exec ~/.bu.bin/bin/today-personal-timing
-#bindsym $mod+Control+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
-#bindsym $mod+Control+Shift+t exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
+#bindsym $mod+t exec ~/.db/workspace/bin/today-timing
+#bindsym $mod+Shift+t exec ~/.db/workspace/bin/today-personal-timing
+#bindsym $mod+Control+t exec ~/.db/workspace/bin/selectexcelfile ~/.db/wiki/timing/ ods soffice-calc
+#bindsym $mod+Control+Shift+t exec ~/.db/workspace/bin/selectexcelfile ~/.db/wiki/personal-timing/ ods soffice-calc
 
 # Таймер (pomodoro)
-#bindsym $mod+c exec ~/.bu.bin/bin/stop-timer
-bindsym $mod+c exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/changelog.md
+#bindsym $mod+c exec ~/.db/workspace/bin/stop-timer
+bindsym $mod+c exec ~/.db/workspace/bin/open-in-gvim ~/.db/wiki/changelog.md
 
 
 # Runners
-bindsym $mod+e exec ~/.bu.bin/bin/siterunner.py
-bindsym $mod+Shift+e exec ~/.bu.bin/bin/open-in-gvim ~/.sites
-bindsym $mod+Control+e exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel/ ods soffice-calc
-bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/keys pub copy
-#bindsym $mod+Control+Shift+p exec ~/.bu.bin/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
-bindsym $mod+r exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/reps.md
-bindsym $mod+Shift+m exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/meme.md
-#bindsym $mod+Control+l exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/learning-links.md
-bindsym $mod+t exec ~/.bu.bin/bin/siterunner.py ~/.db/wiki/tasklists.md
-bindsym $mod+Shift+t exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/tasklists.md
+bindsym $mod+e exec ~/.db/workspace/bin/siterunner.py
+bindsym $mod+Shift+e exec ~/.db/workspace/bin/open-in-gvim ~/.sites
+bindsym $mod+Control+e exec ~/.db/workspace/bin/selectexcelfile ~/.db/wiki/excel/ ods soffice-calc
+bindsym $mod+Control+Shift+p exec ~/.db/workspace/bin/selectwikifile ~/.db/wiki/keys pub copy
+#bindsym $mod+Control+Shift+p exec ~/.db/workspace/bin/selectexcelfile ~/.db/wiki/excel-prj/ ods soffice-calc
+bindsym $mod+r exec ~/.db/workspace/bin/siterunner.py ~/.db/wiki/reps.md
+bindsym $mod+Shift+m exec ~/.db/workspace/bin/siterunner.py ~/.db/wiki/meme.md
+#bindsym $mod+Control+l exec ~/.db/workspace/bin/siterunner.py ~/.db/wiki/learning-links.md
+bindsym $mod+t exec ~/.db/workspace/bin/siterunner.py ~/.db/wiki/tasklists.md
+bindsym $mod+Shift+t exec ~/.db/workspace/bin/open-in-gvim ~/.db/wiki/tasklists.md
 
-#bindsym $mod+Shift+a exec ~/.bu.bin/bin/start-activity
+#bindsym $mod+Shift+a exec ~/.db/workspace/bin/start-activity
 
 
 # Запись экрана
-bindsym $mod+v exec ~/.bu.bin/bin/scy record
-bindsym $mod+Shift+V exec ~/.bu.bin/bin/scy upload
-bindcode Shift+$print_screen exec ~/.bu.bin/bin/make-screenshot
-bindcode $print_screen exec ~/.bu.bin/bin/make-screenshot select
+bindsym $mod+v exec ~/.db/workspace/bin/scy record
+bindsym $mod+Shift+V exec ~/.db/workspace/bin/scy upload
+bindcode Shift+$print_screen exec ~/.db/workspace/bin/make-screenshot
+bindcode $print_screen exec ~/.db/workspace/bin/make-screenshot select
 
 
 # Readlist
-bindsym $mod+Shift+k exec ~/.bu.bin/bin/readlist.py next
-bindsym $mod+Control+k exec ~/.bu.bin/bin/readlist.py unread
-bindsym $mod+Control+Shift+k exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/readlist.md
+bindsym $mod+Shift+k exec ~/.db/workspace/bin/readlist.py next
+bindsym $mod+Control+k exec ~/.db/workspace/bin/readlist.py unread
+bindsym $mod+Control+Shift+k exec ~/.db/workspace/bin/open-in-gvim ~/.db/wiki/readlist.md
 
 
 # Редактор, заметки
-bindcode $scroll_lock exec ~/.bu.bin/bin/clipboard-to-plan ~/.db/wiki/plan.md
-bindsym $mod+n exec ~/.bu.bin/bin/write-to-plan ~/.db/wiki/plan.md
-bindsym $mod+Shift+n exec ~/.db/bu.bin-private/bin/open-check-note
+bindcode $scroll_lock exec ~/.db/workspace/bin/clipboard-to-plan ~/.db/wiki/plan.md
+bindsym $mod+n exec ~/.db/workspace/bin/write-to-plan ~/.db/wiki/plan.md
+bindsym $mod+Shift+n exec ~/.db/workspace/bin/open-check-note
 
-bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
+bindsym $mod+p exec ~/.db/workspace/bin/select-prj
 
 
 
@@ -214,48 +214,48 @@ bindsym $mod+a exec br https://abox.bubujka.org
 bindsym $mod+Shift+a exec br https://abox.bubujka.org/add
 
 
-bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/howto/howtos
-bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/howto/howtos hb.simmi
+bindsym $mod+Control+i exec xterm  -T my-check-list-selector -e ~/.db/workspace/bin/edit-checklist ~/.db/howto/howtos
+bindsym $mod+i exec xterm  -T my-check-list-selector -e ~/.db/workspace/bin/select-checklist ~/.db/howto/howtos hb.simmi
 
-bindsym $mod+Control+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/edit-checklist ~/.db/beta/howto-basic/howtos
-bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/select-checklist ~/.db/beta/howto-basic/howtos howtobasic.beta.agency
-bindsym $mod+Control+s exec ~/.bu.bin/bin/selectwikifile ~/.vim/snippets snippets
-bindsym $mod+Control+m exec st -e ~/.bu.bin/bin/mebot
-bindsym $mod+Control+n exec ~/.bu.bin/bin/search-name
-bindsym $mod+Control+b exec ~/.bu.bin/bin/open-backlog
-bindsym $mod+Shift+b exec ~/.bu.bin/bin/select-bin-file
-bindsym $mod+Shift+c exec ~/.bu.bin/bin/select-dotfile-file
-bindsym $mod+Control+c exec ~/.bu.bin/bin/selectwikifile ~/.db/wiki/contacts/ md
+bindsym $mod+Control+Shift+i exec xterm  -T my-check-list-selector -e ~/.db/workspace/bin/edit-checklist ~/.db/beta/howto-basic/howtos
+bindsym $mod+Shift+i exec xterm  -T my-check-list-selector -e ~/.db/workspace/bin/select-checklist ~/.db/beta/howto-basic/howtos howtobasic.beta.agency
+bindsym $mod+Control+s exec ~/.db/workspace/bin/selectwikifile ~/.vim/snippets snippets
+bindsym $mod+Control+m exec st -e ~/.db/workspace/bin/mebot
+bindsym $mod+Control+n exec ~/.db/workspace/bin/search-name
+bindsym $mod+Control+b exec ~/.db/workspace/bin/open-backlog
+bindsym $mod+Shift+b exec ~/.db/workspace/bin/select-bin-file
+bindsym $mod+Shift+c exec ~/.db/workspace/bin/select-dotfile-file
+bindsym $mod+Control+c exec ~/.db/workspace/bin/selectwikifile ~/.db/wiki/contacts/ md
 
 bindsym $mod+b exec exec br http://localhost:3000/dev/backport; mode "default"
 
-bindsym $mod+Control+Shift+l exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/letters-index.md
+bindsym $mod+Control+Shift+l exec ~/.db/workspace/bin/open-in-gvim ~/.db/wiki/letters-index.md
 
 # Поиск
-bindcode $mod+$search_key exec ~/.bu.bin/bin/web_searcher.py full_search
-bindcode $mod+Shift+$search_key exec ~/.bu.bin/bin/web_searcher.py last_engine_search
-bindcode $mod+Control+$search_key exec ~/.bu.bin/bin/web_searcher.py last_query_search
-bindcode $mod+Control+Shift+$search_key exec ~/.bu.bin/bin/open-in-gvim ~/.db/wiki/search-history.csv
+bindcode $mod+$search_key exec ~/.db/workspace/bin/web_searcher.py full_search
+bindcode $mod+Shift+$search_key exec ~/.db/workspace/bin/web_searcher.py last_engine_search
+bindcode $mod+Control+$search_key exec ~/.db/workspace/bin/web_searcher.py last_query_search
+bindcode $mod+Control+Shift+$search_key exec ~/.db/workspace/bin/open-in-gvim ~/.db/wiki/search-history.csv
 
 
 # Misc
-bindcode $pause_break exec ~/.bu.bin/bin/add-image-to-anki
+bindcode $pause_break exec ~/.db/workspace/bin/add-image-to-anki
 
-bindsym Shift+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener
-bindsym Control+F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener new
-bindsym F9 exec ~/.db/bu.bin-private/bin/corp-doc-opener dev
+bindsym Shift+F9 exec ~/.db/workspace/bin/corp-doc-opener
+bindsym Control+F9 exec ~/.db/workspace/bin/corp-doc-opener new
+bindsym F9 exec ~/.db/workspace/bin/corp-doc-opener dev
 
-bindsym F10 exec ~/.bu.bin/bin/open-numbered-link
-bindsym Shift+F10 exec ~/.bu.bin/bin/save-link
+bindsym F10 exec ~/.db/workspace/bin/open-numbered-link
+bindsym Shift+F10 exec ~/.db/workspace/bin/save-link
 bindsym Control+F10 workspace --no-auto-back-and-forth 5; exec soffice ~/.db/wiki/excel/warpa-prj.ods
-bindsym Shift+F11 exec ~/.bu.bin/bin/save-file
-bindsym F11 exec xterm  -T my-check-list-selector -e ~/.bu.bin/bin/run-fn
+bindsym Shift+F11 exec ~/.db/workspace/bin/save-file
+bindsym F11 exec xterm  -T my-check-list-selector -e ~/.db/workspace/bin/run-fn
 bindsym Control+Shift+F11 exec open-in-gvim ~/.config/gtk-3.0/bookmarks
 
 
 # Управление громкостью
-bindcode 122 exec ~/.bu.bin/bin/volume 5%-
-bindcode 123 exec ~/.bu.bin/bin/volume 5%+
+bindcode 122 exec ~/.db/workspace/bin/volume 5%-
+bindcode 123 exec ~/.db/workspace/bin/volume 5%+
 
 # change focus
 bindsym $mod+j focus down
