@@ -112,6 +112,19 @@ mode "workings" {
 bindsym F12 mode "workings"
 
 
+
+
+
+# ----------------------------
+# Работа с Wiki
+bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
+bindsym $mod+Shift+w exec ~/.bu.bin/bin/wiki-next
+
+bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki
+bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet copy ~/.db/wiki
+
+
+
 # ----------------------------
 
 # Основные кнопки
@@ -195,13 +208,6 @@ bindsym $mod+Shift+n exec ~/.db/bu.bin-private/bin/open-check-note
 
 bindsym $mod+p exec ~/.db/bu.bin-private/bin/select-prj
 
-bindsym $mod+Shift+p exec ~/.bu.bin/bin/open-plan
-bindsym $mod+Shift+h exec ~/.bu.bin/bin/open-homemd
-bindsym $mod+Shift+o exec ~/.bu.bin/bin/open-progress
-
-bindsym $mod+w exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet edit ~/.db/wiki
-bindsym $mod+Shift+w exec ~/.bu.bin/bin/wiki-next
-bindsym $mod+s exec xterm -title '[fullscreen]' -e ~/.bu.bin/bin/select-snippet copy ~/.db/wiki
 
 
 bindsym $mod+a exec br https://abox.bubujka.org
